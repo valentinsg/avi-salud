@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { ChevronRight, Heart, Mail, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, ChevronRight, Mail, MapPin, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -532,66 +532,120 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-5">
           <div className="text-center mb-12">
             <h2
-              className="text-3xl font-bold text-teal-600 mb-4"
+              className="text-4xl tracking-tighter leading-tighter font-normal text-teal-500 mb-4"
               style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
             >
-              Estamos para acompañarte
+              Realiza tu consulta
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-
-            <div className="space-y-8">
-              <Card className="bg-white shadow-lg">
-                <CardContent className="p-8">
-                  <h3
-                    className="text-2xl font-bold text-teal-600 mb-6"
-                    style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
-                  >
-                    Realiza tu consulta
-                  </h3>
-                  <form className="space-y-4">
-                    <Input placeholder="Nombre" className="bg-gray-50" />
-                    <Input placeholder="Apellido" className="bg-gray-50" />
+          <div className="flex flex-row gap-8 items-start justify-center">
+            <Card className="bg-white shadow-lg hover:shadow-[0_4px_24px_0_rgba(13,148,136,0.18)] transition-shadow duration-300 flex-1 max-w-md rounded-3xl">
+              <CardContent className="p-8">
+                <form className="space-y-6">
+                  <div>
+                    <label
+                      className="block text-teal-800 font-medium mb-1"
+                      htmlFor="nombre"
+                    >
+                      Nombre
+                    </label>
                     <Input
-                      placeholder="Mail"
-                      type="email"
-                      className="bg-gray-50"
+                      id="nombre"
+                      placeholder=""
+                      className="bg-gray-50 border-0 rounded-lg shadow focus:shadow-md transition-shadow w-full"
                     />
-                    <Textarea
-                      placeholder="Consulta"
-                      className="bg-gray-50 min-h-[100px]"
-                    />
-                    <Button className="bg-teal-600 hover:bg-teal-700 text-white w-full">
-                      Enviar
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-teal-600 text-white">
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-teal-700 rounded-full flex items-center justify-center mr-4">
-                      <Heart className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg">Atención cálida</h4>
-                      <p className="text-teal-100">sin compromiso.</p>
-                    </div>
                   </div>
-                  <div className="space-y-3">
+                  <div>
+                    <label
+                      className="block text-teal-800 font-medium mb-1"
+                      htmlFor="apellido"
+                    >
+                      Apellido
+                    </label>
+                    <Input
+                      id="apellido"
+                      placeholder=""
+                      className="bg-gray-50 border-0 rounded-lg shadow focus:shadow-md transition-shadow w-full"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      className="block text-teal-800 font-medium mb-1"
+                      htmlFor="mail"
+                    >
+                      Mail
+                    </label>
+                    <Input
+                      id="mail"
+                      type="email"
+                      placeholder=""
+                      className="bg-gray-50 border-0 rounded-lg shadow focus:shadow-md transition-shadow w-full"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      className="block text-teal-800 font-medium mb-1"
+                      htmlFor="consulta"
+                    >
+                      Consulta
+                    </label>
+                    <Textarea
+                      id="consulta"
+                      placeholder=""
+                      className="bg-gray-50 border-0 rounded-lg min-h-[120px] resize-none shadow focus:shadow-md transition-shadow w-full"
+                    />
+                  </div>
+                  <div className="pt-2 flex items-center">
+                    <button className="learn-more w-48 h-auto">
+                      <span className="circle" aria-hidden="true">
+                        <span className="icon arrow">
+                          <ChevronRight className="w-5 h-5" />
+                        </span>
+                      </span>
+                      <span className="button-text">enviar</span>
+                    </button>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
+
+            <div className="flex flex-col gap-4 flex-1 max-w-md mt-auto">
+              <div className="flex flex-row gap-2 items-center">
+                <Card className="bg-teal-700 text-white rounded-3xl">
+                  <CardContent className="p-5">
                     <div className="flex items-center">
-                      <Phone className="w-5 h-5 mr-3" />
-                      <span>+54 9 223 530 6250</span>
+                      <ArrowRight className="w-10 h-8 text-teal-500" />
+                    </div>
+                  </CardContent>
+                </Card>
+                <span className="text-teal-700 font-medium text-3xl leading-none tracking-tighter">
+                  Atención cálida sin compromiso.
+                </span>
+              </div>
+
+                <Card className="bg-teal-500 text-teal-50 shadow-lg rounded-3xl">
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-teal-700 rounded-full flex items-center justify-center mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-white" viewBox="0 0 32 32" fill="currentColor">
+                          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.844 5.18 2.441 7.34L4 29l6.879-2.262A12.93 12.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.98 0-3.92-.52-5.6-1.5l-.4-.23-4.08 1.34 1.34-4.08-.23-.4A10.97 10.97 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.09-7.41c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.97.95-.97 2.31 0 1.36.99 2.68 1.13 2.87.14.18 1.95 2.98 4.73 4.06.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.18-.53-.32z"/>
+                        </svg>
+                      </div>
+                      <span className="text-white font-medium text-xl">+54 9 223 530 6250</span>
                     </div>
                     <div className="flex items-center">
-                      <Mail className="w-5 h-5 mr-3" />
-                      <span>info@avisalud.com.ar</span>
+                      <div className="w-8 h-8 bg-teal-700 rounded-full flex items-center justify-center mr-3">
+                        <Mail className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-white font-medium text-xl">info@avisalud.com.ar</span>
                     </div>
                     <div className="flex items-center">
-                      <MapPin className="w-5 h-5 mr-3" />
-                      <span>Av. Colón 3095</span>
+                      <div className="w-8 h-8 bg-teal-700 rounded-full flex items-center justify-center mr-3">
+                        <MapPin className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-white font-medium text-xl">Av. Colón 3095</span>
                     </div>
                   </div>
                 </CardContent>

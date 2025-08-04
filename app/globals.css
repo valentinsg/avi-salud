@@ -108,3 +108,109 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Estilos personalizados para el botón animado */
+.learn-more {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: #f3f4f6;
+  padding: 0.2rem 0.5rem;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 2rem;
+  overflow: hidden;
+  min-height: 3rem;
+}
+
+.learn-more::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #0f766e; /* teal-700 */
+  color: #fff;
+  transition: width 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  z-index: 1;
+}
+
+.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  left: 0.01rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #0f766e; /* teal-700 */
+  border-radius: 1.625rem;
+  z-index: 2;
+}
+
+.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.125rem;
+  height: 1.125rem;
+  color: #0f766e;
+  z-index: 3;
+}
+
+.learn-more .circle .icon svg {
+  color: #ffffff;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem 0;
+  margin: 0;
+  color: #0f766e; /* teal-700 */
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.learn-more:hover .circle {
+  width: 100%;
+}
+
+.learn-more:hover .circle .icon {
+  transform: translate(6rem, -50%);
+}
+
+.learn-more:hover .circle .icon svg {
+  color: #ffffff !important;
+}
+
+.learn-more:hover::before {
+  width: 100%;
+}
+
+.learn-more:hover .button-text {
+  color: #fff;
+}
