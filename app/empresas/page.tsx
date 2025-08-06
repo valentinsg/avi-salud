@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Activity, ChevronRight, Heart } from 'lucide-react'
 import Image from 'next/image'
 
-export default function PlanesPage() {
+export default function EmpresasPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
