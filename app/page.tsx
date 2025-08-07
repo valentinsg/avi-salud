@@ -54,24 +54,26 @@ const planesData = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#F0FDFA]">
+    <div className="min-h-screen bg-[#F0FDFA] overflow-hidden">
       {/* Hero Section */}
-      {/* Hero Image with Text Overlay and Curved Bottom */}
-      <div className="relative h-screen w-full overflow-hidden">
+      <section
+        id="inicio"
+        className="relative h-[85vh] md:h-[80vh] lg:h-[95vh] w-full overflow-hidden"
+      >
         <Image
           src="/images/nurse-patient-care.png"
           alt="Enfermera cuidando paciente"
           fill
-          className="object-cover w-full h-full scale-105 blur-xs shadow-lg -ml-4"
+          className="object-cover w-full h-full scale-110 blur-xs shadow-lg"
         />
         <div className="absolute inset-0 bg-teal-300 bg-opacity-10" />
 
         {/* Content */}
-        <div className="absolute inset-0 flex items-center text-left px-4 sm:px-6 lg:px-10">
+        <div className="absolute inset-0 flex items-start md:items-center text-center md:text-left px-2 sm:px-6 lg:px-10">
           <div className="container mx-auto">
-            <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl">
+            <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-xl mt-[65%] mr-10 md:mr-0 md:mt-0 md:ml-8 lg:ml-12">
               <h1
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-teal-50 -tracking-wider drop-shadow-md"
+                className="text-4xl text-right md:text-left sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold text-teal-50 -tracking-wider drop-shadow-md md:leading-tight"
                 style={{
                   fontFamily: 'Cocogoose ProTrial, sans-serif',
                   lineHeight: 0.9,
@@ -79,23 +81,31 @@ export default function HomePage() {
               >
                 Cuidamos a<br />
                 los que{' '}
-                <span className="font-semibold -tracking-wider text-teal-800 drop-shadow-md">
+                <span className="font-semibold -tracking-wider text-teal-50 md:text-teal-800 drop-shadow-md">
                   más
                 </span>
                 <br />
-                <span className="font-semibold -tracking-wider text-teal-800 drop-shadow-md">
+                <span className="font-semibold -tracking-wider text-teal-50 md:text-teal-800 drop-shadow-md">
                   {' '}
                   te cuidaron
                 </span>
               </h1>
+
+              {/* Botón visible solo en móvil, debajo del texto */}
+              <div className="block ml-36 md:hidden mt-6 text-center">
+                <Button className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6 py-4 font-bold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                  Conoce más
+                  <ChevronRight className="ml-2 w-6 h-6 text-white font-bold" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Curved Bottom */}
-        <div className="absolute bottom-0 left-0 right-0">
+        <div className="absolute bottom-0 left-0 right-0 hidden md:block">
           <svg
-            className="w-full h-24 sm:h-32 md:h-44 lg:h-56"
+            className="w-full h-24 sm:h-32 md:h-48 lg:h-56"
             viewBox="0 0 1440 320"
             preserveAspectRatio="none"
           >
@@ -115,11 +125,11 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Button positioned in the white curved area */}
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-12 lg:bottom-16 left-1/4 transform -translate-x-1/2 z-5">
-          <Button className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 font-bold text-sm sm:text-base md:text-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+        {/* Button positioned in the white curved area - visible only on md and larger screens */}
+        <div className="hidden md:block absolute bottom-40 sm:bottom-6 md:bottom-16 lg:bottom-20 left-1/2 md:left-[5%] lg:left-[13%] transform -translate-x-1/2 md:translate-x-0 lg:translate-x-0 z-5">
+          <Button className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-10 sm:px-6 md:px-8 py-6 sm:py-4 md:py-6 lg:py-6 lg:px-12 font-bold text-xl sm:text-base md:text-2xl lg:text-2xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
             Conoce más
-            <ChevronRight className="ml-1 sm:ml-2 w-4 sm:w-6 md:w-8 h-4 sm:h-6 md:h-8 text-white font-bold" />
+            <ChevronRight className="ml-1 sm:ml-2 w-4 sm:w-6 md:w-7 lg:w-8 h-4 sm:h-6 md:h-7 lg:h-8 text-white font-bold" />
           </Button>
         </div>
 
@@ -128,10 +138,10 @@ export default function HomePage() {
           <div className="bg-teal-600 text-white space-y-1 rounded-l-2xl shadow-lg">
             <a
               href="#"
-              className="block py-3 sm:py-4 md:py-5 px-2 sm:px-3 items-center justify-center hover:bg-teal-700 transition-colors rounded-l-xl"
+              className="block py-3 sm:py-4 md:py-4 lg:py-5 px-2 sm:px-3 md:px-4 items-center justify-center hover:bg-teal-700 transition-colors rounded-l-xl"
             >
               <svg
-                className="w-4 sm:w-5 h-4 sm:h-5"
+                className="w-4 sm:w-5 md:w-5 lg:w-5 h-4 sm:h-5 md:h-5 lg:h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -140,10 +150,10 @@ export default function HomePage() {
             </a>
             <a
               href="#"
-              className="block py-3 sm:py-4 md:py-5 px-2 sm:px-3 items-center justify-center hover:bg-teal-700 transition-colors rounded-l-xl"
+              className="block py-3 sm:py-4 md:py-4 lg:py-5 px-2 sm:px-3 md:px-4 items-center justify-center hover:bg-teal-700 transition-colors rounded-l-xl"
             >
               <svg
-                className="w-4 sm:w-5 h-4 sm:h-5"
+                className="w-4 sm:w-5 md:w-5 lg:w-5 h-4 sm:h-5 md:h-5 lg:h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -152,10 +162,10 @@ export default function HomePage() {
             </a>
             <a
               href="#"
-              className="block py-3 sm:py-4 md:py-5 px-2 sm:px-3 items-center justify-center hover:bg-teal-700 transition-colors rounded-l-xl"
+              className="block py-3 sm:py-4 md:py-4 lg:py-5 px-2 sm:px-3 md:px-4 items-center justify-center hover:bg-teal-700 transition-colors rounded-l-xl"
             >
               <svg
-                className="w-4 sm:w-5 h-4 sm:h-5"
+                className="w-4 sm:w-5 md:w-5 lg:w-5 h-4 sm:h-5 md:h-5 lg:h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -164,10 +174,10 @@ export default function HomePage() {
             </a>
             <a
               href="#"
-              className="block py-3 sm:py-4 md:py-5 px-2 sm:px-3 items-center justify-center hover:bg-teal-700 transition-colors rounded-l-xl"
+              className="block py-3 sm:py-4 md:py-4 lg:py-5 px-2 sm:px-3 md:px-4 items-center justify-center hover:bg-teal-700 transition-colors rounded-l-xl"
             >
               <svg
-                className="w-4 sm:w-5 h-4 sm:h-5"
+                className="w-4 sm:w-5 md:w-5 lg:w-5 h-4 sm:h-5 md:h-5 lg:h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -176,12 +186,12 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* About Section - Responsive */}
       <section
         id="nosotros"
-        className="relative h-auto py-12 bg-[#F0FDFA] overflow-hidden"
+        className="relative h-auto py-4 md:py-12 bg-[#F0FDFA] overflow-hidden -mt-4 md:mt-0"
       >
         {/* Background with geometric pattern */}
         <div className="absolute inset-0">
@@ -194,10 +204,10 @@ export default function HomePage() {
           <div className="absolute inset-0"></div>
         </div>
 
-        <div className="mx-auto relative top-[20%] px-10 md:px-6 py-20 z-3 flex justify-center items-center ">
-          <div className="grid lg:grid-cols-2 ">
+        <div className="mx-auto relative md:top-[20%] px-4 md:px-6 py-12 md:py-20 z-3 flex justify-center items-center">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
             {/* Left Panel - Sobre Nosotros */}
-            <div className="bg-teal-800 rounded-3xl max-w-lg md:max-w-md px-6 text-white relative shadow-2xl py-16 mt-auto">
+            <div className="bg-teal-800 rounded-3xl max-w-lg md:max-w-md px-6 text-white relative shadow-2xl py-16 mt-auto md:mx-auto">
               {/* Heart icon positioned absolutely */}
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
                 <Image
@@ -209,14 +219,14 @@ export default function HomePage() {
                 />
               </div>
               <h2
-                className="text-left mb-4"
+                className="text-left mb-1 md:mb-4"
                 style={{
                   fontFamily: 'Cocogoose ProTrial, sans-serif',
                   lineHeight: 0.9,
                 }}
               >
                 <span
-                  className="text-teal-500 text-5xl text-shadow-lg font-bold"
+                  className="text-teal-500 text-3xl md:text-5xl text-shadow-lg font-bold"
                   style={{
                     fontFamily: 'Cocogoose ProTrial, sans-serif',
                     lineHeight: 0.9,
@@ -226,7 +236,7 @@ export default function HomePage() {
                 </span>
                 <br />
                 <span
-                  className="text-teal-50 text-5xl text-shadow-lg font-bold"
+                  className="text-teal-50 text-3xl md:text-5xl text-shadow-lg font-bold"
                   style={{
                     fontFamily: 'Cocogoose ProTrial, sans-serif',
                     lineHeight: 0.9,
@@ -237,14 +247,14 @@ export default function HomePage() {
               </h2>
 
               <p
-                className="text-xl mb-8 text-white text-left"
+                className="text-lg md:text-xl mt-4 md:mt-0 mb-6 md:mb-8 text-white text-left"
                 style={{ fontFamily: 'Acumin Variable Concept, sans-serif' }}
               >
                 Somos una empresa de internación domiciliaria cuyo propósito
                 esencial se encuentra reflejado en su propio nombre:
               </p>
 
-              <div className="text-left">
+              <div className="text-left -mb-4 md:-mb-0">
                 <Button className="bg-teal-50 hover:bg-teal-700 hover:text-white text-teal-600 font-bold rounded-full px-6 py-2 text-base">
                   Contáctanos
                 </Button>
@@ -252,21 +262,21 @@ export default function HomePage() {
             </div>
 
             {/* Center Panel - Doctor Image */}
-            <div className="bg-transparent rounded-3xl p-4 relative">
+            <div className="bg-transparent rounded-3xl p-4 relative md:flex md:justify-center">
               <div
-                className="relative rounded-3xl flex flex-row items-center justify-between max-w-3xl md:max-w-xl"
+                className="relative rounded-3xl flex flex-col md:flex-row items-center justify-between max-w-3xl md:max-w-2xl lg:max-w-xl"
                 style={{
                   background:
                     'linear-gradient(to top, #0d9488 0%, #0d9488 65%, transparent 65%, transparent 65%)',
                 }}
               >
                 {/* Equipo multidisciplinario box - positioned in the white space near doctor's head */}
-                <div className="absolute lg:right-0 text-center md:right-0 top-6 bg-teal-800 rounded-3xl p-3 text-white max-w-sm md:max-w-[325px] shadow-lg z-5">
+                <div className="absolute hidden lg:block lg:right-0 text-center md:right-0 top-2 md:top-6 bg-teal-800 rounded-3xl p-4 md:p-3 text-white max-w-full md:max-w-[325px] shadow-lg z-5">
                   <p
-                    className="text-sm font-bold"
+                    className="text-md md:text-sm font-bold"
                     style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
                   >
-                    <span className="text-sm font-extrabold">
+                    <span className="text-md md:text-sm font-extrabold">
                       Equipo multidisciplinario:
                     </span>{' '}
                     Profesionales capacitados en atención domiciliaria.
@@ -277,21 +287,32 @@ export default function HomePage() {
                   alt="Doctor profesional de AVI Salud"
                   width={380}
                   height={380}
-                  className="rounded-xl -ml-4 -mb-0.5"
+                  className="rounded-xl md:-ml-4 mb-0.5 md:-mb-0.5 mt-2 md:mt-0"
                 />
-                {/* El h3 está alineado a la derecha del contenedor */}
+                {/* El h3 está alineado a la derecha del contenedor en desktop, oculto en móvil */}
                 <h3
-                  className="text-2xl text-teal-50 font-bold text-left mt-28 pr-8 "
+                  className="hidden md:block text-2xl text-teal-50 font-bold text-left mt-28 pr-8"
                   style={{
                     fontFamily: 'Cocogoose ProTrial, sans-serif',
                     lineHeight: 1.25,
                   }}
                 >
-                  Acompañar de manera vital
-                  e Integral a la Salud
-                  de cada paciente.
+                  Acompañar de manera vital e Integral a la Salud de cada
+                  paciente.
                 </h3>
               </div>
+
+              {/* Texto fuera del contenedor verde, debajo */}
+              <h3
+                className="text-lg md:text-2xl text-teal-50 font-bold text-center md:hidden mt-4 pr-0"
+                style={{
+                  fontFamily: 'Cocogoose ProTrial, sans-serif',
+                  lineHeight: 1.25,
+                }}
+              >
+                Acompañar de manera vital e Integral a la Salud de cada
+                paciente.
+              </h3>
             </div>
           </div>
         </div>
@@ -357,7 +378,7 @@ export default function HomePage() {
           </div>
 
           <h2
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold ml-2 sm:ml-4 md:ml-6 text-teal-800 tracking-tighter drop-shadow-md px-4 sm:px-0 mb-6 sm:mb-8"
+            className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center sm:text-left ml-0 sm:ml-4 md:ml-6 text-teal-800 tracking-tighter drop-shadow-md px-4 sm:px-0 mb-6 sm:mb-8"
             style={{
               fontFamily: 'Cocogoose ProTrial, sans-serif',
               lineHeight: 1.1,
@@ -375,57 +396,57 @@ export default function HomePage() {
             </span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-stretch mt-8 sm:mt-12 md:mt-16 px-4 sm:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 md:gap-8 lg:gap-12 items-stretch mt-8 sm:mt-12 md:mt-16 px-2 sm:px-0">
             {planesData.map((plan) => (
-              <Card
-                key={plan.id}
-                className={`${
-                  plan.id === 'integral'
-                    ? 'bg-teal-700 border-2 border-teal-50 h-auto min-h-[500px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
-                    : plan.id === 'vital'
-                    ? 'bg-teal-50 border-2 border-teal-700 h-auto min-h-[500px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
-                    : 'bg-white border-2 border-teal-50 h-auto min-h-[500px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
-                } rounded-2xl sm:rounded-3xl flex flex-col transition-transform duration-500 shadow-md hover:shadow-xl ease-out transform hover:-translate-y-2 sm:hover:-translate-y-4 md:hover:-translate-y-6`}
-                style={{
-                  transition: 'transform 0.75s, box-shadow 0.75s ease-in-out',
-                }}
-              >
-                <CardContent className=" sm:p-2 flex flex-col h-full justify-between">
-                  <div className="flex-1">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mr-2">
-                      <Image
-                        src={plan.icono}
-                        alt={plan.alt}
-                        width={80}
-                        height={80}
-                        className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain"
-                      />
-                    </div>
-                    <h3
-                      className={`text-2xl sm:text-3xl md:text-4xl font-semibold sm:p-4 md:p-5 mb-2 sm:mb-2 md:mb-2 -tracking-wider leading-tighter ${
-                        plan.id === 'integral'
-                          ? 'text-white'
-                          : plan.id === 'vital'
-                          ? 'text-teal-600'
-                          : 'text-teal-600'
-                      }`}
-                      style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
-                    >
-                      {plan.titulo}
-                    </h3>
-                    <div
-                      className={`font-medium text-sm sm:text-base tracking-tighter sm:px-4 md:px-6 space-y-2 ${
-                        plan.id === 'integral'
-                          ? 'text-gray-100'
-                          : plan.id === 'vital'
-                          ? 'text-gray-600'
-                          : 'text-gray-600'
-                      }`}
-                      style={{
-                        fontFamily: 'Acumin Variable Concept, sans-serif',
-                        lineHeight: 1.3,
-                      }}
-                    >
+                              <Card
+                  key={plan.id}
+                  className={`${
+                    plan.id === 'integral'
+                      ? 'bg-teal-700 border-2 border-teal-50 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
+                      : plan.id === 'vital'
+                      ? 'bg-teal-50 border-2 border-teal-700 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
+                      : 'bg-white border-2 border-teal-50 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
+                  } rounded-2xl sm:rounded-3xl flex flex-col transition-transform duration-500 shadow-md hover:shadow-xl ease-out transform hover:-translate-y-2 sm:hover:-translate-y-4 md:hover:-translate-y-6`}
+                  style={{
+                    transition: 'transform 0.75s, box-shadow 0.75s ease-in-out',
+                  }}
+                >
+                                  <CardContent className="p-4 sm:p-2 flex flex-col h-full justify-between">
+                    <div className="flex-1">
+                      <div className="w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mr-2 mb-3">
+                        <Image
+                          src={plan.icono}
+                          alt={plan.alt}
+                          width={80}
+                          height={80}
+                          className="w-14 h-14 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain"
+                        />
+                      </div>
+                      <h3
+                        className={`text-2xl sm:text-3xl md:text-4xl font-semibold sm:p-4 md:p-5 mb-3 sm:mb-2 md:mb-2 -tracking-wider leading-tighter ${
+                          plan.id === 'integral'
+                            ? 'text-white'
+                            : plan.id === 'vital'
+                            ? 'text-teal-600'
+                            : 'text-teal-600'
+                        }`}
+                        style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
+                      >
+                        {plan.titulo}
+                      </h3>
+                                          <div
+                        className={`font-medium text-base sm:text-base tracking-tighter sm:px-4 md:px-6 space-y-3 ${
+                          plan.id === 'integral'
+                            ? 'text-gray-100'
+                            : plan.id === 'vital'
+                            ? 'text-gray-600'
+                            : 'text-gray-600'
+                        }`}
+                        style={{
+                          fontFamily: 'Acumin Variable Concept, sans-serif',
+                          lineHeight: 1.4,
+                        }}
+                      >
                       {Array.isArray(plan.descripcion) ? (
                         plan.descripcion.map((item, index) => (
                           <div key={index} className="flex items-start">
@@ -437,25 +458,25 @@ export default function HomePage() {
                       )}
                     </div>
                   </div>
-                  <div className="flex justify-center w-full mt-4 sm:mt-6">
-                    <Link href="/planes" className="w-full sm:w-auto">
-                      <Button
-                        className={`w-full sm:w-auto mb-2 sm:mb-4 rounded-full px-3 sm:px-4 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-4 lg:py-5 text-xs sm:text-sm md:text-base lg:text-lg font-semibold transition-transform transform hover:scale-105 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-4 ${
-                          plan.id === 'integral'
-                            ? 'bg-teal-50 hover:bg-teal-100 text-teal-600 focus:ring-gray-300'
-                            : plan.id === 'vital'
-                            ? 'bg-teal-600 hover:bg-teal-700 text-teal-50 focus:ring-teal-300'
-                            : 'bg-teal-600 hover:bg-teal-700 text-teal-50 focus:ring-teal-300'
-                        }`}
-                        style={{
-                          boxShadow: '0 8px 24px 0 rgba(19, 78, 74, 0.15)',
-                          transition: 'transform 0.5s, box-shadow 0.5s',
-                        }}
-                      >
-                        Más información
-                      </Button>
-                    </Link>
-                  </div>
+                                      <div className="flex justify-center w-full mt-6 sm:mt-6">
+                      <Link href="/planes" className="w-full sm:w-auto">
+                        <Button
+                          className={`w-full sm:w-auto mb-2 sm:mb-4 rounded-full px-6 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-3 md:py-4 lg:py-5 text-base sm:text-sm md:text-base lg:text-lg font-semibold transition-transform transform hover:scale-105 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-4 ${
+                            plan.id === 'integral'
+                              ? 'bg-teal-50 hover:bg-teal-100 text-teal-600 focus:ring-gray-300'
+                              : plan.id === 'vital'
+                              ? 'bg-teal-600 hover:bg-teal-700 text-teal-50 focus:ring-teal-300'
+                              : 'bg-teal-600 hover:bg-teal-700 text-teal-50 focus:ring-teal-300'
+                          }`}
+                          style={{
+                            boxShadow: '0 8px 24px 0 rgba(19, 78, 74, 0.15)',
+                            transition: 'transform 0.5s, box-shadow 0.5s',
+                          }}
+                        >
+                          Más información
+                        </Button>
+                      </Link>
+                    </div>
                 </CardContent>
               </Card>
             ))}
