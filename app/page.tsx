@@ -71,7 +71,7 @@ export default function HomePage() {
         {/* Content */}
         <div className="absolute inset-0 flex items-start md:items-center text-center md:text-left px-2 sm:px-6 lg:px-10">
           <div className="container mx-auto">
-            <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-xl mt-[65%] mr-10 md:mr-0 md:mt-0 md:ml-8 lg:ml-12">
+            <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-xl mt-[55%] mr-8 md:mr-0 md:mt-0 md:ml-8 lg:ml-12">
               <h1
                 className="text-4xl text-right md:text-left sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold text-teal-50 -tracking-wider drop-shadow-md md:leading-tight"
                 style={{
@@ -92,7 +92,7 @@ export default function HomePage() {
               </h1>
 
               {/* Botón visible solo en móvil, debajo del texto */}
-              <div className="block ml-36 md:hidden mt-6 text-center">
+              <div className="block md:hidden mt-6 text-right">
                 <Button className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6 py-4 font-bold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
                   Conoce más
                   <ChevronRight className="ml-2 w-6 h-6 text-white font-bold" />
@@ -344,7 +344,7 @@ export default function HomePage() {
         />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-5 py-4 sm:py-6">
-          <div className="flex items-center ">
+          <div className="hidden md:flex md:items-center">
             <div className="flex items-center">
               <svg
                 className="w-6 sm:w-8 md:w-10 lg:w-12 h-8 sm:h-12 md:h-16 lg:h-20 text-teal-800"
@@ -378,7 +378,7 @@ export default function HomePage() {
           </div>
 
           <h2
-            className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center sm:text-left ml-0 sm:ml-4 md:ml-6 text-teal-800 tracking-tighter drop-shadow-md px-4 sm:px-0 mb-6 sm:mb-8"
+            className="text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center sm:text-left ml-0 sm:ml-4 md:ml-6 text-teal-800 tracking-tighter drop-shadow-md px-4 sm:px-0 mb-6 sm:mb-8"
             style={{
               fontFamily: 'Cocogoose ProTrial, sans-serif',
               lineHeight: 1.1,
@@ -387,9 +387,15 @@ export default function HomePage() {
             Encontrá el mejor plan para <br className="hidden sm:block" />
             cuidar a quien{' '}
             <span
-              className="text-teal-50 drop-shadow-md"
+              className=" md:text-teal-50 text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl md:drop-shadow-md"
               style={{
-                WebkitTextStroke: '0.8px #134e4a', // color teal-800
+                WebkitTextStroke: '0px #134e4a',
+                // A partir de sm aplica el trazo
+                ...(typeof window === 'undefined'
+                  ? {}
+                  : window.innerWidth >= 640
+                  ? { WebkitTextStroke: '0.8px #134e4a' }
+                  : {}),
               }}
             >
               más querés
@@ -398,55 +404,55 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 md:gap-8 lg:gap-12 items-stretch mt-8 sm:mt-12 md:mt-16 px-2 sm:px-0">
             {planesData.map((plan) => (
-                              <Card
-                  key={plan.id}
-                  className={`${
-                    plan.id === 'integral'
-                      ? 'bg-teal-700 border-2 border-teal-50 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
-                      : plan.id === 'vital'
-                      ? 'bg-teal-50 border-2 border-teal-700 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
-                      : 'bg-white border-2 border-teal-50 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
-                  } rounded-2xl sm:rounded-3xl flex flex-col transition-transform duration-500 shadow-md hover:shadow-xl ease-out transform hover:-translate-y-2 sm:hover:-translate-y-4 md:hover:-translate-y-6`}
-                  style={{
-                    transition: 'transform 0.75s, box-shadow 0.75s ease-in-out',
-                  }}
-                >
-                                  <CardContent className="p-4 sm:p-2 flex flex-col h-full justify-between">
-                    <div className="flex-1">
-                      <div className="w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mr-2 mb-3">
-                        <Image
-                          src={plan.icono}
-                          alt={plan.alt}
-                          width={80}
-                          height={80}
-                          className="w-14 h-14 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain"
-                        />
-                      </div>
-                      <h3
-                        className={`text-2xl sm:text-3xl md:text-4xl font-semibold sm:p-4 md:p-5 mb-3 sm:mb-2 md:mb-2 -tracking-wider leading-tighter ${
-                          plan.id === 'integral'
-                            ? 'text-white'
-                            : plan.id === 'vital'
-                            ? 'text-teal-600'
-                            : 'text-teal-600'
-                        }`}
-                        style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
-                      >
-                        {plan.titulo}
-                      </h3>
-                                          <div
-                        className={`font-medium text-base sm:text-base tracking-tighter sm:px-4 md:px-6 space-y-3 ${
-                          plan.id === 'integral'
-                            ? 'text-gray-100'
-                            : plan.id === 'vital'
-                            ? 'text-gray-600'
-                            : 'text-gray-600'
-                        }`}
-                        style={{
-                          fontFamily: 'Acumin Variable Concept, sans-serif',
-                          lineHeight: 1.4,
-                        }}
-                      >
+              <Card
+                key={plan.id}
+                className={`${
+                  plan.id === 'integral'
+                    ? 'bg-teal-700 border-2 border-teal-50 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
+                    : plan.id === 'vital'
+                    ? 'bg-teal-50 border-2 border-teal-700 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
+                    : 'bg-white border-2 border-teal-50 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
+                } rounded-2xl sm:rounded-3xl flex flex-col transition-transform duration-500 shadow-md hover:shadow-xl ease-out transform hover:-translate-y-2 sm:hover:-translate-y-4 md:hover:-translate-y-6`}
+                style={{
+                  transition: 'transform 0.75s, box-shadow 0.75s ease-in-out',
+                }}
+              >
+                <CardContent className="p-4 sm:p-2 flex flex-col h-full justify-between">
+                  <div className="flex-1">
+                    <div className="w-20 h-20 sm:w-20 sm:h-20 md:w-20 md:h-20 rounded-full flex items-center justify-center -ml-4 md:mr-2 mb-3">
+                      <Image
+                        src={plan.icono}
+                        alt={plan.alt}
+                        width={80}
+                        height={80}
+                        className="w-20 h-20 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain"
+                      />
+                    </div>
+                    <h3
+                      className={`text-2xl sm:text-3xl md:text-4xl font-semibold sm:p-4 md:p-5 mb-3 sm:mb-2 md:mb-2 -tracking-wider leading-tighter ${
+                        plan.id === 'integral'
+                          ? 'text-white'
+                          : plan.id === 'vital'
+                          ? 'text-teal-600'
+                          : 'text-teal-600'
+                      }`}
+                      style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
+                    >
+                      {plan.titulo}
+                    </h3>
+                    <div
+                      className={`font-medium text-base sm:text-base tracking-tighter sm:px-4 md:px-6 space-y-3 ${
+                        plan.id === 'integral'
+                          ? 'text-gray-100'
+                          : plan.id === 'vital'
+                          ? 'text-gray-600'
+                          : 'text-gray-600'
+                      }`}
+                      style={{
+                        fontFamily: 'Acumin Variable Concept, sans-serif',
+                        lineHeight: 1.4,
+                      }}
+                    >
                       {Array.isArray(plan.descripcion) ? (
                         plan.descripcion.map((item, index) => (
                           <div key={index} className="flex items-start">
@@ -458,25 +464,25 @@ export default function HomePage() {
                       )}
                     </div>
                   </div>
-                                      <div className="flex justify-center w-full mt-6 sm:mt-6">
-                      <Link href="/planes" className="w-full sm:w-auto">
-                        <Button
-                          className={`w-full sm:w-auto mb-2 sm:mb-4 rounded-full px-6 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-3 md:py-4 lg:py-5 text-base sm:text-sm md:text-base lg:text-lg font-semibold transition-transform transform hover:scale-105 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-4 ${
-                            plan.id === 'integral'
-                              ? 'bg-teal-50 hover:bg-teal-100 text-teal-600 focus:ring-gray-300'
-                              : plan.id === 'vital'
-                              ? 'bg-teal-600 hover:bg-teal-700 text-teal-50 focus:ring-teal-300'
-                              : 'bg-teal-600 hover:bg-teal-700 text-teal-50 focus:ring-teal-300'
-                          }`}
-                          style={{
-                            boxShadow: '0 8px 24px 0 rgba(19, 78, 74, 0.15)',
-                            transition: 'transform 0.5s, box-shadow 0.5s',
-                          }}
-                        >
-                          Más información
-                        </Button>
-                      </Link>
-                    </div>
+                  <div className="flex justify-center w-full mt-6 sm:mt-6">
+                    <Link href="/planes" className="w-full sm:w-auto">
+                      <Button
+                        className={`w-full sm:w-auto mb-2 sm:mb-4 rounded-full px-6 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-3 md:py-4 lg:py-5 text-base sm:text-sm md:text-base lg:text-lg font-semibold transition-transform transform hover:scale-105 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-4 ${
+                          plan.id === 'integral'
+                            ? 'bg-teal-50 hover:bg-teal-100 text-teal-600 focus:ring-gray-300'
+                            : plan.id === 'vital'
+                            ? 'bg-teal-600 hover:bg-teal-700 text-teal-50 focus:ring-teal-300'
+                            : 'bg-teal-600 hover:bg-teal-700 text-teal-50 focus:ring-teal-300'
+                        }`}
+                        style={{
+                          boxShadow: '0 8px 24px 0 rgba(19, 78, 74, 0.15)',
+                          transition: 'transform 0.5s, box-shadow 0.5s',
+                        }}
+                      >
+                        Más información
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -485,7 +491,7 @@ export default function HomePage() {
       </section>
 
       {/* Additional Services */}
-      <section className="py-12 sm:py-16 bg-teal-700 relative overflow-hidden min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh]">
+      <section className="py-12 sm:py-16 bg-teal-700 relative overflow-hidden min-h-[65vh] sm:min-h-[70vh] md:min-h-[80vh]">
         {/* Imagen de fondo difuminada */}
         <div
           className="absolute inset-0 blur-xs opacity-30"
@@ -497,12 +503,12 @@ export default function HomePage() {
           }}
         />
 
-        <div className="container mx-auto px-4 sm:px-6 h-full flex items-center justify-center">
+        <div className="container mx-auto px-4 sm:px-6 h-full mt-20 md:mt-0 flex items-center justify-center">
           <div className="max-w-sm sm:max-w-md md:max-w-xl mx-auto text-center">
             <div className="bg-white/70 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-4 sm:p-5 lg:p-6 shadow-2xl border border-white/20">
               <div className="mb-4 sm:mb-5">
                 <h3
-                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-teal-800 mb-2 leading-tighter tracking-tighter"
+                  className="text-md sm:text-xl md:text-2xl lg:text-3xl font-bold text-teal-800 mb-0 md:mb-2 leading-tighter tracking-tighter"
                   style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
                 >
                   ¿Necesitas ayuda con el cuidado de tu familiar?
@@ -578,9 +584,9 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-col lg:flex-row gap-6 items-start justify-center">
-            <Card className="bg-white shadow-lg hover:shadow-[0_4px_24px_0_rgba(13,148,136,0.18)] transition-shadow duration-300 flex-1 max-w-md mx-auto lg:mx-0 rounded-2xl sm:rounded-3xl">
-              <CardContent className="p-4 sm:p-6">
-                <form className="space-y-4 sm:space-y-5">
+            <Card className="bg-white shadow-lg hover:shadow-[0_4px_24px_0_rgba(13,148,136,0.18)] transition-shadow duration-300 w-full lg:flex-1 lg:max-w-md xl:max-w-lg mx-auto lg:mx-0 rounded-2xl sm:rounded-3xl">
+              <CardContent className="p-5 sm:p-6">
+                <form className="space-y-5 sm:space-y-6">
                   <div>
                     <label
                       className="block text-teal-800 font-medium mb-1 text-sm sm:text-base"
@@ -591,7 +597,7 @@ export default function HomePage() {
                     <Input
                       id="nombre"
                       placeholder=""
-                      className="bg-gray-50 border-0 rounded-lg shadow focus:shadow-md transition-shadow w-full text-sm sm:text-base"
+                      className="bg-gray-50 border-0 rounded-lg shadow focus:shadow-md transition-shadow w-full h-12 text-base sm:text-lg"
                     />
                   </div>
                   <div>
@@ -604,7 +610,7 @@ export default function HomePage() {
                     <Input
                       id="apellido"
                       placeholder=""
-                      className="bg-gray-50 border-0 rounded-lg shadow focus:shadow-md transition-shadow w-full text-sm sm:text-base"
+                      className="bg-gray-50 border-0 rounded-lg shadow focus:shadow-md transition-shadow w-full h-12 text-base sm:text-lg"
                     />
                   </div>
                   <div>
@@ -618,7 +624,7 @@ export default function HomePage() {
                       id="mail"
                       type="email"
                       placeholder=""
-                      className="bg-gray-50 border-0 rounded-lg shadow focus:shadow-md transition-shadow w-full text-sm sm:text-base"
+                      className="bg-gray-50 border-0 rounded-lg shadow focus:shadow-md transition-shadow w-full h-12 text-base sm:text-lg"
                     />
                   </div>
                   <div>
@@ -631,11 +637,11 @@ export default function HomePage() {
                     <Textarea
                       id="consulta"
                       placeholder=""
-                      className="bg-gray-50 border-0 rounded-lg min-h-[80px] sm:min-h-[100px] resize-none shadow focus:shadow-md transition-shadow w-full text-sm sm:text-base"
+                      className="bg-gray-50 border-0 rounded-lg min-h-[120px] sm:min-h-[140px] resize-none shadow focus:shadow-md transition-shadow w-full text-base sm:text-lg"
                     />
                   </div>
-                  <div className="pt-2 flex items-center">
-                    <button className="learn-more w-32 sm:w-40 h-auto">
+                  <div className="pt-2">
+                    <button className="learn-more w-full sm:w-40 h-auto">
                       <span className="circle" aria-hidden="true">
                         <span className="icon arrow">
                           <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -710,24 +716,24 @@ export default function HomePage() {
       <footer className="bg-teal-700 text-white py-8 sm:py-10">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            <div className="text-center sm:text-left">
-              <div className="flex items-center justify-center sm:justify-start space-x-2 mb-3">
+            <div className="text-left">
+              <div className="flex items-center justify-start space-x-2 mb-3">
                 <Image
                   src="/images/avi-salud-logo.png"
                   alt="AVI Salud"
                   width={80}
                   height={26}
-                  className="h-5 sm:h-6 w-auto brightness-0 invert"
+                  className="h-7 sm:h-8 w-auto brightness-0 invert"
                 />
               </div>
-              <p className="text-teal-100 text-xs sm:text-sm">
+              <p className="text-teal-100 text-sm sm:text-base">
                 Cuidamos a los que más te cuidaron con profesionalismo y calidez
                 humana.
               </p>
             </div>
-            <div className="text-center sm:text-left">
-              <h4 className="font-bold mb-3 text-xs sm:text-sm">Servicios</h4>
-              <ul className="space-y-1 text-teal-100 text-xs sm:text-sm">
+            <div className="text-left">
+              <h4 className="font-bold mb-3 text-sm sm:text-base">Servicios</h4>
+              <ul className="space-y-1 text-teal-100 text-sm sm:text-base">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
                     Plan Acompañar
@@ -745,9 +751,9 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="text-center sm:text-left">
-              <h4 className="font-bold mb-3 text-xs sm:text-sm">Empresa</h4>
-              <ul className="space-y-1 text-teal-100 text-xs sm:text-sm">
+            <div className="text-left">
+              <h4 className="font-bold mb-3 text-sm sm:text-base">Empresa</h4>
+              <ul className="space-y-1 text-teal-100 text-sm sm:text-base">
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
                     Sobre nosotros
@@ -765,16 +771,16 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
-            <div className="text-center sm:text-left">
-              <h4 className="font-bold mb-3 text-xs sm:text-sm">Contacto</h4>
-              <div className="space-y-1 text-teal-100 text-xs sm:text-sm">
+            <div className="text-left">
+              <h4 className="font-bold mb-3 text-sm sm:text-base">Contacto</h4>
+              <div className="space-y-1 text-teal-100 text-sm sm:text-base">
                 <p>+54 9 223 530 6250</p>
                 <p>info@avisalud.com.ar</p>
                 <p>Av. Colón 3095</p>
               </div>
             </div>
           </div>
-          <div className="border-t border-teal-600 mt-6 pt-6 text-center text-teal-100 text-xs sm:text-sm">
+          <div className="border-t border-teal-600 mt-6 pt-6 text-left text-teal-100 text-sm sm:text-base">
             <p>&copy; 2024 AVI Salud. Todos los derechos reservados.</p>
           </div>
         </div>

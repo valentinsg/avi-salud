@@ -119,12 +119,12 @@
   vertical-align: middle;
   text-decoration: none;
   background: #f3f4f6;
-  padding: 0.2rem 0.5rem;
+  padding: 0.4rem 0.75rem;
   font-size: inherit;
   font-family: inherit;
   border-radius: 2rem;
   overflow: hidden;
-  min-height: 2.5rem;
+  min-height: 2.75rem; /* un poco más alto en mobile */
 }
 
 @media (min-width: 640px) {
@@ -154,8 +154,8 @@
   transform: translateY(-50%);
   display: block;
   margin: 0;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem; /* círculo levemente más chico para no tapar texto */
   background: #0f766e; /* teal-700 */
   border-radius: 1.25rem;
   z-index: 2;
@@ -178,8 +178,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1rem;
-  height: 1rem;
+  width: 0.9rem;
+  height: 0.9rem;
   color: #0f766e;
   z-index: 3;
 }
@@ -203,7 +203,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
   margin: 0;
   color: #0f766e; /* teal-700 */
   font-weight: 700;
