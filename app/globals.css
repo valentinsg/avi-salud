@@ -1,22 +1,8 @@
 /* Importar fuentes personalizadas */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-/* Definir fuentes personalizadas */
-@font-face {
-  font-family: 'Cocogoose ProTrial';
-  src: url('https://fonts.cdnfonts.com/css/cocogoose-pro-trial') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Acumin Variable Concept';
-  src: url('https://fonts.cdnfonts.com/css/acumin-variable-concept') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+/* CDN de las familias que usamos en Tailwind */
+@import url('https://fonts.cdnfonts.com/css/cocogoose-pro-trial');
+@import url('https://fonts.cdnfonts.com/css/acumin-variable-concept');
 
 @tailwind base;
 @tailwind components;

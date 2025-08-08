@@ -33,7 +33,7 @@ export default function Header() {
             <a href="/" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
               Inicio
             </a>
-            <a href="/#servicios" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
+            <a href="/planes" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
               Planes
             </a>
             <a href="/empresas" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">

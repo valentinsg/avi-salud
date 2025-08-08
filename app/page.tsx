@@ -1,56 +1,10 @@
+import { PlansGrid } from '@/components/plans/PlansGrid'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { ArrowRight, ChevronRight, Mail, MapPin } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
-
-// Datos de los planes de servicios
-const planesData = [
-  {
-    id: 'acompanar',
-    titulo: 'Plan Acompañar',
-    descripcion: [
-      '✓ Supervisión y asistencia leve',
-      '✓ Ideal para adultos mayores',
-      '✓ Contención y apoyo emocional',
-      '✓ Seguimiento de recuperación',
-    ],
-    icono: '/images/medical-cross-icon.png',
-    alt: 'Plan Acompañar',
-  },
-  {
-    id: 'integral',
-    titulo: 'Plan Integral',
-    descripcion: [
-      '✓ Internación domiciliaria de alta intensidad',
-      '✓ Red de cuidados continua 24/7',
-      '✓ Equipo médico especializado',
-      '✓ Monitoreo avanzado de signos vitales',
-      '✓ Respuesta inmediata ante emergencias',
-      '✓ Gestión integral de medicamentos',
-      '✓ Cuidados paliativos especializados',
-      '✓ Plan de tratamiento personalizado',
-    ],
-    icono: '/images/stethoscope-icon.png',
-    alt: 'Plan Integral',
-  },
-  {
-    id: 'vital',
-    titulo: 'Plan Vital',
-    descripcion: [
-      '✓ Atención médica frecuente',
-      '✓ Patologías agudas y crónicas',
-      '✓ Abordaje clínico intensivo',
-      '✓ Monitoreo especializado',
-      '✓ Tratamientos domiciliarios',
-      '✓ Coordinación con estudios',
-    ],
-    icono: '/images/heartbeat-icon.png',
-    alt: 'Plan Vital',
-  },
-]
 
 export default function HomePage() {
   return (
@@ -72,20 +26,14 @@ export default function HomePage() {
         <div className="absolute inset-0 flex items-start md:items-center text-center md:text-left px-2 sm:px-6 lg:px-10">
           <div className="container mx-auto">
             <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-xl mt-[55%] mr-8 md:mr-0 md:mt-0 md:ml-8 lg:ml-12">
-              <h1
-                className="text-4xl text-right md:text-left sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold text-teal-50 -tracking-wider drop-shadow-md md:leading-tight"
-                style={{
-                  fontFamily: 'Cocogoose ProTrial, sans-serif',
-                  lineHeight: 0.9,
-                }}
-              >
+              <h1 className="font-cocogoose leading-[0.9] text-4xl text-right md:text-left sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-semibold text-teal-50 -tracking-wider drop-shadow-md md:leading-tight">
                 Cuidamos a<br />
                 los que{' '}
-                <span className="font-semibold -tracking-wider text-teal-50 md:text-teal-800 drop-shadow-md">
+                <span className="font-cocogoose font-semibold -tracking-wider text-teal-50 md:text-teal-800 drop-shadow-md">
                   más
                 </span>
                 <br />
-                <span className="font-semibold -tracking-wider text-teal-50 md:text-teal-800 drop-shadow-md">
+                <span className="font-cocogoose font-semibold -tracking-wider text-teal-50 md:text-teal-800 drop-shadow-md">
                   {' '}
                   te cuidaron
                 </span>
@@ -218,30 +166,12 @@ export default function HomePage() {
                   className="bg-teal-50 rounded-full"
                 />
               </div>
-              <h2
-                className="text-left mb-1 md:mb-4"
-                style={{
-                  fontFamily: 'Cocogoose ProTrial, sans-serif',
-                  lineHeight: 0.9,
-                }}
-              >
-                <span
-                  className="text-teal-500 text-3xl md:text-5xl text-shadow-lg font-bold"
-                  style={{
-                    fontFamily: 'Cocogoose ProTrial, sans-serif',
-                    lineHeight: 0.9,
-                  }}
-                >
+              <h2 className="font-cocogoose leading-[0.9] text-left mb-1 md:mb-4">
+                <span className="font-cocogoose leading-[0.9] text-teal-500 text-3xl md:text-5xl text-shadow-lg font-bold">
                   Sobre
                 </span>
                 <br />
-                <span
-                  className="text-teal-50 text-3xl md:text-5xl text-shadow-lg font-bold"
-                  style={{
-                    fontFamily: 'Cocogoose ProTrial, sans-serif',
-                    lineHeight: 0.9,
-                  }}
-                >
+                <span className="font-cocogoose leading-[0.9] text-teal-50 text-3xl md:text-5xl text-shadow-lg font-bold">
                   Nosotros
                 </span>
               </h2>
@@ -343,7 +273,7 @@ export default function HomePage() {
           }}
         />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-5 py-4 sm:py-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative justify-center z-5 py-4 sm:py-6">
           <div className="hidden md:flex md:items-center">
             <div className="flex items-center">
               <svg
@@ -377,116 +307,15 @@ export default function HomePage() {
             </div>
           </div>
 
-          <h2
-            className="text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center sm:text-left ml-0 sm:ml-4 md:ml-6 text-teal-800 tracking-tighter drop-shadow-md px-4 sm:px-0 mb-6 sm:mb-8"
-            style={{
-              fontFamily: 'Cocogoose ProTrial, sans-serif',
-              lineHeight: 1.1,
-            }}
-          >
+          <h2 className="font-cocogoose leading-[1.1] text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center sm:text-left ml-0 sm:ml-4 md:ml-6 text-teal-800 tracking-tighter drop-shadow-md px-4 sm:px-0 mb-6 sm:mb-8">
             Encontrá el mejor plan para <br className="hidden sm:block" />
             cuidar a quien{' '}
-            <span
-              className=" md:text-teal-50 text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl md:drop-shadow-md"
-              style={{
-                WebkitTextStroke: '0px #134e4a',
-                // A partir de sm aplica el trazo
-                ...(typeof window === 'undefined'
-                  ? {}
-                  : window.innerWidth >= 640
-                  ? { WebkitTextStroke: '0.8px #134e4a' }
-                  : {}),
-              }}
-            >
+            <span className="font-cocogoose md:text-teal-50 text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl md:drop-shadow-md">
               más querés
             </span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 md:gap-8 lg:gap-12 items-stretch mt-8 sm:mt-12 md:mt-16 px-2 sm:px-0">
-            {planesData.map((plan) => (
-              <Card
-                key={plan.id}
-                className={`${
-                  plan.id === 'integral'
-                    ? 'bg-teal-700 border-2 border-teal-50 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
-                    : plan.id === 'vital'
-                    ? 'bg-teal-50 border-2 border-teal-700 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
-                    : 'bg-white border-2 border-teal-50 h-auto min-h-[480px] sm:min-h-[500px] md:min-h-[500px] scale-100 sm:scale-100'
-                } rounded-2xl sm:rounded-3xl flex flex-col transition-transform duration-500 shadow-md hover:shadow-xl ease-out transform hover:-translate-y-2 sm:hover:-translate-y-4 md:hover:-translate-y-6`}
-                style={{
-                  transition: 'transform 0.75s, box-shadow 0.75s ease-in-out',
-                }}
-              >
-                <CardContent className="p-4 sm:p-2 flex flex-col h-full justify-between">
-                  <div className="flex-1">
-                    <div className="w-20 h-20 sm:w-20 sm:h-20 md:w-20 md:h-20 rounded-full flex items-center justify-center -ml-4 md:mr-2 mb-3">
-                      <Image
-                        src={plan.icono}
-                        alt={plan.alt}
-                        width={80}
-                        height={80}
-                        className="w-20 h-20 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain"
-                      />
-                    </div>
-                    <h3
-                      className={`text-2xl sm:text-3xl md:text-4xl font-semibold sm:p-4 md:p-5 mb-3 sm:mb-2 md:mb-2 -tracking-wider leading-tighter ${
-                        plan.id === 'integral'
-                          ? 'text-white'
-                          : plan.id === 'vital'
-                          ? 'text-teal-600'
-                          : 'text-teal-600'
-                      }`}
-                      style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
-                    >
-                      {plan.titulo}
-                    </h3>
-                    <div
-                      className={`font-medium text-base sm:text-base tracking-tighter sm:px-4 md:px-6 space-y-3 ${
-                        plan.id === 'integral'
-                          ? 'text-gray-100'
-                          : plan.id === 'vital'
-                          ? 'text-gray-600'
-                          : 'text-gray-600'
-                      }`}
-                      style={{
-                        fontFamily: 'Acumin Variable Concept, sans-serif',
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {Array.isArray(plan.descripcion) ? (
-                        plan.descripcion.map((item, index) => (
-                          <div key={index} className="flex items-start">
-                            <span className="mr-2">{item}</span>
-                          </div>
-                        ))
-                      ) : (
-                        <p>{plan.descripcion}</p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="flex justify-center w-full mt-6 sm:mt-6">
-                    <Link href="/planes" className="w-full sm:w-auto">
-                      <Button
-                        className={`w-full sm:w-auto mb-2 sm:mb-4 rounded-full px-6 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-3 md:py-4 lg:py-5 text-base sm:text-sm md:text-base lg:text-lg font-semibold transition-transform transform hover:scale-105 shadow-lg hover:shadow-2xl focus:outline-none focus:ring-4 ${
-                          plan.id === 'integral'
-                            ? 'bg-teal-50 hover:bg-teal-100 text-teal-600 focus:ring-gray-300'
-                            : plan.id === 'vital'
-                            ? 'bg-teal-600 hover:bg-teal-700 text-teal-50 focus:ring-teal-300'
-                            : 'bg-teal-600 hover:bg-teal-700 text-teal-50 focus:ring-teal-300'
-                        }`}
-                        style={{
-                          boxShadow: '0 8px 24px 0 rgba(19, 78, 74, 0.15)',
-                          transition: 'transform 0.5s, box-shadow 0.5s',
-                        }}
-                      >
-                        Más información
-                      </Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <PlansGrid />
         </div>
       </section>
 
@@ -575,10 +404,7 @@ export default function HomePage() {
         />
         <div className="container mx-auto px-4 sm:px-6 relative z-5">
           <div className="text-center mb-8 sm:mb-10">
-            <h2
-              className="text-2xl sm:text-3xl tracking-tighter leading-tighter font-normal text-teal-500 mb-4"
-              style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
-            >
+            <h2 className="font-cocogoose text-2xl sm:text-3xl tracking-tighter leading-tighter font-normal text-teal-500 mb-4">
               Realiza tu consulta
             </h2>
           </div>
@@ -712,79 +538,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-teal-700 text-white py-8 sm:py-10">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            <div className="text-left">
-              <div className="flex items-center justify-start space-x-2 mb-3">
-                <Image
-                  src="/images/avi-salud-logo.png"
-                  alt="AVI Salud"
-                  width={80}
-                  height={26}
-                  className="h-7 sm:h-8 w-auto brightness-0 invert"
-                />
-              </div>
-              <p className="text-teal-100 text-sm sm:text-base">
-                Cuidamos a los que más te cuidaron con profesionalismo y calidez
-                humana.
-              </p>
-            </div>
-            <div className="text-left">
-              <h4 className="font-bold mb-3 text-sm sm:text-base">Servicios</h4>
-              <ul className="space-y-1 text-teal-100 text-sm sm:text-base">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Plan Acompañar
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Plan Vital
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Plan Integral
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-left">
-              <h4 className="font-bold mb-3 text-sm sm:text-base">Empresa</h4>
-              <ul className="space-y-1 text-teal-100 text-sm sm:text-base">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Sobre nosotros
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Equipo médico
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contacto
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-left">
-              <h4 className="font-bold mb-3 text-sm sm:text-base">Contacto</h4>
-              <div className="space-y-1 text-teal-100 text-sm sm:text-base">
-                <p>+54 9 223 530 6250</p>
-                <p>info@avisalud.com.ar</p>
-                <p>Av. Colón 3095</p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-teal-600 mt-6 pt-6 text-left text-teal-100 text-sm sm:text-base">
-            <p>&copy; 2024 AVI Salud. Todos los derechos reservados.</p>
-          </div>
-        </div>
-      </footer>
+
 
       {/* WhatsApp Floating Button */}
       <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50">

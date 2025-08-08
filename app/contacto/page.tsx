@@ -12,8 +12,7 @@ export default function ContactoPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 sm:mb-16">
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-teal-800 tracking-tighter mb-4 sm:mb-6"
-              style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
+              className="font-cocogoose text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-teal-800 tracking-tighter mb-4 sm:mb-6"
             >
               Contáctanos
             </h1>
@@ -34,8 +33,7 @@ export default function ContactoPage() {
               <Card className="bg-white shadow-lg hover:shadow-[0_4px_24px_0_rgba(13,148,136,0.18)] transition-shadow duration-300 rounded-2xl sm:rounded-3xl">
                 <CardContent className="p-6 sm:p-8">
                   <h2
-                    className="text-2xl sm:text-3xl font-bold text-teal-800 mb-6"
-                    style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
+                    className="font-cocogoose text-2xl sm:text-3xl font-bold text-teal-800 mb-6"
                   >
                     Envíanos tu consulta
                   </h2>
@@ -135,8 +133,7 @@ export default function ContactoPage() {
                 <Card className="bg-teal-500 text-teal-50 shadow-lg rounded-2xl sm:rounded-3xl">
                   <CardContent className="p-6 sm:p-8">
                     <h3
-                      className="text-xl sm:text-2xl font-bold mb-6"
-                      style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
+                      className="font-cocogoose text-xl sm:text-2xl font-bold mb-6"
                     >
                       Información de contacto
                     </h3>
@@ -179,8 +176,7 @@ export default function ContactoPage() {
                       <ArrowRight className="w-6 h-6 sm:w-8 sm:h-8 text-teal-300 mt-1 mr-4" />
                       <div>
                         <h4
-                          className="text-lg sm:text-xl font-bold mb-2"
-                          style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
+                          className="font-cocogoose text-lg sm:text-xl font-bold mb-2"
                         >
                           Atención personalizada
                         </h4>
@@ -207,8 +203,7 @@ export default function ContactoPage() {
                         </svg>
                       </div>
                       <h4
-                        className="text-lg sm:text-xl font-bold mb-2"
-                        style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
+                        className="font-cocogoose text-lg sm:text-xl font-bold mb-2"
                       >
                         ¿Necesitas una respuesta rápida?
                       </h4>

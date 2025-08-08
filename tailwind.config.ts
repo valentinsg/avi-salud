@@ -12,6 +12,10 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+      fontFamily: {
+        cocogoose: ["Cocogoose ProTrial", "sans-serif"],
+        acumin: ["Acumin Variable Concept", "sans-serif"],
+      },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
