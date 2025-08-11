@@ -398,7 +398,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/images/healthcare-professional.png')",
+            backgroundImage: "url('/images/healthcare-professional.webp')",
             backgroundSize: 'cover',
           }}
         />
@@ -467,7 +467,7 @@ export default function HomePage() {
                     />
                   </div>
                   <div className="pt-2">
-                    <button className="learn-more w-full sm:w-40 h-auto">
+                    <button className="learn-more w-[50%] md:w-full sm:w-40 h-auto">
                       <span className="circle" aria-hidden="true">
                         <span className="icon arrow">
                           <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />

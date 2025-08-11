@@ -1,15 +1,15 @@
 'use client'
 
-import * as React from 'react'
 import {
-  ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
+    ChevronDownIcon,
+    ChevronLeftIcon,
+    ChevronRightIcon,
 } from 'lucide-react'
+import * as React from 'react'
 import { DayButton, DayPicker, getDefaultClassNames } from 'react-day-picker'
 
-import { cn } from '@/lib/utils'
 import { Button, buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 
 function Calendar({
   className,
@@ -37,7 +37,7 @@ function Calendar({
       captionLayout={captionLayout}
       formatters={{
         formatMonthDropdown: date =>
-          date.toLocaleString('default', { month: 'short' }),
+          date.toLocaleString('es-ES', { month: 'short' }),
         ...formatters,
       }}
       classNames={{
@@ -186,11 +186,11 @@ function CalendarDayButton({
   }, [modifiers.focused])
 
   return (
-    <Button
+      <Button
       ref={ref}
       variant="ghost"
       size="icon"
-      data-day={day.date.toLocaleDateString()}
+        data-day={day.date.toISOString().slice(0,10)}
       data-selected-single={
         modifiers.selected &&
         !modifiers.range_start &&
@@ -211,3 +211,4 @@ function CalendarDayButton({
 }
 
 export { Calendar, CalendarDayButton }
+

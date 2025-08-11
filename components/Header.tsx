@@ -14,7 +14,7 @@ export default function Header() {
   }
 
   return (
-    <header className="bg-[#F0FDFA] shadow-sm border-b fixed top-0 left-0 right-0 z-50">
+    <header className="bg-[#FFFFFF] shadow-sm border-b fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -80,7 +80,7 @@ export default function Header() {
                 Inicio
               </Link>
               <Link
-                href="/#servicios"
+                href="/planes"
                 className="text-gray-700 hover:text-teal-600 transition-colors font-medium py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >

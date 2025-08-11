@@ -8,26 +8,39 @@ export default function PlanesPage() {
       {/* Hero Section */}
       <section
         id="inicio"
-        className="relative overflow-hidden w-full py-12 md:py-16 lg:py-20 min-h-[60vh] md:min-h-[68vh] lg:min-h-[75vh]"
+        className="relative overflow-hidden w-full py-12 md:py-16 lg:py-20 min-h-[60vh] md:min-h-[75vh] lg:min-h-screen"
       >
+
         <Image
           src="/images/specialist-with-grandma-optimized.webp"
           alt="Enfermera cuidando paciente"
           fill
           className="object-cover object-center md:object-[center_32%] w-full h-full blur-xs shadow-lg z-0"
         />
-        <div className="absolute inset-0 z-10 pointer-events-none bg-teal-900/25" />
+
+        {/* Curved Top */}
+        <div className="absolute top-0 left-0 right-0 hidden md:block">
+          <svg
+            className="w-full h-48 sm:h-56 md:h-72 lg:h-96"
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="#FFFFFF"
+              d="M0,0 L0,200 H420 C460,205 500,140 540,140 S920,140 1000,140 H1440 L1440,0 Z"
+            />
+          </svg>
+        </div>
 
         {/* Content */}
-        <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto py-4 px-4 sm:px-5">
-          <div className="self-start flex flex-col gap-3 max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-cocogoose max-w-full -tracking-wider text-left text-teal-50 drop-shadow-md font-bold">
-              Nuestros Planes
+        <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto px-4 sm:px-5">
+          <div className="text-left relative z-20 mb-12 md:mb-16 pt-6 self-start">
+            <h1 className="font-cocogoose text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tight">
+              <span className="block text-3xl md:text-4xl lg:text-5xl text-teal-600">
+                NUESTROS
+              </span>
+              <span className="block text-teal-900">PLANES</span>
             </h1>
-            <p className="text-left font-cocogoose -tracking-wider text-teal-50/95 drop-shadow-sm text-2xl md:text-3xl">
-              Conocé en detalle cada servicio de internación domiciliaria y
-              elegí el que mejor se adapte a tus necesidades.
-            </p>
           </div>
           <PlansGrid />
         </div>
