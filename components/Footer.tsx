@@ -2,8 +2,15 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-teal-700 text-white py-8 sm:py-20 font-cocogoose ">
-      <div className="container mx-auto px-4 sm:px-6">
+    <footer className="relative overflow-hidden bg-teal-700 text-white py-8 sm:py-24 font-cocogoose">
+      <Image
+        src="/images/light-geometric-bg.png"
+        alt="Fondo de fondo geometrico"
+        fill
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-40 pointer-events-none select-none"
+        priority={false}
+      />
+      <div className="relative z-10 container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           <div className="text-left">
             <div className="flex items-center justify-start space-x-2 mb-3">
@@ -41,7 +48,7 @@ export default function Footer() {
             </ul>
           </div>
           <div className="text-left">
-            <h4 className="font-bold mb-3 text-sm sm:text-base">Empresa</h4>
+            <h4 className="font-bold mb-3 text-sm sm:text-base">Institucional</h4>
             <ul className="space-y-1 text-teal-100 text-sm sm:text-base">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
@@ -51,6 +58,11 @@ export default function Footer() {
               <li>
                 <a href="#" className="hover:text-white transition-colors">
                   Equipo médico
+                </a>
+              </li>
+              <li>
+                <a href="/empresas" className="hover:text-white transition-colors">
+                  Empresas
                 </a>
               </li>
               <li>

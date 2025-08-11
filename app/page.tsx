@@ -315,7 +315,7 @@ export default function HomePage() {
             </span>
           </h2>
 
-          <PlansGrid />
+          <PlansGrid useWhatsApp whatsAppPhone={process.env.NEXT_PUBLIC_WHATSAPP_PHONE} />
         </div>
       </section>
 

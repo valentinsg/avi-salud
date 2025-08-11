@@ -1,8 +1,14 @@
 import { PlansGrid } from '@/components/plans/PlansGrid'
 import { Activity, ChevronRight, Heart, Plus } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function PlanesPage() {
+  const buildWhatsAppHref = (planTitle: string) => {
+    const phone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '5492235306250'
+    const text = encodeURIComponent(`Quiero consultar sobre este plan: ${planTitle}`)
+    return `https://wa.me/${phone}?text=${text}`
+  }
   return (
     <div className="min-h-screen bg-[#F0FDFA]">
       {/* Hero Section */}
@@ -33,7 +39,7 @@ export default function PlanesPage() {
         </div>
 
         {/* Content */}
-        <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto px-4 sm:px-5">
+        <div className="container relative z-20 flex flex-col justify-center font-congoose mx-auto px-4 sm:px-5">
           <div className="text-left relative z-20 mb-12 md:mb-16 pt-6 self-start">
             <h1 className="font-cocogoose text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tight">
               <span className="block text-3xl md:text-4xl lg:text-5xl text-teal-600">
@@ -42,7 +48,7 @@ export default function PlanesPage() {
               <span className="block text-teal-900">PLANES</span>
             </h1>
           </div>
-          <PlansGrid />
+          <PlansGrid useWhatsApp whatsAppPhone={process.env.NEXT_PUBLIC_WHATSAPP_PHONE} />
         </div>
       </section>
 
@@ -73,13 +79,13 @@ export default function PlanesPage() {
                     Plan Acompañar
                   </h3>
                 </div>
-                <p className="font-acumin text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8">
+                <p className="font-acumin text-base md:text-lg text-teal-900 leading-relaxed tracking-tight mb-6 sm:mb-8">
                   Orientado a brindar contención, apoyo y seguimiento a
                   pacientes que requieren supervisión o asistencia leve en el
                   hogar. Ideal para adultos mayores o personas en recuperación
                   leve.
                 </p>
-                <ul className="font-acumin space-y-2 sm:space-y-3">
+                <ul className="font-acumin text-base md:text-lg text-teal-900 leading-relaxed space-y-2 sm:space-y-3">
                   <li className="flex items-start">
                     <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
                     <span>Supervisión y asistencia leve en el hogar</span>
@@ -98,15 +104,20 @@ export default function PlanesPage() {
                   </li>
                 </ul>
               </div>
-              <div className="relative order-1 lg:order-2 w-full h-full">
+              <Link
+                href={buildWhatsAppHref('Plan Acompañar')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative order-1 lg:order-2 w-full h-full rounded-xl transition-transform duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl"
+              >
                 <Image
                   src="/images/plan-acompanar-card.png"
                   alt="Plan Acompañar"
                   width={560}
                   height={500}
-                  className="rounded-xl w-full h-auto"
+                  className="rounded-xl w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
                 />
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -138,12 +149,12 @@ export default function PlanesPage() {
                       Plan Vital
                     </h3>
                   </div>
-                  <p className="font-acumin text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8">
+                  <p className="font-acumin text-base md:text-lg text-teal-900 leading-relaxed tracking-tight mb-6 sm:mb-8">
                     Para pacientes con patologías agudas o crónicas que
                     requieren atención médica y de enfermería de manera
                     frecuente, con un abordaje clínico más intensivo.
                   </p>
-                  <ul className="font-acumin space-y-2 sm:space-y-3">
+                  <ul className="font-acumin text-base md:text-lg text-teal-900 leading-relaxed space-y-2 sm:space-y-3">
                     <li className="flex items-start">
                       <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
                       <span>
@@ -166,15 +177,20 @@ export default function PlanesPage() {
                     </li>
                   </ul>
                 </div>
-                <div className="relative order-1 lg:order-2">
+                <Link
+                  href={buildWhatsAppHref('Plan Vital')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative order-1 lg:order-2 rounded-xl transition-transform duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl"
+                >
                   <Image
                     src="/images/plan-vital-card.png"
                     alt="Plan Vital"
                     width={520}
                     height={360}
-                    className=" w-full h-auto"
+                    className="w-full h-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                   />
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -205,13 +221,13 @@ export default function PlanesPage() {
                         Plan Integral
                       </h3>
                     </div>
-                    <p className="font-acumin text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8">
+                    <p className="font-acumin text-base md:text-lg text-teal-900 leading-relaxed tracking-tight mb-6 sm:mb-8">
                       Nuestro servicio más completo para pacientes con
                       necesidades complejas que requieren internación
                       domiciliaria de alta intensidad. Red de cuidados continua
                       y especializada.
                     </p>
-                    <ul className="font-acumin space-y-2 sm:space-y-3">
+                    <ul className="font-acumin text-base md:text-lg text-teal-900 leading-relaxed space-y-2 sm:space-y-3">
                       <li className="flex items-start">
                         <ChevronRight className="w-4 h-4 text-teal-200 mt-0.5 mr-2" />
                         <span>Internación domiciliaria con cobertura 24/7</span>
@@ -237,15 +253,20 @@ export default function PlanesPage() {
                       </li>
                     </ul>
                   </div>
-                  <div className="relative order-1 lg:order-2">
+                  <Link
+                    href={buildWhatsAppHref('Plan Integral')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative order-1 lg:order-2 rounded-xl transition-transform duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl"
+                  >
                     <Image
                       src="/images/plan-integral-card.png"
                       alt="Plan Integral"
                       width={520}
                       height={360}
-                      className=" w-full h-auto rounded-xl"
+                      className="w-full h-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                     />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -42,7 +42,7 @@ export default function Header() {
             <a href="/#nosotros" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
               Sobre nosotros
             </a>
-            <a href="/contacto" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
+            <a href="/#contacto" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
               Contáctanos
             </a>
 
@@ -101,7 +101,7 @@ export default function Header() {
                 Sobre nosotros
               </Link>
               <Link
-                href="/contacto"
+                href="#/contacto"
                 className="text-gray-700 hover:text-teal-600 transition-colors font-medium py-2 border-b border-gray-100"
                 onClick={() => setIsMenuOpen(false)}
               >

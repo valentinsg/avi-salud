@@ -12,9 +12,17 @@ type PlanCardProps = {
   plan: Plan
   ctaHref?: string | ((plan: Plan) => string)
   ctaLabel?: string
+  useWhatsApp?: boolean
+  whatsAppPhone?: string
 }
 
-export function PlanCard({ plan, ctaHref = "/planes", ctaLabel = "Más información" }: PlanCardProps) {
+export function PlanCard({
+  plan,
+  ctaHref = "/planes",
+  ctaLabel = "Más información",
+  useWhatsApp = false,
+  whatsAppPhone,
+}: PlanCardProps) {
   const variantClasses =
     plan.id === "integral"
       ? "bg-teal-700 border-2 border-teal-50"
@@ -25,7 +33,18 @@ export function PlanCard({ plan, ctaHref = "/planes", ctaLabel = "Más informaci
   const textColorTitle = plan.id === "integral" ? "text-white" : "text-teal-600"
   const textColorDesc = plan.id === "integral" ? "text-gray-100" : "text-gray-600"
 
-  const computedHref = typeof ctaHref === "function" ? ctaHref(plan) : ctaHref
+  const computedHref = (() => {
+    if (useWhatsApp) {
+      const phone =
+        whatsAppPhone || process.env.NEXT_PUBLIC_WHATSAPP_PHONE || "5492235306250"
+      const text = encodeURIComponent(
+        `Quiero consultar sobre este plan: ${plan.titulo}`
+      )
+      return `https://wa.me/${phone}?text=${text}`
+    }
+    return typeof ctaHref === "function" ? ctaHref(plan) : ctaHref
+  })()
+  const isExternal = computedHref.startsWith("http")
 
   return (
     <Card
@@ -77,7 +96,11 @@ export function PlanCard({ plan, ctaHref = "/planes", ctaLabel = "Más informaci
           </ul>
         </div>
         <div className="flex justify-center w-full mt-6 sm:mt-6">
-          <Link href={computedHref} className="w-full sm:w-auto">
+          <Link
+            href={computedHref}
+            className="w-full sm:w-auto"
+            {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          >
             <Button
               className={`${
                 plan.id === "integral"
