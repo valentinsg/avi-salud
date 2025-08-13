@@ -17,7 +17,9 @@ export default function HomePage() {
           src="/images/nurse-patient-care.jpg"
           alt="Enfermera cuidando paciente"
           fill
-          className="object-cover object-center md:object-[60%_center] w-full h-full"
+          priority
+          sizes="100vw"
+          className="object-cover w-full h-full object-center sm:object-[45%_center] md:object-[60%_center] lg:object-[65%_center] xl:object-[68%_center] 2xl:object-[70%_center]"
         />
         <div className="absolute inset-0 bg-teal-300 bg-opacity-10" />
 
@@ -182,16 +184,14 @@ export default function HomePage() {
                 </span>
               </h2>
 
-              <p
-                className="text-lg font-acumin md:text-xl mt-4 md:mt-0 mb-6 md:mb-8 text-white text-left"
-              >
+              <p className="text-lg font-acumin md:text-xl mt-4 md:mt-0 mb-6 md:mb-8 text-white text-left">
                 Somos una empresa de internación domiciliaria cuyo propósito
                 esencial se encuentra reflejado en su propio nombre:
               </p>
 
               <div className="text-left -mb-4 md:-mb-0">
                 <a href="#contacto">
-                  <Button className="bg-teal-50 hover:bg-teal-700 hover:text-white text-teal-600 font-bold rounded-full px-6 py-2 text-base">
+                  <Button className="bg-teal-50 font-acumin hover:bg-teal-700 hover:text-white text-teal-600 font-bold rounded-full px-6 py-2 text-base">
                     Contáctanos
                   </Button>
                 </a>
@@ -199,64 +199,21 @@ export default function HomePage() {
             </div>
 
             {/* Center Panel - Doctor Image */}
-            <div className="bg-transparent rounded-3xl p-4 relative md:flex md:justify-center">
-              <div
-                className="relative rounded-3xl flex flex-col md:flex-row items-center justify-between max-w-3xl md:max-w-2xl lg:max-w-xl"
-                style={{
-                  background:
-                    'linear-gradient(to top, #0d9488 0%, #0d9488 65%, transparent 65%, transparent 65%)',
-                }}
-              >
-                {/* Equipo multidisciplinario box - positioned in the white space near doctor's head */}
-                <div className="absolute hidden lg:block lg:right-0 text-center md:right-0 top-2 md:top-6 bg-teal-800 rounded-3xl p-4 md:p-3 text-white max-w-full md:max-w-[325px] shadow-lg z-5">
-                  <p
-                    className="text-md md:text-sm font-bold"
-                  >
-                    <span className="text-md md:text-sm font-extrabold">
-                      Equipo multidisciplinario:
-                    </span>{' '}
-                    Profesionales capacitados en atención domiciliaria.
-                  </p>
-                </div>
-                <Image
-                  src="/images/doctor-consultation.png"
-                  alt="Doctor profesional de AVI Salud"
-                  width={380}
-                  height={380}
-                  className="rounded-xl md:-ml-4 mb-0.5 md:-mb-0.5 mt-2 md:mt-0"
-                />
-                {/* El h3 está alineado a la derecha del contenedor en desktop, oculto en móvil */}
-                <h3
-                  className="hidden md:block text-2xl text-teal-50 font-bold text-left mt-28 pr-8"
-                  style={{
-                    fontFamily: 'Cocogoose ProTrial, sans-serif',
-                    lineHeight: 1.25,
-                  }}
-                >
-                  Acompañar de manera vital e Integral a la Salud de cada
-                  paciente.
-                </h3>
-              </div>
-
-              {/* Texto fuera del contenedor verde, debajo */}
-              <h3
-                className="text-lg md:text-2xl text-teal-50 font-bold text-center md:hidden mt-4 pr-0"
-                style={{
-                  fontFamily: 'Cocogoose ProTrial, sans-serif',
-                  lineHeight: 1.25,
-                }}
-              >
-                Acompañar de manera vital e Integral a la Salud de cada
-                paciente.
-              </h3>
+            <div className="bg-transparent rounded-3xl relative md:flex md:justify-center">
+              <Image
+                src="/images/doc-workbench.png"
+                alt="Doctor en consultorio"
+                width={625}
+                height={625}
+                className="rounded-3xl"
+              />
             </div>
           </div>
         </div>
         {/* Bottom Text */}
         <div className="text-center relative z-20 mt-8 mb-8">
           <h2
-            className="text-xl font-light text-teal-50 tracking-tight"
-            style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
+            className="text-xl font-acumin text-teal-500 tracking-tight"
           >
             Estamos para acompañarte
           </h2>
@@ -341,11 +298,6 @@ export default function HomePage() {
             className="object-cover object-center md:object-center"
             priority
           />
-        </div>
-        <div className="container mx-auto px-4 md:px-6 relative z-5 w-full">
-          <div className="flex flex-col items-center text-center md:block md:text-left">
-            {/* Añade aquí contenido si es necesario; centrado en mobile */}
-          </div>
         </div>
       </section>
 

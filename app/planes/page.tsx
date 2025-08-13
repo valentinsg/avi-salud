@@ -75,7 +75,7 @@ export default function PlanesPage() {
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-teal-600 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                     <Plus className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <h3 className="font-cocogoose text-2xl sm:text-3xl font-bold text-teal-600">
+                  <h3 className="font-cocogoose text-2xl sm:text-3xl text-teal-600">
                     Plan Acompañar
                   </h3>
                 </div>
