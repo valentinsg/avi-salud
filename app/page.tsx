@@ -19,7 +19,7 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover w-full h-full object-center sm:object-[45%_center] md:object-[60%_center] lg:object-[65%_center] xl:object-[68%_center] 2xl:object-[70%_center]"
+          className="object-cover w-full h-full object-[85%_center] sm:object-[45%_center] md:object-[60%_center] lg:object-[65%_center] xl:object-[68%_center] 2xl:object-[70%_center]"
         />
         <div className="absolute inset-0 bg-teal-300 bg-opacity-10" />
 
@@ -30,11 +30,11 @@ export default function HomePage() {
               <h1 className="font-acumin leading-[0.9] text-4xl text-left sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-teal-50 drop-shadow-md">
                 Cuidamos a<br />
                 los que{' '}
-                <span className="font-acumin text-teal-50 md:text-teal-800 drop-shadow-md">
+                <span className="font-acumin text-teal-300 md:text-teal-800 drop-shadow-md">
                   más
                 </span>
                 <br />
-                <span className="font-acumin text-teal-50 md:text-teal-800 drop-shadow-md">
+                <span className="font-acumin text-teal-300 md:text-teal-800 drop-shadow-md">
                   {' '}
                   te cuidaron
                 </span>

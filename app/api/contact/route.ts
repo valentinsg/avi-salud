@@ -9,15 +9,52 @@ export async function POST(request: Request) {
 
     // Enviar email usando Resend API si está disponible
     const RESEND_API_KEY = process.env.RESEND_API_KEY || process.env.AVI_SALUD_EMAIL
-    const to = 'sanchezguevaravalentin@gmail.com'
-    const subject = `Nueva consulta desde AVI Salud: ${nombre} ${apellido}`
+    const to = 'info@avisalud.com.ar'
+    const subject = `Nueva consulta • AVI Salud — ${nombre} ${apellido}`
+    const createdAt = new Date().toLocaleString('es-AR', { hour12: false })
     const html = `
-      <h2>Nueva consulta</h2>
-      <p><strong>Nombre:</strong> ${nombre} ${apellido}</p>
-      <p><strong>Email:</strong> ${mail}</p>
-      <p><strong>Consulta:</strong></p>
-      <p>${consulta}</p>
+      <table width="100%" cellpadding="0" cellspacing="0" style="font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; background:#f7faf9; padding:24px;">
+        <tr>
+          <td align="center">
+            <table width="100%" cellpadding="0" cellspacing="0" style="max-width:640px; background:#ffffff; border-radius:12px; overflow:hidden; border:1px solid #e5e7eb;">
+              <tr>
+                <td style="background:#0d9488; color:#ecfeff; padding:16px 20px; font-weight:700; font-size:18px;">
+                  Nueva consulta — AVI Salud
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:20px; color:#0f172a;">
+                  <p style="margin:0 0 8px; font-size:14px; color:#475569;">Fecha: ${createdAt}</p>
+                  <table cellpadding="0" cellspacing="0" style="width:100%; margin-top:8px;">
+                    <tr>
+                      <td style="width:160px; padding:6px 0; color:#64748b; font-weight:600;">Nombre</td>
+                      <td style="padding:6px 0; color:#0f172a;">${nombre} ${apellido}</td>
+                    </tr>
+                    <tr>
+                      <td style="width:160px; padding:6px 0; color:#64748b; font-weight:600;">Email</td>
+                      <td style="padding:6px 0; color:#0f172a;">${mail}</td>
+                    </tr>
+                    <tr>
+                      <td style="width:160px; padding:10px 0; color:#64748b; font-weight:600; vertical-align:top;">Consulta</td>
+                      <td style="padding:10px 0; color:#0f172a; white-space:pre-wrap;">${consulta}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="background:#f1f5f9; color:#334155; padding:16px 20px; font-size:12px;">
+                  Responder a este correo responde al remitente por defecto. Para contactar al interesado, responder a <strong>${mail}</strong>.
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
     `
+
+    if (!RESEND_API_KEY) {
+      return NextResponse.json({ error: 'Falta RESEND_API_KEY (o AVI_SALUD_EMAIL) en .env.local. Reinicia el server tras agregarla.' }, { status: 500 })
+    }
 
     if (RESEND_API_KEY) {
       const res = await fetch('https://api.resend.com/emails', {
@@ -31,6 +68,7 @@ export async function POST(request: Request) {
           to,
           subject,
           html,
+          reply_to: mail,
         }),
       })
       if (!res.ok) {
