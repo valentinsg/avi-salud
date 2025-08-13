@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     }
 
     // Enviar email usando Resend API si está disponible
-    const RESEND_API_KEY = process.env.RESEND_API_KEY
+    const RESEND_API_KEY = process.env.RESEND_API_KEY || process.env.AVI_SALUD_EMAIL
     const to = 'sanchezguevaravalentin@gmail.com'
     const subject = `Nueva consulta desde AVI Salud: ${nombre} ${apellido}`
     const html = `

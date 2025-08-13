@@ -17,7 +17,7 @@ export default function HomePage() {
           src="/images/nurse-patient-care.jpg"
           alt="Enfermera cuidando paciente"
           fill
-          className="object-cover  w-full h-full mt-20"
+          className="object-cover object-center md:object-[60%_center] w-full h-full"
         />
         <div className="absolute inset-0 bg-teal-300 bg-opacity-10" />
 

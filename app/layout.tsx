@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
+import { acumin, cocogoose } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,16 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
-      </head>
-      <body suppressHydrationWarning>
+      <head></head>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} ${cocogoose.variable} ${acumin.variable}`} suppressHydrationWarning>
         <Header />
         {children}
         <Footer />
