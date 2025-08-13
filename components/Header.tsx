@@ -36,9 +36,7 @@ export default function Header() {
             <a href="/planes" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
               Planes
             </a>
-            <a href="/empresas" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
-              Empresas
-            </a>
+            {/* Corporativo es privado: no indexar en navbar */}
             <a href="/#nosotros" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
               Sobre nosotros
             </a>
@@ -86,13 +84,7 @@ export default function Header() {
               >
                 Planes
               </Link>
-              <Link
-                href="/empresas"
-                className="text-gray-700 hover:text-teal-600 transition-colors font-medium py-2 border-b border-gray-100"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Empresas
-              </Link>
+              {/* Corporativo es privado: no indexar en navbar móvil */}
               <Link
                 href="/#nosotros"
                 className="text-gray-700 hover:text-teal-600 transition-colors font-medium py-2 border-b border-gray-100"

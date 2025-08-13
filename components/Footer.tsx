@@ -60,11 +60,7 @@ export default function Footer() {
                   Equipo médico
                 </a>
               </li>
-              <li>
-                <a href="/empresas" className="hover:text-white transition-colors">
-                  Empresas
-                </a>
-              </li>
+              {/* Corporativo es privado: no indexar en footer */}
               <li>
                 <a href="/contacto" className="hover:text-white transition-colors">
                   Contacto
