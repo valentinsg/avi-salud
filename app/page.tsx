@@ -25,14 +25,14 @@ export default function HomePage() {
         <div className="absolute inset-0 flex items-start md:items-center text-left px-2 sm:px-6 lg:px-10">
           <div className="container mx-auto">
             <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-xl font-medium mt-[55%] mr-8 md:mr-0 md:mt-20 md:ml-8 lg:ml-0 tracking-widest">
-              <h1 className="font-cucumin leading-[0.9] text-4xl text-left sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-teal-50 drop-shadow-md">
+              <h1 className="font-acumin leading-[0.9] text-4xl text-left sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-teal-50 drop-shadow-md">
                 Cuidamos a<br />
                 los que{' '}
-                <span className="font-cucumin text-teal-50 md:text-teal-800 drop-shadow-md">
+                <span className="font-acumin text-teal-50 md:text-teal-800 drop-shadow-md">
                   más
                 </span>
                 <br />
-                <span className="font-cucumin text-teal-50 md:text-teal-800 drop-shadow-md">
+                <span className="font-acumin text-teal-50 md:text-teal-800 drop-shadow-md">
                   {' '}
                   te cuidaron
                 </span>
@@ -172,19 +172,18 @@ export default function HomePage() {
                   className="bg-teal-50 rounded-full"
                 />
               </div>
-              <h2 className="font-cocogoose leading-[0.9] text-left mb-1 md:mb-4">
-                <span className="font-cocogoose leading-[0.9] text-teal-500 text-3xl md:text-5xl text-shadow-lg font-bold">
+              <h2 className="font-cocogoose text-left mb-1 md:mb-4">
+                <span className=" text-teal-500 text-3xl md:text-5xl text-shadow-lg ">
                   Sobre
                 </span>
                 <br />
-                <span className="font-cocogoose leading-[0.9] text-teal-50 text-3xl md:text-5xl text-shadow-lg font-bold">
+                <span className="leading-[0.9] text-teal-50 text-3xl md:text-5xl text-shadow-lg">
                   Nosotros
                 </span>
               </h2>
 
               <p
-                className="text-lg md:text-xl mt-4 md:mt-0 mb-6 md:mb-8 text-white text-left"
-                style={{ fontFamily: 'Acumin Variable Concept, sans-serif' }}
+                className="text-lg font-acumin md:text-xl mt-4 md:mt-0 mb-6 md:mb-8 text-white text-left"
               >
                 Somos una empresa de internación domiciliaria cuyo propósito
                 esencial se encuentra reflejado en su propio nombre:
@@ -212,7 +211,6 @@ export default function HomePage() {
                 <div className="absolute hidden lg:block lg:right-0 text-center md:right-0 top-2 md:top-6 bg-teal-800 rounded-3xl p-4 md:p-3 text-white max-w-full md:max-w-[325px] shadow-lg z-5">
                   <p
                     className="text-md md:text-sm font-bold"
-                    style={{ fontFamily: 'Cocogoose ProTrial, sans-serif' }}
                   >
                     <span className="text-md md:text-sm font-extrabold">
                       Equipo multidisciplinario:
@@ -317,10 +315,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          <h2 className="font-cucumin leading-[1.1] text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center sm:text-left ml-0 sm:ml-4 md:ml-6 text-teal-50 tracking-tighter drop-shadow-xs px-4 sm:px-0 mb-6 sm:mb-8">
+          <h2 className="font-acumin leading-[1.1] text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center sm:text-left ml-0 sm:ml-4 md:ml-6 text-teal-50 tracking-tighter drop-shadow-xs px-4 sm:px-0 mb-6 sm:mb-8">
             Encontrá el mejor plan para <br className="hidden sm:block" />
             cuidar a quien{' '}
-            <span className="font-cucumin text-teal-800 text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl ">
+            <span className="font-acumin text-teal-800 text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl ">
               más querés
             </span>
           </h2>
@@ -364,14 +362,14 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row gap-6 items-start justify-center">
             <div className="w-full lg:flex-1 lg:max-w-md xl:max-w-lg mx-auto lg:mx-0">
               <div className="text-center mb-4 sm:mb-6">
-                <h2 className="font-cocogoose text-2xl sm:text-3xl tracking-tighter leading-tighter font-normal text-teal-500">
+                <h2 className="font-acumin text-2xl sm:text-3xl tracking-tighter leading-tighter font-normal text-teal-500">
                   Realiza tu consulta
                 </h2>
               </div>
               <ContactForm />
             </div>
 
-            <div className="flex flex-col gap-4 flex-1 max-w-lg mx-auto lg:mx-0 mt-8 lg:mt-auto">
+            <div className="flex flex-col font-acumin gap-4 flex-1 max-w-lg mx-auto lg:mx-0 mt-8 lg:mt-auto">
               <Card className="bg-teal-500 text-teal-50 shadow-lg rounded-2xl sm:rounded-3xl">
                 <CardContent className="p-6 sm:p-6">
                   <div className="space-y-4">
@@ -386,7 +384,7 @@ export default function HomePage() {
                           <path d="M16 3C9.373 3 4 8.373 4 15c0 2.637.844 5.18 2.441 7.34L4 29l6.879-2.262A12.93 12.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.98 0-3.92-.52-5.6-1.5l-.4-.23-4.08 1.34 1.34-4.08-.23-.4A10.97 10.97 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.09-7.41c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.97.95-.97 2.31 0 1.36.99 2.68 1.13 2.87.14.18 1.95 2.98 4.73 4.06.66.28 1.18.45 1.58.58.66.21 1.26.18 1.73.11.53-.08 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.18-.53-.32z" />
                         </svg>
                       </div>
-                      <span className="text-white font-semibold text-base sm:text-lg md:text-xl">
+                      <span className="text-white  text-base sm:text-lg md:text-xl">
                         +54 9 223 530 6250
                       </span>
                     </div>
@@ -394,7 +392,7 @@ export default function HomePage() {
                       <div className="w-7 h-7 sm:w-8 sm:h-8 bg-teal-700 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                         <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                       </div>
-                      <span className="text-white font-semibold text-base sm:text-lg md:text-xl">
+                      <span className="text-white text-base sm:text-lg md:text-xl">
                         info@avisalud.com.ar
                       </span>
                     </div>
@@ -402,7 +400,7 @@ export default function HomePage() {
                       <div className="w-7 h-7 sm:w-8 sm:h-8 bg-teal-700 rounded-full flex items-center justify-center mr-3 sm:mr-4">
                         <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                       </div>
-                      <span className="text-white font-semibold text-base sm:text-lg md:text-xl">
+                      <span className="text-white text-base sm:text-lg md:text-xl">
                         Av. Colón 3095
                       </span>
                     </div>

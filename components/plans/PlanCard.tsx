@@ -63,7 +63,7 @@ export function PlanCard({
             />
           </div>
           <h3
-            className={`font-cocogoose text-2xl sm:text-3xl md:text-4xl font-semibold sm:p-4 md:p-5 mb-3 sm:mb-2 md:mb-2 -tracking-wider leading-tighter ${textColorTitle}`}
+            className={`font-acumin text-2xl sm:text-3xl md:text-4xl font-semibold sm:p-4 md:p-5 mb-3 sm:mb-2 md:mb-2 -tracking-wider leading-tighter ${textColorTitle}`}
           >
             {plan.titulo}
           </h3>

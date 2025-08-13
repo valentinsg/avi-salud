@@ -30,7 +30,7 @@ export default function CorporativoPage() {
 
           {/* Title */}
           <div className="text-left relative z-20 mb-16 pt-8 md:pt-10">
-            <h1 className="font-cucumin text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tight">
+            <h1 className="font-acumin text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tight">
               <span className="block text-3xl md:text-4xl lg:text-5xl text-teal-600">
                 SERVICIOS
               </span>

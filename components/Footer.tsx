@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-teal-700 text-white py-8 sm:py-24 font-cocogoose">
+    <footer className="relative font-acumin overflow-hidden bg-teal-700 text-white py-8 sm:py-24 font-cocogoose">
       <Image
         src="/images/light-geometric-bg.png"
         alt="Fondo de fondo geometrico"

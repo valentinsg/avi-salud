@@ -41,7 +41,7 @@ export default function PlanesPage() {
         {/* Content */}
         <div className="container relative z-20 flex flex-col justify-center items-center font-congoose mx-auto px-4 sm:px-5">
           <div className="text-left relative z-20 mb-12 md:mb-16 pt-6 self-start">
-            <h1 className="font-cucumin text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tight">
+            <h1 className="font-acumin text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tight">
               <span className="block text-3xl md:text-4xl lg:text-5xl text-teal-600">
                 NUESTROS
               </span>
