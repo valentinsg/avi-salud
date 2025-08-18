@@ -26,17 +26,11 @@ export default function HomePage() {
         {/* Content */}
         <div className="absolute inset-0 flex items-start md:items-center text-left px-2 sm:px-6 lg:px-10">
           <div className="container mx-auto">
-            <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-xl font-medium mt-[55%] mr-8 md:mr-0 md:mt-20 md:ml-8 lg:ml-0 tracking-widest">
+            <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-2xl font-medium mt-[55%] mr-8 md:mr-0 md:mt-20 md:ml-8 lg:ml-0 tracking-widest">
               <h1 className="font-acumin leading-[0.9] text-4xl text-left sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-teal-50 drop-shadow-md">
-                Cuidamos a<br />
-                los que{' '}
+                Somos el cuidado vital incorporado a <br />
                 <span className="font-acumin text-teal-300 md:text-teal-800 drop-shadow-md">
-                  más
-                </span>
-                <br />
-                <span className="font-acumin text-teal-300 md:text-teal-800 drop-shadow-md">
-                  {' '}
-                  te cuidaron
+                  la calidez de tu hogar
                 </span>
               </h1>
 
@@ -65,15 +59,6 @@ export default function HomePage() {
               d="M0,600 C0,50 0,0 6700,7000 C350,345 600,100 450,100 C-1500,100 20,100 0,100 L0,350 L1440,320 Z"
             />
           </svg>
-          <div className="absolute inset-0">
-            <Image
-              src="/images/light-geometric-bg.png"
-              alt="Fondo geométrico"
-              fill
-              className="object-cover scale-100 opacity-80"
-            />
-            <div className="absolute inset-0"></div>
-          </div>
         </div>
 
         {/* Button positioned in the white curved area - visible only on md and larger screens */}
@@ -160,17 +145,17 @@ export default function HomePage() {
           <div className="absolute inset-0"></div>
         </div>
 
-        <div className="mx-auto relative md:top-[20%] px-4 md:px-6 py-12 md:py-20 z-3 flex justify-center items-center">
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+        <div className="mx-auto relative md:top-[20%] px-4 md:px-2 py-12 md:py-20 z-3 flex justify-center items-center">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-2">
             {/* Left Panel - Sobre Nosotros */}
-            <div className="bg-teal-800 rounded-3xl max-w-xl md:max-w-lg px-8 text-white relative shadow-2xl py-20 mt-auto md:mx-auto">
+            <div className="bg-teal-800 rounded-3xl max-w-lg md:max-w-[450px] px-8 text-white relative shadow-2xl py-16 mt-auto md:mx-auto">
               {/* Heart icon positioned absolutely */}
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
                 <Image
                   src="/images/home-avi.png"
                   alt="Logo AVI Salud"
-                  width={60}
-                  height={60}
+                  width={80}
+                  height={80}
                   className="bg-teal-50 rounded-full"
                 />
               </div>
@@ -185,8 +170,11 @@ export default function HomePage() {
               </h2>
 
               <p className="text-lg font-acumin md:text-xl mt-4 md:mt-0 mb-6 md:mb-8 text-white text-left">
-                Somos una empresa de internación domiciliaria cuyo propósito
-                esencial se encuentra reflejado en su propio nombre:
+                Somos un sistema de salud que lleva el consultorio, el laboratorio y la internación a tu hogar.
+              </p>
+
+              <p className="text-lg font-acumin md:text-xl mt-4 md:mt-0 mb-6 md:mb-8 text-white text-left">
+                Diseñamos una experiencia médica completa, sin traslados ni esperas, adaptada al ritmo de tu vida. Todo lo que necesitás para estar bien, donde más seguro estás.
               </p>
 
               <div className="text-left -mb-4 md:-mb-0">
@@ -203,8 +191,8 @@ export default function HomePage() {
               <Image
                 src="/images/doc-workbench.png"
                 alt="Doctor en consultorio"
-                width={625}
-                height={625}
+                width={700}
+                height={700}
                 className="rounded-3xl"
               />
             </div>
@@ -212,9 +200,7 @@ export default function HomePage() {
         </div>
         {/* Bottom Text */}
         <div className="text-center relative z-20 mt-8 mb-8">
-          <h2
-            className="text-xl font-acumin text-teal-500 tracking-tight"
-          >
+          <h2 className="text-xl font-acumin text-teal-500 tracking-tight">
             Estamos para acompañarte
           </h2>
         </div>
