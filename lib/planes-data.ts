@@ -10,44 +10,23 @@ export const planesData: Plan[] = [
   {
     id: 'acompanar',
     titulo: 'Plan Acompañar',
-    descripcion: [
-      'Supervisión y asistencia leve',
-      'Ideal para adultos mayores',
-      'Contención y apoyo emocional',
-      'Seguimiento de recuperación',
-    ],
+    descripcion: 'Un plan de salud preventivo, enfocado en brindar servicios esenciales para pacientes con necesidades básicas de atención domiciliaria, o bien, un servicio de asistencia constante.',
     icono: '/images/medical-cross-icon.png',
     alt: 'Plan Acompañar',
   },
   {
-    id: 'integral',
-    titulo: 'Plan Integral',
-    descripcion: [
-      'Internación domiciliaria de alta intensidad',
-      'Red de cuidados continua 24/7',
-      'Equipo médico especializado',
-      'Monitoreo avanzado de signos vitales',
-      'Respuesta inmediata ante emergencias',
-      'Gestión integral de medicamentos',
-      'Cuidados paliativos especializados',
-      'Plan de tratamiento personalizado',
-    ],
-    icono: '/images/stethoscope-icon.png',
-    alt: 'Plan Integral',
-  },
-  {
     id: 'vital',
     titulo: 'Plan Vital',
-    descripcion: [
-      'Atención médica frecuente',
-      'Patologías agudas y crónicas',
-      'Abordaje clínico intensivo',
-      'Monitoreo especializado',
-      'Tratamientos domiciliarios',
-      'Coordinación con estudios',
-    ],
+    descripcion: 'Plan de rehabilitación diseñado para pacientes con necesidades moderadas o manejo de enfermedades crónicas estables que necesitan atención intermedia prolongada.',
     icono: '/images/heartbeat-icon.png',
     alt: 'Plan Vital',
+  },
+  {
+    id: 'integral',
+    titulo: 'Plan Integral',
+    descripcion: 'Plan que se ajusta a cada paciente de alta complejidad con necesidades avanzadas, como cuidados paliativos, manejo integral de enfermedades complejas o internación domiciliaria completa.',
+    icono: '/images/stethoscope-icon.png',
+    alt: 'Plan Integral',
   },
 ]
 

@@ -4,7 +4,7 @@ import {
   ArrowDown,
   ChevronRight,
   Plus,
-  Stethoscope
+  Stethoscope,
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -46,15 +46,20 @@ export default function PlanesPage() {
         </div>
 
         {/* Content */}
-        <div className="container relative z-20 flex flex-col justify-center items-center font-congoose mx-auto px-4 sm:px-5">
+        <div className="container relative z-20 flex flex-col justify-center items-center font-congoose mx-auto px-4 sm:px-4">
           <div className="text-left relative z-20 mb-12 md:mb-16 pt-6 self-start">
-            <h1 className="font-acumin text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tight">
+            <h1 className="font-cocogoose text-4xl md:text-5xl lg:text-5xl font-bold leading-tight">
               <span className="block text-3xl md:text-4xl lg:text-5xl text-teal-50 sm:text-teal-600">
-                NUESTROS
+                Nuestros
               </span>
-              <span className="block text-teal-50 sm:text-teal-900">PLANES</span>
+              <span className="block text-teal-50 sm:text-teal-900">
+                Planes
+              </span>
             </h1>
           </div>
+          <p className="text-teal-50 text-2xl font-acumin mt-2 mb-8">
+            Planes de Salud Complementarios Diseñados para el domicilio.
+          </p>
           <PlansGrid
             useWhatsApp
             whatsAppPhone={process.env.NEXT_PUBLIC_WHATSAPP_PHONE}
@@ -66,7 +71,7 @@ export default function PlanesPage() {
       <section id="planes" className="relative w-full">
         <div
           id="plan-acompanar"
-          className="relative overflow-hidden w-full py-8 md:py-10 lg:py-12 min-h-[80vh]"
+          className="relative overflow-hidden w-full py-8 md:py-10 lg:py-12 min-h-[90vh] flex items-center"
         >
           {/* Imagen de fondo difuminada */}
           <div
@@ -79,7 +84,7 @@ export default function PlanesPage() {
           />
 
           <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto py-3 px-4 sm:px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-20 items-center">
               <div className="order-2 lg:order-1">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-teal-700 rounded-2xl flex items-center justify-center text-white shadow-md">
@@ -95,35 +100,34 @@ export default function PlanesPage() {
                   </div>
                 </div>
                 <p className="font-acumin text-base md:text-lg text-teal-700 leading-relaxed tracking-tight mb-6 sm:mb-8 max-w-md">
-                  Orientado a brindar contención, apoyo y seguimiento a
-                  pacientes que requieren supervisión o asistencia leve en el
-                  hogar. Ideal para adultos mayores o personas en recuperación
-                  leve.
+                  Un plan de salud preventivo, enfocado en brindar servicios
+                  esenciales para pacientes con necesidades básicas de atención
+                  domiciliaria, o bien, un servicio de asistencia constante.
                 </p>
                 <div className="bg-white rounded-3xl shadow-xl p-4 sm:p-5 md:p-6 max-w-md">
                   <ul className="font-acumin text-base md:text-lg text-teal-900 leading-relaxed space-y-3">
                     <li className="flex items-start">
                       <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
                       <span className="text-teal-700 font-semibold">
-                        Supervisión y asistencia leve en el hogar
+                        Acompañamiento domiciliario no médico
                       </span>
                     </li>
                     <li className="flex items-start">
                       <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
                       <span className="text-teal-700 font-semibold">
-                        Ideal para adultos mayores
+                        Visitas periódicas de profesionales de la salud
                       </span>
                     </li>
                     <li className="flex items-start">
                       <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
                       <span className="text-teal-700 font-semibold">
-                        Contención y apoyo emocional
+                        Control de signos vitales y medicación
                       </span>
                     </li>
                     <li className="flex items-start">
                       <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
                       <span className="text-teal-700 font-semibold">
-                        Seguimiento de recuperación
+                        Comunicación constante con la familia
                       </span>
                     </li>
                   </ul>
@@ -133,27 +137,171 @@ export default function PlanesPage() {
                 href={buildWhatsAppHref('Plan Acompañar')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative order-1 lg:order-2 w-full overflow-hidden rounded-[40px] sm:rounded-[48px] transition-transform duration-500 ease-out hover:-translate-y-2"
+                className="group relative order-1 lg:order-2 w-full overflow-hidden rounded-[40px] sm:rounded-[40px] transition-transform duration-500 ease-out hover:-translate-y-2"
               >
                 <Image
                   src="/images/plan-acompanar-card.png"
                   alt="Plan Acompañar"
-                  width={560}
+                  width={525}
                   height={500}
-                  sizes="(min-width: 1024px) 560px, 100vw"
-                  className="w-full h-auto object-cover"
+                  sizes="(min-width: 800px) 500px, 60vw"
                   style={{ borderRadius: 'inherit' }}
                 />
                 <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm shadow-[0_8px_18px_rgba(0,0,0,0.12)] rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center ring-1 ring-teal-200/60">
                   <Plus className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600" />
                 </div>
-                <div className="absolute left-3 bottom-3 sm:left-5 sm:bottom-5 bg-white rounded-[22px] sm:rounded-[32px] px-4 sm:px-6 py-2.5 sm:py-4 shadow-[0_12px_28px_rgba(0,0,0,0.12)] flex items-center gap-2 sm:gap-3">
-                  <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-teal-600 text-white flex items-center justify-center">
-                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </div>
-                  <span className="font-acumin text-teal-800 text-sm sm:text-lg font-semibold">Plan Acompañar</span>
-                </div>
               </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative w-full py-2 flex bg-avi-teal-medium items-center justify-center">
+          <div className="flex items-center gap-2 mr-[47%]">
+            <Image
+              src="/images/avi-logo-blanco.png"
+              alt="Avi Salud"
+              width={100}
+              height={100}
+              className="w-12 h-12"
+            />
+            <h3 className="text-xl md:text-2xl font-acumin font-light text-teal-50 text-left">
+              Requerimientos incluidos en Plan Acompañar en tu hogar:
+            </h3>
+          </div>
+        </div>
+
+        {/* Lista detallada de servicios incluidos en Plan Acompañar */}
+        <div className="relative w-full py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              {/* Columna izquierda */}
+              <div className="space-y-6">
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    ADMISIÓN CLÍNICA - 1 CONSULTA / AÑO
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    Visita programada de un médico general al ingreso.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    MÉDICINA CLÍNICA - 2 CONSULTAS / MES
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    Consultas virtuales programadas de un médico generalista.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    ODONTOLOGÍA - 1 CONSULTA / AÑO
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    Visita programada de control para garantizar la salud bucal.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    REHABILITACIÓN - 5 SESIONES / AÑO
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    Ejercicios supervisados para mejorar la movilidad.
+                    Fisioterapia, kinesiología, Fonoaudiología o terapia
+                    ocupacional ligera.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    NUTRICIÓN - 2 CONSULTAS / AÑO
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    Plan alimenticio personalizado con seguimiento.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    SALUD MENTAL - 2 SESIONES / AÑO
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    Psicología y/o terapia emocional.
+                  </p>
+                </div>
+              </div>
+
+              {/* Columna derecha */}
+              <div className="space-y-6">
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    ENFERMERÍA - 1 VISITA / MES
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    Toma de signos vitales (presión arterial, temperatura,
+                    frecuencia cardíaca). Administración de medicamentos
+                    prescritos (oral, tópico o inyectable). Curaciones simples
+                    de heridas.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    CUIDADOR - 60 HORAS / AÑO
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    Se habilitan 15 horas por trimestre.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    ANÁLISIS CLÍNICOS - 1 CONTROL / AÑO
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    APB, Hemograma, Eritrosedimentación, Proteína C reactiva,
+                    Glucemia, Perfil lipoproteico básico, Hepatograma, Gamma
+                    glutamil transpeptidasa, Uremia, Tonograma sérico, Calcemia,
+                    Magnesemia, Fosfatemia, TSH, T4 libre, Uricemia,
+                    Albuminemia, Proteínas totales, Vitamina D total, Vitamina
+                    B12, Ácido fólico, PSA - antígeno prostático específico. A
+                    partir del 3er mes.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    DIAGNÓSTICO POR IMÁGEN - 1 PRÁCTICA / AÑO
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    Estudios de imagenología, ecografías.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <h4 className="text-lg font-cocogoose text-avi-teal-dark mb-3">
+                    TRASLADOS EN AMBULANCIA - 2 TRASLADOS / MES
+                  </h4>
+                  <p className="text-gray-700 font-acumin">
+                    Servicios de traslado y asistencia en casos de emergencia,
+                    priorizando la seguridad del paciente, hasta 2 por mes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Sección inferior que abarca ambas columnas */}
+            <div className="mt-12 bg-avi-teal-dark rounded-2xl p-8 shadow-lg">
+              <h4 className="text-xl font-cocogoose text-white mb-4 text-center">
+                INCLUYE:
+              </h4>
+              <p className="text-white font-acumin text-center text-lg">
+                Coordinador/a de ID. Personal administrativo (gestión de
+                autorizaciones y registros). Historia Clínica Digital
+                (registros, asistencias, evoluciones). Agenda de servicios.
+              </p>
             </div>
           </div>
         </div>
@@ -162,7 +310,7 @@ export default function PlanesPage() {
           {/* Vital */}
           <div
             id="plan-vital"
-            className="relative overflow-hidden w-full py-10 md:py-12 lg:py-16 min-h-[75vh]"
+            className="relative overflow-hidden w-full py-10 md:py-12 lg:py-16 min-h-screen flex items-center"
           >
             {/* Imagen de fondo difuminada */}
             <div
@@ -233,13 +381,13 @@ export default function PlanesPage() {
                   <Image
                     src="/images/plan-vital-card.png"
                     alt="Plan Vital"
-                    width={520}
-                    height={360}
-                    sizes="(min-width: 1024px) 520px, 100vw"
-                    className="w-full h-auto object-cover transition-transform duration-500 border-none"
+                    width={525}
+                    height={500}
+                    sizes="(min-width: 800px) 500px, 60vw"
+                    style={{ borderRadius: 'inherit' }}
                   />
-                    <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm shadow-[0_8px_18px_rgba(0,0,0,0.12)] rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center ring-1 ring-teal-200/60">
-                      <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600" />
+                  <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm shadow-[0_8px_18px_rgba(0,0,0,0.12)] rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center ring-1 ring-teal-200/60">
+                    <Activity className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600" />
                   </div>
                 </Link>
               </div>
@@ -250,7 +398,7 @@ export default function PlanesPage() {
             {/* Vital */}
             <div
               id="plan-integral"
-              className="relative overflow-hidden w-full py-10 md:py-12 lg:py-16 min-h-[80vh]"
+              className="relative overflow-hidden w-full py-10 md:py-12 lg:py-16 min-h-screen flex items-center"
             >
               {/* Imagen de fondo difuminada */}
               <div
@@ -261,7 +409,7 @@ export default function PlanesPage() {
                   backgroundPosition: 'center',
                 }}
               />
-            <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto py-3 px-4 sm:px-6">
+              <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto py-3 px-4 sm:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
                   <div className="order-2 lg:order-1">
                     <div className="flex items-center gap-3 mb-4 sm:mb-6">
@@ -328,10 +476,10 @@ export default function PlanesPage() {
                     <Image
                       src="/images/plan-integral.png"
                       alt="Plan Integral"
-                      width={520}
-                      height={360}
-                      sizes="(min-width: 1024px) 520px, 100vw"
-                      className="w-full h-auto object-cover transition-transform duration-500 border-none"
+                      width={525}
+                      height={500}
+                      sizes="(min-width: 800px) 500px, 60vw"
+                      style={{ borderRadius: 'inherit' }}
                     />
                     <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm shadow-[0_8px_18px_rgba(0,0,0,0.12)] rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center ring-1 ring-teal-200/60">
                       <Stethoscope className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600" />

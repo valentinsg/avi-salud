@@ -66,6 +66,14 @@ const config: Config = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
+  			},
+  			// Paleta personalizada de AVI Salud
+  			avi: {
+  				'teal-dark': '#044B5D',      // Dark Teal/Petrol Blue
+  				'teal-medium': '#036B77',    // Medium Teal
+  				'teal-bright': '#00ADB0',    // Bright Turquoise
+  				'teal-soft': '#009FA9',      // Desaturated Turquoise/Cyan
+  				'orange': '#D57620',         // Burnt Orange/Terracotta
   			}
   		},
   		borderRadius: {

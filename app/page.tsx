@@ -19,7 +19,7 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover w-full h-full object-[85%_center] sm:object-[45%_center] md:object-[60%_center] lg:object-[65%_center] xl:object-[68%_center] 2xl:object-[70%_center]"
+          className="object-cover w-full h-full object-[80%_center] sm:object-[45%_center] md:object-[60%_center] lg:object-[65%_center] xl:object-[68%_center] 2xl:object-[70%_center]"
         />
         <div className="absolute inset-0 bg-teal-300 bg-opacity-10" />
 
@@ -28,9 +28,9 @@ export default function HomePage() {
           <div className="container mx-auto">
             <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-2xl font-medium mt-[55%] mr-8 md:mr-0 md:mt-20 md:ml-8 lg:ml-0 tracking-widest">
               <h1 className="font-acumin leading-[0.9] text-4xl text-left sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-teal-50 drop-shadow-md">
-                Somos el cuidado vital incorporado a <br />
+                Somos el cuidado vital incorporado <br />
                 <span className="font-acumin text-teal-300 md:text-teal-800 drop-shadow-md">
-                  la calidez de tu hogar
+                  a la calidez de tu hogar
                 </span>
               </h1>
 
