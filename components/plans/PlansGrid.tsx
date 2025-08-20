@@ -24,7 +24,6 @@ export function PlansGrid({
         <PlanCard
           key={plan.id}
           plan={plan}
-          ctaHref={ctaHref}
           useWhatsApp={useWhatsApp}
           whatsAppPhone={whatsAppPhone}
         />

@@ -67,7 +67,7 @@ export default function PlanesPage() {
             Planes de Salud Complementarios Diseñados para el domicilio.
           </p>
           <PlansGrid
-            useWhatsApp
+            useWhatsApp={false}
             whatsAppPhone={process.env.NEXT_PUBLIC_WHATSAPP_PHONE}
           />
         </div>

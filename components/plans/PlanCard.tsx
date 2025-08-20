@@ -43,7 +43,8 @@ export function PlanCard({
       )
       return `https://wa.me/${phone}?text=${text}`
     }
-    return typeof ctaHref === 'function' ? ctaHref(plan) : ctaHref
+    // Si no es WhatsApp, ir a la sección detallada del plan
+    return `#plan-${plan.id}`
   })()
   const isExternal = computedHref.startsWith('http')
 
@@ -82,6 +83,18 @@ export function PlanCard({
           <Link
             href={computedHref}
             className="w-full sm:w-auto"
+            onClick={(e) => {
+              if (!isExternal) {
+                e.preventDefault()
+                const element = document.querySelector(computedHref)
+                if (element) {
+                  element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                  })
+                }
+              }
+            }}
             {...(isExternal
               ? { target: '_blank', rel: 'noopener noreferrer' }
               : {})}
