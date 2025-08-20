@@ -43,8 +43,10 @@ export function PlanCard({
       )
       return `https://wa.me/${phone}?text=${text}`
     }
-    // Si no es WhatsApp, ir a la sección detallada del plan
-    return `#plan-${plan.id}`
+    // Si viene de la página principal, ir a /planes#plan-{id}
+    // Si ya está en /planes, ir directamente a #plan-{id}
+    const isFromMainPage = typeof ctaHref === 'string' && ctaHref === '/planes'
+    return isFromMainPage ? `/planes#plan-${plan.id}` : `#plan-${plan.id}`
   })()
   const isExternal = computedHref.startsWith('http')
 
@@ -85,14 +87,19 @@ export function PlanCard({
             className="w-full sm:w-auto"
             onClick={(e) => {
               if (!isExternal) {
-                e.preventDefault()
-                const element = document.querySelector(computedHref)
-                if (element) {
-                  element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                  })
+                // Si es un enlace interno a la misma página (solo #)
+                if (computedHref.startsWith('#')) {
+                  e.preventDefault()
+                  const element = document.querySelector(computedHref)
+                  if (element) {
+                    element.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start'
+                    })
+                  }
                 }
+                // Si es un enlace a otra página con #, dejar que el navegador maneje el scroll
+                // (ej: /planes#plan-acompanar)
               }
             }}
             {...(isExternal

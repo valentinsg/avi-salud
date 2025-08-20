@@ -267,8 +267,9 @@ export default function HomePage() {
           </h2>
 
           <PlansGrid
-            useWhatsApp
+            useWhatsApp={false}
             whatsAppPhone={process.env.NEXT_PUBLIC_WHATSAPP_PHONE}
+            ctaHref="/planes"
           />
         </div>
       </section>
