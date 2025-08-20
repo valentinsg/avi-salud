@@ -53,7 +53,7 @@ export default function PlanesPage() {
 
         {/* Content */}
         <div className="container relative z-20 flex flex-col justify-center items-center font-congoose mx-auto px-4 sm:px-4">
-          <div className="text-left relative z-20 mb-12 md:mb-16 pt-6 self-start">
+          <div className="text-left relative z-20 mb-12 md:mb-16 pt-12 sm:pt-6 self-start">
             <h1 className="font-cocogoose text-4xl md:text-5xl lg:text-5xl font-bold leading-tight">
               <span className="block text-3xl md:text-4xl lg:text-5xl text-teal-50 sm:text-teal-600">
                 Nuestros
@@ -163,15 +163,15 @@ export default function PlanesPage() {
         </div>
 
         <div className="relative w-full py-2 flex bg-avi-teal-medium items-center justify-center">
-          <div className="flex items-center gap-2 mr-[47%]">
+          <div className="flex items-center gap-2 justify-center">
             <Image
               src="/images/avi-logo-blanco.png"
               alt="Avi Salud"
               width={100}
               height={100}
-              className="w-12 h-12"
+              className="w-10 h-10 sm:w-12 sm:h-12"
             />
-            <h3 className="text-xl md:text-2xl font-acumin font-light text-teal-50 text-left">
+            <h3 className="text-base sm:text-lg md:text-xl font-acumin font-light text-teal-50 text-center">
               Requerimientos incluidos en Plan Acompañar en tu hogar:
             </h3>
           </div>
@@ -464,15 +464,15 @@ export default function PlanesPage() {
           </div>
 
           <div className="relative w-full py-2 flex bg-avi-teal-medium items-center justify-center">
-            <div className="flex items-center gap-2 mr-[47%]">
+            <div className="flex items-center gap-2 justify-center">
               <Image
                 src="/images/avi-logo-blanco.png"
                 alt="Avi Salud"
                 width={100}
                 height={100}
-                className="w-12 h-12"
+                className="w-10 h-10 sm:w-12 sm:h-12"
               />
-              <h3 className="text-xl md:text-2xl font-acumin font-light text-teal-50 text-left">
+              <h3 className="text-base sm:text-lg md:text-xl font-acumin font-light text-teal-50 text-center">
                 Requerimientos incluidos en Plan Vital en tu hogar:
               </h3>
             </div>
@@ -661,326 +661,165 @@ export default function PlanesPage() {
           </div>
 
           <div>
-            {/* Vital */}
+            {/* Integral */}
             <div
               id="plan-integral"
-              className="relative overflow-hidden w-full py-8 md:py-10 lg:py-12 min-h-[90vh] flex items-center"
+              className="bg-avi-teal-medium relative overflow-hidden w-full py-16 md:py-20 lg:py-24 min-h-[90vh] flex items-center"
             >
-              {/* Imagen de fondo difuminada */}
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: "url('/images/light-geometric-bg.png')",
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              />
-              <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto py-3 px-4 sm:px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
-                  <div className="order-2 lg:order-1">
-                    <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-teal-700 rounded-2xl flex items-center justify-center text-white shadow-md">
-                        <ArrowDown className="w-6 h-6 sm:w-7 sm:h-7 text-teal-50" />
+              <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto py-8 px-4 sm:px-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-20 items-center max-w-6xl mx-auto">
+                  <div className="order-2 lg:order-1 flex flex-col items-start">
+                    <div className="flex items-center gap-3 mb-6 sm:mb-8">
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 bg-teal-50 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                        <ArrowDown className="w-6 h-6 sm:w-8 sm:h-10 text-avi-teal-bright" />
                       </div>
-                      <div className="leading-none text-teal-700">
-                        <span className="block font-acumin text-xl sm:text-2xl">
-                          Plan
-                        </span>
-                        <span className="block font-cocogoose text-3xl sm:text-4xl">
-                          Integral
+                      <div className="leading-none text-white">
+                        <span className="block font-acumin text-avi-teal-bright font-semibold text-2xl sm:text-5xl">
+                          Plan Integral
                         </span>
                       </div>
                     </div>
-                    <p className="font-acumin text-base md:text-lg text-teal-700 leading-relaxed tracking-tight mb-6 sm:mb-8 max-w-md">
-                      Nuestro servicio más completo, dirigido a pacientes con
-                      necesidades complejas que requieren internación
-                      domiciliaria de alta intensidad. Cuidado continuo y
-                      especializado
+                    <p className="font-acumin text-base md:text-lg text-teal-50 leading-relaxed tracking-tight mb-8 sm:mb-10 max-w-2xl text-left">
+                      Ideal para: Pacientes con enfermedades complejas,
+                      terminales o en rehabilitación intensiva que requieren
+                      atención integral y constante.
                     </p>
-                    <div className="bg-white rounded-3xl shadow-xl p-4 sm:p-5 md:p-6 max-w-md">
-                      <ul className="font-acumin text-base md:text-lg text-teal-900 leading-relaxed space-y-3">
+                    <div className="bg-white rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 md:px-14 max-w-4xl">
+                      <ul className="font-acumin text-sm md:text-base text-teal-900 leading-relaxed space-y-2">
                         <li className="flex items-start">
-                          <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
-                          <span className="text-teal-700 font-semibold">
-                            Internación domiciliaria con cobertura 24/7
+                          <span className="text-avi-teal-medium font-semibold">
+                            Atención Médica Integral
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
-                          <span className="text-teal-700 font-semibold">
-                            Equipamiento médico en el hogar (oxígeno, camas,
-                            bombas de infusión, etc.)
+                          <span className="text-avi-teal-medium font-semibold">
+                            Asistencia Telefónica 24/7
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
-                          <span className="text-teal-700 font-semibold">
-                            Equipo multidisciplinario (médico, enfermería,
-                            kinesiólogo, psicólogo, nutricionista, etc.)
+                          <span className="text-avi-teal-medium font-semibold">
+                            Odontología
                           </span>
                         </li>
                         <li className="flex items-start">
-                          <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
-                          <span className="text-teal-700 font-semibold">
-                            Coordinación con prestadores y obras sociales
+                          <span className="text-avi-teal-medium font-semibold">
+                            Rehabilitación Intensiva
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Nutrición Enteral/Parenteral
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Salud Mental
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Servicios De Enfermería
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Servicio De Cuidadores
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Análisis De Sangre
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Diagnóstico Por Imágen
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Traslados Y Emergencias
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Historia Clínica Digital
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Agenda De Atención Personal
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Suministro Básico De Insumos
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-avi-teal-medium font-semibold">
+                            Equipamientos Médicos Especializados
                           </span>
                         </li>
                       </ul>
                     </div>
-                  </div>
-                  <Link
-                    href={buildWhatsAppHref('Plan Integral')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative order-1 lg:order-2 overflow-hidden rounded-[40px] sm:rounded-[48px] transition-transform duration-500 ease-out hover:-translate-y-2"
-                  >
-                    <Image
-                      src="/images/plan-integral.png"
-                      alt="Plan Integral"
-                      width={525}
-                      height={500}
-                      sizes="(min-width: 800px) 500px, 60vw"
-                      style={{ borderRadius: 'inherit' }}
-                    />
-                    <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm shadow-[0_8px_18px_rgba(0,0,0,0.12)] rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center ring-1 ring-teal-200/60">
-                      <Stethoscope className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600" />
+
+                    {/* Información de contratación */}
+                    <div className="bg-white rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 max-w-2xl mt-6">
+                      <p className="font-acumin text-sm md:text-base text-avi-teal-medium leading-relaxed text-left">
+                        <span className="font-semibold">Contratación:</span>{' '}
+                        Plan de contratación por presupuesto de acuerdo a
+                        requerimientos médicos.
+                      </p>
                     </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Lista detallada de servicios incluidos en Plan Integral */}
-          <div className="relative w-full py-16 bg-white">
-            <div className="container mx-auto px-4 sm:px-6">
-              <h3 className="text-2xl md:text-3xl font-acumin text-avi-teal-dark text-center mb-12">
-                Requerimientos incluidos en Plan Integral en tu hogar:
-              </h3>
-
-              <Accordion type="multiple" className="w-full space-y-4">
-                {/* Columna izquierda */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-                  <div className="space-y-4">
-                    <AccordionItem
-                      value="admision-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        ADMISIÓN CLÍNICA - 2 CONSULTAS / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Visitas programadas de un médico general al ingreso y
-                          posterior.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem
-                      value="medicina-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        MEDICINA CLÍNICA - 2 CONSULTAS / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Consultas virtuales programadas de un médico
-                          generalista.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem
-                      value="medicina-especialista-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        MEDICINA ESPECIALISTA - 2 CONSULTAS / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Visitas programadas de un médico especialista, para
-                          elaboración de planes de tratamiento personalizados.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem
-                      value="odontologia-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        ODONTOLOGÍA - 1 CONSULTA / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Visita programada de control para garantizar la salud
-                          bucal.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem
-                      value="cuidador-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        CUIDADOR - 72 HORAS / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Se habilitan 24 horas por mes.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
                   </div>
 
-                  {/* Columna derecha */}
-                  <div className="space-y-4">
-                    <AccordionItem
-                      value="rehabilitacion-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
+                  {/* Columna derecha - Imagen y Partnership */}
+                  <div className="order-1 lg:order-2 space-y-14 flex flex-col items-center lg:items-start">
+                    <Link
+                      href={buildWhatsAppHref('Plan Integral')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative overflow-hidden rounded-[40px] sm:rounded-[48px] transition-transform duration-500 ease-out hover:-translate-y-2"
                     >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        REHABILITACIÓN - 8 SESIONES / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Ejercicios supervisados para mejorar la movilidad.
-                          Fisioterapia, kinesiología, fonoaudiología o terapia
-                          ocupacional ligera.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
+                      <Image
+                        src="/images/plan-integral.png"
+                        alt="Plan Integral"
+                        width={525}
+                        height={500}
+                        sizes="(min-width: 800px) 500px, 60vw"
+                        style={{ borderRadius: 'inherit' }}
+                      />
+                      <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm shadow-[0_8px_18px_rgba(0,0,0,0.12)] rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center ring-1 ring-teal-200/60">
+                        <Stethoscope className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600" />
+                      </div>
+                    </Link>
 
-                    <AccordionItem
-                      value="nutricion-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        NUTRICIÓN - 2 CONSULTAS / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Plan alimenticio personalizado con seguimiento.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
+                    {/* Sección Partnership debajo de la imagen */}
+                    <div className="bg-transparent p-6 max-w-3xl relative">
+                      {/* Pestaña superior */}
+                      <div className="absolute -top-4 bg-avi-teal-bright px-4 py-3 rounded-t-2xl">
+                        <h4 className="font-acumin text-lg font-bold text-white">
+                          PARTNERSHIP
+                        </h4>
+                      </div>
 
-                    <AccordionItem
-                      value="salud-mental-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        SALUD MENTAL - 2 SESIONES / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Psicología y/o terapia emocional.
+                      {/* Contenido principal */}
+                      <div className="py-5 px-4 bg-avi-teal-bright shadow-xl rounded-b-2xl rounded-tr-2xl">
+                        <p className="font-acumin text-base md:text-lg text-white leading-relaxed mb-3 text-left font-medium">
+                          Innovación Colaborativa al Servicio del Paciente
                         </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem
-                      value="analisis-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        ANÁLISIS CLÍNICOS - 1 CONTROL / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          APB, Hemograma, Eritrosedimentación, Proteína C
-                          reactiva, Glucemia, Perfil lipoproteico básico,
-                          Hepatograma, Gamma glutamil transpeptidasa, Uremia,
-                          Tonograma sérico, Calcemia, Magnesemia, Fosfatemia,
-                          TSH, T4 libre, Uricemia, Albuminemia, Proteínas
-                          totales, Vitamina D total, Vitamina B12, Ácido fólico,
-                          PSA (antígeno prostático específico). A partir del 3º
-                          mes.
+                        <p className="font-acumin text-sm md:text-base text-white leading-relaxed text-left">
+                          En un momento crucial para el sistema de salud, donde
+                          los desafíos de sostenibilidad, integración y calidad
+                          exigen soluciones transformadoras, surge una alianza
+                          estratégica que se consolida sobre pilares de
+                          complementariedad, experiencia e innovación.
                         </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem
-                      value="diagnostico-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        DIAGNÓSTICO POR IMÁGEN - 1 PRÁCTICA / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Estudios de imagenología, ecografías.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem
-                      value="enfermeria-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        ENFERMERÍA - 6 VISITAS / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Toma de signos vitales (presión arterial, temperatura,
-                          frecuencia cardíaca). Administración de medicamentos
-                          prescritos (oral, tópico o inyectable). Curaciones
-                          simples de heridas.
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem
-                      value="insumos-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        INSUMOS - 1 KIT / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Material especializado según el tratamiento (vendas,
-                          catéteres, guantes, alcohol, etc.).
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    <AccordionItem
-                      value="traslados-integral"
-                      className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                    >
-                      <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                        TRASLADOS EN AMBULANCIA - 6 TRASLADOS / TRIM.
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                        <p className="text-gray-700 text-lg font-acumin">
-                          Servicios de traslado y asistencia en casos de
-                          emergencia, priorizando la seguridad del paciente
-                          (hasta 2 por mes).
-                        </p>
-                      </AccordionContent>
-                    </AccordionItem>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </Accordion>
-
-              {/* Sección inferior que abarca ambas columnas */}
-              <div className="mt-12 bg-avi-teal-dark rounded-2xl p-8 shadow-lg">
-                <h4 className="text-xl font-acumin text-white mb-4 text-center">
-                  INCLUYE:
-                </h4>
-                <p className="text-white font-acumin text-center text-lg">
-                  Coordinador/a de internación domiciliaria. Personal
-                  administrativo (gestión de autorizaciones y registros).
-                  Historia clínica digital (registros, asistencias,
-                  evoluciones). Agenda de servicios personalizada. Recetas.
-                  Decomiso de residuos patogénicos.
-                </p>
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@ export const planesData: Plan[] = [
     id: 'acompanar',
     titulo: 'Plan Acompañar',
     descripcion: 'Un plan de salud preventivo, enfocado en brindar servicios esenciales para pacientes con necesidades básicas de atención domiciliaria, o bien, un servicio de asistencia constante.',
-    icono: '/images/medical-cross-icon.png',
+    icono: '/images/cross-healthcare.png',
     alt: 'Plan Acompañar',
   },
   {

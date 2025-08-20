@@ -103,7 +103,7 @@ export default function CorporativoPage() {
               <div className="relative flex flex-col items-center">
                 <div className="absolute -top-12 w-20 h-20 rounded-full flex items-center justify-center shadow-md">
                   <Image
-                    src="/images/cross-healthcare.jpg"
+                    src="/images/cross-healthcare.png"
                     alt="Handshake"
                     fill
                     className="object-cover object-center rounded-full"

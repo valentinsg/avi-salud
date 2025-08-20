@@ -19,7 +19,7 @@ export default function HomePage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover w-full h-full object-[80%_center] sm:object-[45%_center] md:object-[60%_center] lg:object-[65%_center] xl:object-[68%_center] 2xl:object-[70%_center]"
+          className="mt-14 object-cover w-full h-full object-[80%_center] sm:object-[45%_center] md:object-[60%_center] lg:object-[65%_center] xl:object-[68%_center] 2xl:object-[70%_center]"
         />
         <div className="absolute inset-0 bg-teal-300 bg-opacity-10" />
 
@@ -27,9 +27,9 @@ export default function HomePage() {
         <div className="absolute inset-0 flex items-start md:items-center text-left px-2 sm:px-6 lg:px-10">
           <div className="container mx-auto">
             <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-2xl font-medium mt-[55%] mr-8 md:mr-0 md:mt-20 md:ml-8 lg:ml-0 tracking-widest">
-              <h1 className="font-acumin leading-[0.9] text-4xl text-left sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-teal-50 drop-shadow-md">
+              <h1 className="font-acumin leading-[0.9] font-semibold text-4xl text-left sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-teal-50 drop-shadow-md">
                 Somos el cuidado vital incorporado <br />
-                <span className="font-acumin text-teal-300 md:text-teal-800 drop-shadow-md">
+                <span className="font-acumin text-teal-300 md:text-avi-teal-bright drop-shadow-md">
                   a la calidez de tu hogar
                 </span>
               </h1>
@@ -37,7 +37,7 @@ export default function HomePage() {
               {/* Botón visible solo en móvil, debajo del texto */}
               <div className="block md:hidden mt-6 text-left">
                 <a href="/planes">
-                  <Button className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-6 py-4 font-bold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+                  <Button className="bg-avi-teal-bright hover:bg-teal-700 text-white rounded-full px-6 py-4 font-bold text-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
                     conoce más
                     <ChevronRight className="ml-2 w-6 h-6 text-white font-bold" />
                   </Button>
@@ -62,9 +62,9 @@ export default function HomePage() {
         </div>
 
         {/* Button positioned in the white curved area - visible only on md and larger screens */}
-        <div className="hidden md:block absolute bottom-40 sm:bottom-6 md:bottom-12 lg:bottom-14 left-1/2 md:left-[5%] lg:left-[10%] transform -translate-x-1/2 md:translate-x-0 lg:translate-x-0 z-5">
+        <div className="hidden md:block absolute bottom-40 sm:bottom-6 md:bottom-12 lg:bottom-14 left-1/2 md:left-[5%] lg:left-[11%] transform -translate-x-1/2 md:translate-x-0 lg:translate-x-0 z-5">
           <a href="/planes">
-            <Button className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-10 sm:px-6 md:px-8 py-6 sm:py-4 md:py-6 lg:py-7 lg:px-12 font-bold text-xl sm:text-base md:text-2xl lg:text-3xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+            <Button className="bg-avi-teal-bright hover:bg-teal-700 text-white rounded-full px-10 sm:px-6 md:px-8 py-6 sm:py-4 md:py-6 lg:py-7 lg:px-12 font-bold text-xl sm:text-base md:text-2xl lg:text-3xl font-acumin  shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
               conoce más
               <ChevronRight className="ml-1 sm:ml-2 w-4 sm:w-6 md:w-7 lg:w-8 h-4 sm:h-6 md:h-7 lg:h-8 text-white font-bold" />
             </Button>
@@ -148,7 +148,7 @@ export default function HomePage() {
         <div className="mx-auto relative md:top-[20%] px-4 md:px-2 py-12 md:py-20 z-3 flex justify-center items-center">
           <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-2">
             {/* Left Panel - Sobre Nosotros */}
-            <div className="bg-teal-800 rounded-3xl max-w-lg md:max-w-[450px] px-8 text-white relative shadow-2xl py-16 mt-auto md:mx-auto">
+            <div className="bg-avi-teal-medium rounded-3xl max-w-lg md:max-w-[450px] px-8 text-white relative shadow-2xl py-16 mt-auto md:mx-auto">
               {/* Heart icon positioned absolutely */}
               <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
                 <Image
@@ -160,7 +160,7 @@ export default function HomePage() {
                 />
               </div>
               <h2 className="font-cocogoose text-left mb-1 md:mb-4">
-                <span className=" text-teal-500 text-3xl md:text-5xl text-shadow-lg ">
+                <span className=" text-avi-teal-bright text-3xl md:text-5xl text-shadow-lg ">
                   Sobre
                 </span>
                 <br />
@@ -258,10 +258,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          <h2 className="font-acumin leading-[1.1] text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center sm:text-left ml-0 sm:ml-4 md:ml-6 text-teal-50 tracking-tighter drop-shadow-xs px-4 sm:px-0 mb-6 sm:mb-8">
+          <h2 className="font-acumin leading-[1.1] text-2xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-center sm:text-left ml-0 sm:ml-4 md:ml-6 text-teal-50 tracking-tighter drop-shadow-xs px-4 sm:px-0 mb-6 sm:mb-12">
             Encontrá el mejor plan para <br className="hidden sm:block" />
             cuidar a quien{' '}
-            <span className="font-acumin text-teal-800 text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl ">
+            <span className="font-acumin text-avi-teal-dark text-2xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl ">
               más querés
             </span>
           </h2>

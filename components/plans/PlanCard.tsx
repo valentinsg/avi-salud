@@ -57,9 +57,13 @@ export function PlanCard({
           <Image
             src={plan.icono}
             alt={plan.alt}
-            width={180}
-            height={180}
-            className="w-20 h-20 sm:w-20 sm:h-20 md:w-40 md:h-40 object-contain rounded-full"
+            width={120}
+            height={120}
+            className={`${
+              plan.id === 'acompanar'
+                ? 'w-16 h-16 sm:w-16 sm:h-16 md:w-24 md:h-24'
+                : 'w-32 h-32 sm:w-32 sm:h-32 md:w-40 md:h-40'
+            } object-contain rounded-full`}
           />
         </div>
         <div className="flex-1 mt-12">
