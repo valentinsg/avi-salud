@@ -1,13 +1,14 @@
-"use client"
+'use client'
 
-import { Button } from "@/components/ui/button"
-import { ChevronRight, Menu, X } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
+import { Button } from '@/components/ui/button'
+import { ChevronDown, ChevronRight, Menu, X } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isPlanesDropdownOpen, setIsPlanesDropdownOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -24,7 +25,7 @@ export default function Header() {
               alt="AVI Salud"
               width={100}
               height={60}
-              className="h-12 sm:h-14 md:h-16 p-2 sm:p-3 w-auto"
+              className="h-12 sm:h-14 md:h-20 p-2 sm:p-3 w-auto"
             />
           </div>
 
@@ -33,9 +34,49 @@ export default function Header() {
             <a href="/" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
               Inicio
             </a>
-            <a href="/planes" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
-              Planes
-            </a>
+
+            {/* Dropdown de Planes */}
+            <div
+              className="relative group"
+              onMouseEnter={() => setIsPlanesDropdownOpen(true)}
+              onMouseLeave={() => setIsPlanesDropdownOpen(false)}
+            >
+              <Link href="/planes" className="flex items-center gap-1 text-gray-700 hover:text-teal-600 transition-colors font-medium">
+                Planes
+                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+              </Link>
+
+              {/* Dropdown Menu */}
+              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0`}>
+                <div className="py-2">
+
+                  <Link
+                    href="/planes/acompanar"
+                    className="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors border-b border-gray-100"
+                  >
+                    <div className="font-semibold text-teal-700">Plan Acompañar</div>
+                    <div className="text-sm text-gray-500 mt-1">Acompañamiento y seguimiento básico</div>
+                  </Link>
+
+                  <Link
+                    href="/planes/vital"
+                    className="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors border-b border-gray-100"
+                  >
+                    <div className="font-semibold text-teal-700">Plan Vital</div>
+                    <div className="text-sm text-gray-500 mt-1">Atención médica intensiva</div>
+                  </Link>
+
+                  <Link
+                    href="/planes/integral"
+                    className="block px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors"
+                  >
+                    <div className="font-semibold text-teal-700">Plan Integral</div>
+                    <div className="text-sm text-gray-500 mt-1">Cobertura completa personalizada</div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             {/* Corporativo es privado: no indexar en navbar */}
             <a href="/#nosotros" className="text-gray-700 hover:text-teal-600 transition-colors font-medium">
               Sobre nosotros
@@ -77,13 +118,35 @@ export default function Header() {
               >
                 Inicio
               </Link>
-              <Link
-                href="/planes"
-                className="text-gray-700 hover:text-teal-600 transition-colors font-medium py-2 border-b border-gray-100"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Planes
-              </Link>
+
+              {/* Planes en móvil */}
+              <div className="space-y-2">
+                <div className="text-gray-700 font-medium py-2 border-b border-gray-100">Planes</div>
+                <div className="pl-4 space-y-2">
+                  <Link
+                    href="/planes/acompanar"
+                    className="block text-gray-600 hover:text-teal-600 transition-colors py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    • Plan Acompañar
+                  </Link>
+                  <Link
+                    href="/planes/vital"
+                    className="block text-gray-600 hover:text-teal-600 transition-colors py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    • Plan Vital
+                  </Link>
+                  <Link
+                    href="/planes/integral"
+                    className="block text-gray-600 hover:text-teal-600 transition-colors py-1"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    • Plan Integral
+                  </Link>
+                </div>
+              </div>
+
               {/* Corporativo es privado: no indexar en navbar móvil */}
               <Link
                 href="/#nosotros"

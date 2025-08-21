@@ -11,8 +11,8 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 
 const contactSchema = z.object({
-  nombre: z.string().min(2, 'Ingresa tu nombre'),
-  apellido: z.string().min(2, 'Ingresa tu apellido'),
+  fullName: z.string().min(2, 'Ingresa tu nombre'),
+  phone: z.string().min(2, 'Ingresa tu apellido'),
   mail: z.string().email('Correo inválido'),
   consulta: z.string().min(10, 'Contanos un poco más (mínimo 10 caracteres)'),
 })
@@ -55,34 +55,40 @@ export function ContactForm() {
   return (
     <Card className="bg-white shadow-lg hover:shadow-[0_4px_24px_0_rgba(13,148,136,0.18)] transition-shadow duration-300 w-full rounded-2xl sm:rounded-3xl">
       <CardContent className="p-5 sm:p-6">
+        <div className="text-center mb-4 sm:mb-10 ">
+          <h2 className="font-acumin text-2xl sm:text-3xl tracking-tighter leading-tighter font-normal text-avi-teal-medium">
+            Realiza tu consulta
+          </h2>
+        </div>
+
         <form className="space-y-5 sm:space-y-6" onSubmit={handleSubmit(onSubmit)} noValidate>
           <div>
-            <label className="block text-teal-800 font-medium mb-1 text-sm sm:text-base" htmlFor="nombre">
-              Nombre
+            <label className="block text-teal-800 font-medium mb-1 text-sm sm:text-base" htmlFor="full-name">
+              Nombre Completo
             </label>
             <Input
-              id="nombre"
+              id="full-name"
               placeholder=""
               className="bg-gray-50 border-2 border-transparent focus:border-teal-400 rounded-lg shadow focus:shadow-md transition-shadow w-full h-12 text-base sm:text-lg"
-              {...register('nombre')}
+              {...register('fullName')}
             />
-            {errors.nombre && <p className="text-red-600 text-xs mt-1">{errors.nombre.message}</p>}
+            {errors.fullName && <p className="text-red-600 text-xs mt-1">{errors.fullName.message}</p>}
           </div>
           <div>
             <label className="block text-teal-800 font-medium mb-1 text-sm sm:text-base" htmlFor="apellido">
-              Apellido
+              Teléfono
             </label>
             <Input
-              id="apellido"
+              id="phone"
               placeholder=""
               className="bg-gray-50 border-2 border-transparent focus:border-teal-400 rounded-lg shadow focus:shadow-md transition-shadow w-full h-12 text-base sm:text-lg"
-              {...register('apellido')}
+              {...register('phone')}
             />
-            {errors.apellido && <p className="text-red-600 text-xs mt-1">{errors.apellido.message}</p>}
+            {errors.phone && <p className="text-red-600 text-xs mt-1">{errors.phone.message}</p>}
           </div>
           <div>
             <label className="block text-teal-800 font-medium mb-1 text-sm sm:text-base" htmlFor="mail">
-              Mail
+              Correo electrónico
             </label>
             <Input
               id="mail"

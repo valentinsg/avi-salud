@@ -63,9 +63,9 @@ export default function HomePage() {
         </div>
 
         {/* Button positioned in the white curved area - visible only on md and larger screens */}
-        <div className="hidden md:block absolute bottom-40 sm:bottom-6 md:bottom-12 lg:bottom-14 left-1/2 md:left-[5%] lg:left-[11%] transform -translate-x-1/2 md:translate-x-0 lg:translate-x-0 z-5">
+        <div className="hidden md:block absolute bottom-40 sm:bottom-6 md:bottom-12 lg:bottom-14 left-1/2 md:left-[5%] lg:left-[18%] transform -translate-x-1/2 md:translate-x-0 lg:translate-x-0 z-5">
           <a href="/planes">
-            <Button className="bg-avi-teal-bright hover:bg-teal-700 text-white rounded-full px-10 sm:px-6 md:px-8 py-6 sm:py-4 md:py-6 lg:py-7 lg:px-12 font-bold text-xl sm:text-base md:text-2xl lg:text-3xl font-acumin  shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
+            <Button className="bg-avi-teal-bright hover:bg-teal-700 text-white rounded-full px-10 sm:px-6 md:px-8 py-6 sm:py-4 md:py-6 lg:py-6 lg:px-10 font-bold text-xl sm:text-base md:text-2xl lg:text-2xl font-acumin  shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
               conoce más
               <ChevronRight className="ml-1 sm:ml-2 w-4 sm:w-6 md:w-7 lg:w-8 h-4 sm:h-6 md:h-7 lg:h-8 text-white font-bold" />
             </Button>
@@ -301,11 +301,6 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 relative z-5">
           <div className="flex flex-col lg:flex-row gap-6 items-start justify-center">
             <div className="w-full lg:flex-1 lg:max-w-md xl:max-w-lg mx-auto lg:mx-0">
-              <div className="text-center mb-4 sm:mb-6">
-                <h2 className="font-acumin text-2xl sm:text-3xl tracking-tighter leading-tighter font-normal text-teal-500">
-                  Realiza tu consulta
-                </h2>
-              </div>
               <ContactForm />
             </div>
 

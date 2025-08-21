@@ -14,8 +14,8 @@ export default function CorporativoPage() {
             className="object-cover object-center md:object-[center_12%] w-full h-full blur-xs opacity-40 shadow-lg z-0"
           />
 
-          {/* Curved Top */}
-          <div className="absolute top-0 left-0 right-0 hidden md:block">
+          {/* Curva superior, un poco más arriba */}
+          <div className="absolute -top-10 left-0 right-0 hidden md:block">
             <svg
               className="w-full h-48 sm:h-56 md:h-72 lg:h-96"
               viewBox="0 0 1440 320"
@@ -29,12 +29,10 @@ export default function CorporativoPage() {
           </div>
 
           {/* Title */}
-          <div className="text-left relative z-20 mb-16 pt-8 md:pt-10">
-            <h1 className="font-acumin text-4xl md:text-5xl lg:text-5xl font-bold leading-tight tracking-tight">
-              <span className="block text-3xl md:text-4xl lg:text-5xl text-teal-600">
-                SERVICIOS
-              </span>
-              <span className="block text-teal-900">CORPORATIVOS</span>
+          <div className="text-left relative z-20 mb-16 pt-8 md:pt-16">
+            <h1 className="font-acumin text-4xl md:text-4xl lg:text-4xl font-bold leading-tight tracking-tight">
+              <span className="inline text-3xl md:text-4xl lg:text-4xl text-teal-600">SERVICIOS </span>
+              <span className="inline text-teal-900">CORPORATIVOS</span>
             </h1>
           </div>
 
@@ -52,100 +50,10 @@ export default function CorporativoPage() {
                 división Empresas se adapta a las necesidades de:
               </p>
             </div>
-
-            {/* Services Grid */}
-            <div className="relative pt-8 z-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
-              {/* Card 1 - Gestión Integral */}
-              <div className="relative flex flex-col items-center">
-                <div className="absolute -top-12 w-20 h-20 rounded-full flex items-center justify-center shadow-md">
-                  <Image
-                    src="/images/build.jpg"
-                    alt="Building"
-                    fill
-                    className="object-cover object-center rounded-full"
-                  />
-                </div>
-                <div className="bg-teal-600 rounded-2xl px-6 md:px-8 pt-12 pb-8 text-center min-h-[230px] w-full flex flex-col justify-between">
-                  <h3 className="font-cocogoose text-base md:text-lg font-bold text-white uppercase leading-tight">
-                    Gestión integral de salud ocupacional para empresas
-                  </h3>
-                  <div className="mt-6">
-                    <Button className="bg-teal-900 text-white hover:bg-teal-800 rounded-full px-6 py-2 text-sm">
-                      ver más
-                    </Button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 2 - Partners Estratégicos */}
-              <div className="relative flex flex-col items-center">
-                <div className="absolute -top-12 w-20 h-20 rounded-full flex items-center justify-center shadow-md">
-                  <Image
-                    src="/images/build-healthcare.jpg"
-                    alt="Handshake"
-                    fill
-                    className="object-cover object-center rounded-full"
-                  />
-                </div>
-                <div className="bg-teal-600 rounded-2xl px-6 md:px-8 pt-12 pb-8 text-center min-h-[230px] w-full flex flex-col justify-between">
-                  <h3 className="font-cocogoose text-base md:text-lg font-bold text-white uppercase leading-tight">
-                    Partners estratégicos para empresas financiadoras de salud
-                  </h3>
-                  <div className="mt-6">
-                    <Button className="bg-teal-900 text-white hover:bg-teal-800 rounded-full px-6 py-2 text-sm">
-                      ver más
-                    </Button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 3 - Aliados Estratégicos */}
-              <div className="relative flex flex-col items-center">
-                <div className="absolute -top-12 w-20 h-20 rounded-full flex items-center justify-center shadow-md">
-                  <Image
-                    src="/images/cross-healthcare.png"
-                    alt="Handshake"
-                    fill
-                    className="object-cover object-center rounded-full"
-                  />
-                </div>
-                <div className="bg-teal-600 rounded-2xl px-6 md:px-8 pt-12 pb-8 text-center min-h-[230px] w-full flex flex-col justify-between">
-                  <h3 className="font-cocogoose text-base md:text-lg font-bold text-white uppercase leading-tight">
-                    Aliados estratégicos para prestadores de salud
-                  </h3>
-                  <div className="mt-6">
-                    <Button className="bg-teal-900 text-white hover:bg-teal-800 rounded-full px-6 py-2 text-sm">
-                      ver más
-                    </Button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 4 - Soluciones Médicas */}
-              <div className="relative flex flex-col items-center">
-                <div className="absolute -top-12 w-20 h-20 rounded-full flex items-center justify-center shadow-md">
-                  <Image
-                    src="/images/suitcase.jpg"
-                    alt="Handshake"
-                    fill
-                    className="object-cover object-center rounded-full"
-                  />
-                </div>
-                <div className="bg-teal-600 rounded-2xl px-6 md:px-8 pt-12 pb-8 text-center min-h-[230px] w-full flex flex-col justify-between">
-                  <h3 className="font-cocogoose text-base md:text-lg font-bold text-white uppercase leading-tight">
-                    Soluciones médicas estratégicas para empresas ART
-                  </h3>
-                  <div className="mt-6">
-                    <Button className="bg-teal-900 text-white hover:bg-teal-800 rounded-full px-6 py-2 text-sm">
-                      ver más
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
+
 
       {/* Four Panel Layout Section */}
       <section className="bg-white">
