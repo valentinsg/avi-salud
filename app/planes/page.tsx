@@ -37,8 +37,8 @@ export default function PlanesPage() {
           className="object-cover object-center md:object-[center_32%] w-full h-full blur-xs shadow-lg z-0"
         />
 
-        {/* Curved Top */}
-        <div className="absolute top-0 left-0 right-0 hidden md:block">
+        {/* Curva superior, un poco más arriba */}
+        <div className="absolute -top-9 md:top-5 lg:-top-9 left-0 right-0 hidden md:block">
           <svg
             className="w-full h-48 sm:h-56 md:h-72 lg:h-96"
             viewBox="0 0 1440 320"
@@ -46,23 +46,25 @@ export default function PlanesPage() {
           >
             <path
               fill="#FFFFFF"
-              d="M0,0 L0,200 H420 C460,205 500,140 540,140 S920,140 1000,140 H1440 L1440,0 Z"
+              d="M0,0 L0,200 H350 C400,200 450,140 500,140 S920,140 1000,140 H1440 L1440,0 Z"
             />
           </svg>
         </div>
 
+        {/* Title */}
+        <div className="text-left relative z-20 mb-16 pt-8 md:pt-12 ml-4 md:ml-8 lg:ml-[10%]">
+          <h1 className="font-acumin text-2xl md:text-3xl lg:text-3xl font-bold leading-tight tracking-tight max-w-[280px] md:max-w-none">
+            <span className="inline text-xl md:text-2xl lg:text-3xl text-teal-600 md:hidden lg:inline">
+              Nuestros{' '}
+            </span>
+            <span className="inline text-xl md:text-2xl lg:text-3xl text-teal-900">
+              Planes
+            </span>
+          </h1>
+        </div>
         {/* Content */}
-        <div className="container relative z-20 flex flex-col justify-center items-center font-congoose mx-auto px-4 sm:px-4">
-          <div className="text-left relative z-20 mb-12 md:mb-16 pt-12 sm:pt-6 self-start">
-            <h1 className="font-acumin text-4xl md:text-5xl lg:text-5xl font-medium leading-tight">
-              <span className="block text-3xl md:text-4xl lg:text-5xl text-teal-50 sm:text-teal-600">
-                Nuestros
-              </span>
-              <span className="block text-teal-50 sm:text-teal-900">
-                Planes
-              </span>
-            </h1>
-          </div>
+        <div className="container relative z-20 flex flex-col justify-center items-center font-congoose pt-12 md:pt-16 lg:pt-20 mx-auto px-4 sm:px-4">
+
           <p className="text-teal-50 text-2xl font-acumin mt-2 mb-8">
             Planes de Salud Complementarios Diseñados para el domicilio.
           </p>

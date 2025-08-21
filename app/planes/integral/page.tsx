@@ -1,5 +1,5 @@
 import PlansBreadcrumb from '@/components/PlansBreadcrumb'
-import { ArrowDown, ChevronRight, Stethoscope } from 'lucide-react'
+import { ArrowDown, Stethoscope } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -21,7 +21,7 @@ export default function PlanIntegralPage() {
             <PlansBreadcrumb
               currentPlan="Plan Integral"
               currentPlanPath="/planes/integral"
-              textColor="text-white"
+              textColor="text-teal-700"
             />
           </div>
 

@@ -27,7 +27,7 @@ export default function PlanVitalPage() {
             <PlansBreadcrumb
               currentPlan="Plan Vital"
               currentPlanPath="/planes/vital"
-              textColor="text-white"
+              textColor="text-teal-700"
             />
           </div>
 

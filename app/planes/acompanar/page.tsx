@@ -27,6 +27,7 @@ export default function PlanAcompanarPage() {
           <PlansBreadcrumb
             currentPlan="Plan Acompañar"
             currentPlanPath="/planes/acompanar"
+            textColor="text-teal-700"
           />
           </div>
 

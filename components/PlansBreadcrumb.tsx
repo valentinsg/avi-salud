@@ -9,25 +9,27 @@ interface PlansBreadcrumbProps {
 
 export default function PlansBreadcrumb({ currentPlan, currentPlanPath, textColor = "text-gray-600" }: PlansBreadcrumbProps) {
   return (
-    <nav className={`flex items-center space-x-2 z-40 text-sm ${textColor} mb-6`}>
+    <nav className={`flex items-center space-x-1 sm:space-x-2 z-40 text-xs sm:text-sm ${textColor} mb-4 sm:mb-6 overflow-hidden`}>
       <Link
         href="/"
-        className={`flex items-center hover:text-teal-600 transition-colors ${textColor}`}
+        className={`flex items-center hover:text-teal-600 transition-colors ${textColor} whitespace-nowrap`}
       >
-        <Home className="w-4 h-4 mr-1" />
-        Inicio
+        <Home className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
+        <span className="hidden sm:inline">Inicio</span>
+        <span className="sm:hidden">Inicio</span>
       </Link>
-      <ChevronRight className="w-4 h-4" />
+      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
       <Link
         href="/planes"
-        className={`hover:text-teal-600 transition-colors ${textColor}`}
+        className={`hover:text-teal-600 transition-colors ${textColor} whitespace-nowrap`}
       >
         Planes
       </Link>
-      <ChevronRight className="w-4 h-4" />
+      <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
       <Link
         href={currentPlanPath}
-        className="text-avi-teal-bright font-medium"
+        className="text-avi-teal-bright font-medium truncate max-w-[120px] sm:max-w-none"
+        title={currentPlan}
       >
         {currentPlan}
       </Link>
