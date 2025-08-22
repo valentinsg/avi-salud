@@ -48,7 +48,10 @@ export default function CorporativoPage() {
           <div className="flex flex-col items-center w-full">
             {/* Main content */}
             <div className="relative z-20 max-w-full mx-auto text-left px-2 sm:px-0">
-              <h2 className="font-cocogoose text-left max-w-full sm:max-w-7xl text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+              <h2
+                className="font-cocogoose text-left max-w-full sm:max-w-7xl text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6"
+                style={{ lineHeight: '1.25' }}
+              >
                 Soluciones estratégicas de internación domiciliaria para
                 financiadores y prestadores de salud.
               </h2>
