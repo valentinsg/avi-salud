@@ -247,19 +247,12 @@ export default function CorporativoPage() {
               <AccordionTrigger className="px-4 md:px-6 lg:px-8 py-4 md:py-6 text-white font-bold hover:text-gray-100 font-acumin text-base md:text-lg lg:text-xl text-center">
                 <div className="flex items-center gap-2 md:gap-4">
                   <div className="relative w-12 h-12 md:w-14 lg:w-16 bg-white rounded-full overflow-hidden border-2 border-teal-500 shadow-md flex-shrink-0">
-                    {/* Icono de cruz médica */}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 48 48"
-                      fill="none"
-                      className="w-full h-full object-cover text-teal-600"
-                    >
-                      <rect width="48" height="48" rx="24" fill="#fff" />
-                      <path
-                        d="M20 12a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8h8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-8v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-8h-8a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h8v-8z"
-                        fill="#14b8a6"
-                      />
-                    </svg>
+                    <Image
+                      src="/images/suitcase.jpg"
+                      alt="Emergency Services"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <span className="text-left leading-tight">
                     PLAN DE SALUD PREVENTIVA PARA EMPRESAS
@@ -281,19 +274,12 @@ export default function CorporativoPage() {
                       {/* Título superpuesto */}
                       <div className="relative z-10 flex items-center gap-3 max-w-[280px] md:max-w-[450px] lg:max-w-[450px] mb-6">
                         <div className="relative w-[72px] h-[72px] md:w-[84px] md:h-[84px] aspect-square bg-white rounded-full overflow-hidden border-2 border-teal-500 shadow-md flex-shrink-0 mt-2">
-                          {/* Icono de cruz médica */}
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 48 48"
-                            fill="none"
-                            className="w-full h-full object-cover text-teal-600"
-                          >
-                            <rect width="48" height="48" rx="24" fill="#fff" />
-                            <path
-                              d="M20 12a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8h8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-8v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-8h-8a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h8v-8z"
-                              fill="#14b8a6"
-                            />
-                          </svg>
+                          <Image
+                            src="/images/suitcase.jpg"
+                            alt="Emergency Services"
+                            fill
+                            className="object-cover"
+                          />
                         </div>
                         <h3 className="font-cocogoose text-md md:text-lg lg:text-xl font-bold text-teal-600 uppercase leading-tight text-wrap">
                           Soluciones médicas para empresas estrategicas para ART
@@ -302,20 +288,23 @@ export default function CorporativoPage() {
                       {/* Contenedor verde */}
                       <div className="bg-teal-600 text-base md:text-2xl text-white rounded-3xl shadow-xl p-6 md:p-10 lg:p-14">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris.
+                          AVI Salud es el aliado ideal para hospitales, clínicas
+                          y centros médicos en Mar del Plata y la región que
+                          buscan optimizar sus recursos sin resignar calidad de
+                          atención.
                         </p>
                         <p className="mt-4">
-                          Duis aute irure dolor in reprehenderit in voluptate
-                          velit esse cillum dolore eu fugiat nulla pariatur.
-                          Excepteur sint occaecat cupidatat non proident.
+                          Nuestros servicios complementan su estructura
+                          prestacional mediante un modelo innovador de atención
+                          post-hospitalaria que permite trasladar a pacientes
+                          clínicamente estables, liberando camas y permitiendo
+                          destinar ese espacio a casos de mayor complejidad.
                         </p>
                         <p className="mt-4">
-                          Sed ut perspiciatis unde omnis iste natus error sit
-                          voluptatem accusantium doloremque laudantium, totam
-                          rem aperiam, eaque ipsa quae ab illo inventore.
+                          De esta manera, promovemos una rotación más eficiente
+                          de pacientes, reducción de costos operativos y
+                          continuidad asistencial segura y humanizada, siempre
+                          bajo estándares médicos rigurosos.
                         </p>
                       </div>
                     </div>
@@ -324,7 +313,7 @@ export default function CorporativoPage() {
                   {/* Top Right Panel - Imagen */}
                   <div className="relative w-full lg:w-1/2 min-h-[28rem] md:min-h-[40rem] lg:min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-0 pt-12 md:pt-16">
                     <Image
-                      src="/images/partners-estrategios.png"
+                      src="/images/laburantes-avi.jpg"
                       alt="Partners estratégicos"
                       fill
                       className="object-cover object-center"
@@ -344,13 +333,19 @@ export default function CorporativoPage() {
               <AccordionTrigger className="px-4 md:px-6 lg:px-8 py-4 md:py-6 text-white font-bold hover:text-gray-100 font-acumin text-base md:text-lg lg:text-xl text-center">
                 <div className="flex items-center gap-2 md:gap-4">
                   <div className="relative w-12 h-12 md:w-14 lg:w-16 bg-white rounded-full overflow-hidden border-2 border-teal-500 shadow-md flex-shrink-0">
-                    <Image
-                      src="/images/suitcase.jpg"
-                      alt="Emergency Services"
-                      width={64}
-                      height={64}
-                      className="object-cover object-center w-full h-full"
-                    />
+                    {/* Icono de cruz médica */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      className="w-full h-full object-cover text-teal-600"
+                    >
+                      <rect width="48" height="48" rx="24" fill="#fff" />
+                      <path
+                        d="M20 12a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8h8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-8v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-8h-8a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h8v-8z"
+                        fill="#14b8a6"
+                      />
+                    </svg>
                   </div>
                   <span className="text-left leading-tight">
                     ALIADOS ESTRATÉGICOS PARA PRESTADORAS DE SALUD
@@ -383,12 +378,19 @@ export default function CorporativoPage() {
                       {/* Título superpuesto */}
                       <div className="relative z-10 flex items-center gap-3 max-w-[280px] md:max-w-[400px] lg:max-w-[450px] mb-6">
                         <div className="relative w-[72px] h-[72px] md:w-[84px] md:h-[84px] aspect-square rounded-full overflow-hidden bg-white border-2 border-teal-500 shadow-md flex-shrink-0 mt-2">
-                          <Image
-                            src="/images/suitcase.jpg"
-                            alt="Emergency Services"
-                            fill
-                            className="object-cover"
-                          />
+                          {/* Icono de cruz médica */}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            className="w-full h-full object-cover text-teal-600"
+                          >
+                            <rect width="48" height="48" rx="24" fill="#fff" />
+                            <path
+                              d="M20 12a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8h8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-8v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-8h-8a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h8v-8z"
+                              fill="#14b8a6"
+                            />
+                          </svg>
                         </div>
                         <h3 className="font-cocogoose text-md md:text-lg lg:text-xl font-bold text-teal-600 uppercase leading-tight text-wrap">
                           Aliados estratégicos para prestadoras de salud
