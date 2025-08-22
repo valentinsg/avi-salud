@@ -33,7 +33,7 @@ export default function CorporativoPage() {
         </div>
 
         {/* Title */}
-        <div className="text-left relative z-20 mb-4 sm:mb-16 pt-6 sm:pt-8 md:pt-12 ml-4 sm:ml-4 md:ml-12 lg:ml-20">
+        <div className="text-left relative z-20 mb-4 sm:mb-16 pt-6 sm:pt-8 md:pt-12 ml-2 sm:ml-2 md:ml-2 lg:ml-[7%]">
           <h1 className="font-acumin mt-10 sm:mt-0 md:mt-0 text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold leading-tight tracking-tight max-w-[250px] sm:max-w-[280px] md:max-w-none">
             <span className="inline text-2xl sm:text-xl md:text-2xl lg:text-3xl text-white md:text-avi-teal-bright md:hidden lg:inline">
               Servicios{' '}
@@ -179,7 +179,7 @@ export default function CorporativoPage() {
                   {/* Top Right Panel - Imagen */}
                   <div className="relative w-full lg:w-1/2 min-h-[28rem] md:min-h-[70vh] lg:min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-0 pt-12 md:pt-16">
                     <Image
-                      src="/images/nurse-patient.webp"
+                      src="/images/laburantes-avi.jpg"
                       alt="Emergency Care"
                       fill
                       className="object-cover object-center saturate-150 contrast-150"
@@ -357,10 +357,10 @@ export default function CorporativoPage() {
                   {/* Top Right Panel - Imagen */}
                   <div className="relative w-full lg:w-1/2 min-h-[28rem] md:min-h-screen lg:min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-0">
                     <Image
-                      src="/images/aliados-estrategicos.webp"
+                      src="/images/partners-estrategios.png"
                       alt="Aliados estratégicos para prestadoras de salud"
                       fill
-                      className="object-cover object-center saturate-150 contrast-150"
+                      className="object-cover object-center"
                       priority
                     />
                     <div className="absolute bottom-0 left-0 w-full h-full bg-teal-600/10 to-transparent z-10"></div>

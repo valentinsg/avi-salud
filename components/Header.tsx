@@ -19,7 +19,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 mr-10">
             <Image
               src="/images/avi-salud-logo.png"
               alt="AVI Salud"
