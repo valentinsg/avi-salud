@@ -33,13 +33,13 @@ export default function CorporativoPage() {
         </div>
 
         {/* Title */}
-        <div className="text-left relative z-20 mb-4 sm:mb-16 pt-6 sm:pt-8 md:pt-12 ml-4 sm:ml-4 md:ml-8 lg:ml-20">
+        <div className="text-left relative z-20 mb-4 sm:mb-16 pt-6 sm:pt-8 md:pt-12 ml-4 sm:ml-4 md:ml-12 lg:ml-20">
           <h1 className="font-acumin mt-10 sm:mt-0 md:mt-0 text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold leading-tight tracking-tight max-w-[250px] sm:max-w-[280px] md:max-w-none">
             <span className="inline text-2xl sm:text-xl md:text-2xl lg:text-3xl text-white md:text-avi-teal-bright md:hidden lg:inline">
-              SERVICIOS{' '}
+              Servicios{' '}
             </span>
             <span className="inline text-2xl sm:text-xl md:text-2xl lg:text-3xl text-white md:text-avi-teal-medium">
-              CORPORATIVOS
+              Corporativos
             </span>
           </h1>
         </div>
@@ -247,13 +247,19 @@ export default function CorporativoPage() {
               <AccordionTrigger className="px-4 md:px-6 lg:px-8 py-4 md:py-6 text-white font-bold hover:text-gray-100 font-acumin text-base md:text-lg lg:text-xl text-center">
                 <div className="flex items-center gap-2 md:gap-4">
                   <div className="relative w-12 h-12 md:w-14 lg:w-16 bg-white rounded-full overflow-hidden border-2 border-teal-500 shadow-md flex-shrink-0">
-                    <Image
-                      src="/images/healthcare-professional.webp"
-                      alt="Healthcare Professional"
-                      width={64}
-                      height={64}
-                      className="object-cover object-center w-full h-full"
-                    />
+                    {/* Icono de cruz médica */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 48 48"
+                      fill="none"
+                      className="w-full h-full object-cover text-teal-600"
+                    >
+                      <rect width="48" height="48" rx="24" fill="#fff" />
+                      <path
+                        d="M20 12a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8h8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-8v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-8h-8a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h8v-8z"
+                        fill="#14b8a6"
+                      />
+                    </svg>
                   </div>
                   <span className="text-left leading-tight">
                     PLAN DE SALUD PREVENTIVA PARA EMPRESAS
@@ -275,12 +281,19 @@ export default function CorporativoPage() {
                       {/* Título superpuesto */}
                       <div className="relative z-10 flex items-center gap-3 max-w-[280px] md:max-w-[450px] lg:max-w-[450px] mb-6">
                         <div className="relative w-[72px] h-[72px] md:w-[84px] md:h-[84px] aspect-square bg-white rounded-full overflow-hidden border-2 border-teal-500 shadow-md flex-shrink-0 mt-2">
-                          <Image
-                            src="/images/healthcare-professional.webp"
-                            alt="Healthcare Professional"
-                            fill
-                            className="object-cover"
-                          />
+                          {/* Icono de cruz médica */}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            className="w-full h-full object-cover text-teal-600"
+                          >
+                            <rect width="48" height="48" rx="24" fill="#fff" />
+                            <path
+                              d="M20 12a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v8h8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-8v8a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-8h-8a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h8v-8z"
+                              fill="#14b8a6"
+                            />
+                          </svg>
                         </div>
                         <h3 className="font-cocogoose text-md md:text-lg lg:text-xl font-bold text-teal-600 uppercase leading-tight text-wrap">
                           Soluciones médicas para empresas estrategicas para ART
@@ -289,10 +302,10 @@ export default function CorporativoPage() {
                       {/* Contenedor verde */}
                       <div className="bg-teal-600 text-base md:text-2xl text-white rounded-3xl shadow-xl p-6 md:p-10 lg:p-14">
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          Sed do eiusmod tempor incididunt ut labore et dolore
-                          magna aliqua. Ut enim ad minim veniam, quis nostrud
-                          exercitation ullamco laboris.
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco laboris.
                         </p>
                         <p className="mt-4">
                           Duis aute irure dolor in reprehenderit in voluptate
@@ -332,7 +345,7 @@ export default function CorporativoPage() {
                 <div className="flex items-center gap-2 md:gap-4">
                   <div className="relative w-12 h-12 md:w-14 lg:w-16 bg-white rounded-full overflow-hidden border-2 border-teal-500 shadow-md flex-shrink-0">
                     <Image
-                      src="/images/cross-healthcare.png"
+                      src="/images/suitcase.jpg"
                       alt="Emergency Services"
                       width={64}
                       height={64}
@@ -349,7 +362,7 @@ export default function CorporativoPage() {
                   {/* Top Right Panel - Imagen */}
                   <div className="relative w-full lg:w-1/2 min-h-[28rem] md:min-h-screen lg:min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-0">
                     <Image
-                      src="/images/aliados-estratégicos-para-prestadores-de-salud.png"
+                      src="/images/aliados-estrategicos.webp"
                       alt="Aliados estratégicos para prestadoras de salud"
                       fill
                       className="object-cover object-center saturate-150 contrast-150"
@@ -371,7 +384,7 @@ export default function CorporativoPage() {
                       <div className="relative z-10 flex items-center gap-3 max-w-[280px] md:max-w-[400px] lg:max-w-[450px] mb-6">
                         <div className="relative w-[72px] h-[72px] md:w-[84px] md:h-[84px] aspect-square rounded-full overflow-hidden bg-white border-2 border-teal-500 shadow-md flex-shrink-0 mt-2">
                           <Image
-                            src="/images/cross-healthcare.png"
+                            src="/images/suitcase.jpg"
                             alt="Emergency Services"
                             fill
                             className="object-cover"
@@ -384,20 +397,23 @@ export default function CorporativoPage() {
                       {/* Contenedor verde */}
                       <div className="bg-teal-600 text-base md:text-2xl text-white rounded-3xl shadow-xl p-6 md:p-10 lg:p-14">
                         <p>
-                          AVI Salud es el socio ideal para hospitales, clínicas y
-                          centros médicos en Mar del Plata y la región que buscan
-                          optimizar sus recursos sin resignar calidad de atención.
+                          AVI Salud es el socio ideal para hospitales, clínicas
+                          y centros médicos en Mar del Plata y la región que
+                          buscan optimizar sus recursos sin resignar calidad de
+                          atención.
                         </p>
                         <p className="mt-4">
-                          Nuestro servicio complementan su estructura prestacional
-                          mediante un modelo innovador de atención post-hospitalaria que
-                          permite trasladar a pacientes clínicamente estables, liberando camas
-                          y permitiendo destinar ese espacio a casos de mayor complejidad.
+                          Nuestro servicio complementan su estructura
+                          prestacional mediante un modelo innovador de atención
+                          post-hospitalaria que permite trasladar a pacientes
+                          clínicamente estables, liberando camas y permitiendo
+                          destinar ese espacio a casos de mayor complejidad.
                         </p>
                         <p className="mt-4">
-                          De esta manera promovemos una rotación más eficiente de pacientes,
-                          reducción de costos operativos y continuidad asistencial segura
-                          y humanizada, siempre bajo estándares médicos rigurosos.
+                          De esta manera promovemos una rotación más eficiente
+                          de pacientes, reducción de costos operativos y
+                          continuidad asistencial segura y humanizada, siempre
+                          bajo estándares médicos rigurosos.
                         </p>
                       </div>
                     </div>

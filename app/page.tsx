@@ -280,7 +280,7 @@ export default function HomePage() {
         {/* Imagen de fondo responsiva: centrada en mobile, igual en desktop */}
         <div className="absolute inset-0">
           <Image
-            src="/images/coordina-tus-servicios.png"
+            src="/images/coordina-tus-servicios.jpg"
             alt="Coordina tus servicios"
             fill
             className="object-cover object-center md:object-center"

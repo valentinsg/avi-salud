@@ -19,7 +19,7 @@ export default function PlanAcompanarPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F0FDFA] pt-20 ">
+    <div className="min-h-screen bg-[#F0FDFA] pt-10 md:pt-20">
       {/* Descripción del Plan */}
       <section className="relative w-full py-16 bg-white ">
         <div className="container mx-auto px-4 sm:px-6">
@@ -41,7 +41,7 @@ export default function PlanAcompanarPage() {
             }}
           />
 
-          <div className="container h-[75vh] relative z-20 flex flex-col items-center justify-center font-congoose mx-auto mb-10 px-4 sm:px-6">
+          <div className="container h-[100vh] md:h-[75vh] relative z-20 flex flex-col items-center justify-center font-congoose mx-auto mb-10 px-4 sm:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-20 items-center">
               <div className="order-2 lg:order-1">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">

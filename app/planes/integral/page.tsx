@@ -13,7 +13,7 @@ export default function PlanIntegralPage() {
   }
 
   return (
-    <div className="min-h-screen bg-avi-teal-medium pt-20 ">
+    <div className="min-h-screen bg-avi-teal-medium pt-10 md:pt-20 ">
       {/* Descripción del Plan */}
       <section className="relative w-full py-16 ">
         <div className="container mx-auto px-4 sm:px-6">

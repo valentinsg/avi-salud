@@ -19,7 +19,7 @@ export default function PlanVitalPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F0FDFA] pt-20 ">
+    <div className="min-h-screen bg-[#F0FDFA] pt-10 md:pt-20 ">
       {/* Vital */}
       <section className="relative w-full  bg-white ">
         <div className="container mx-auto px-4 sm:px-6 py-16">
@@ -42,7 +42,7 @@ export default function PlanVitalPage() {
             }}
           />
 
-          <div className="container h-[75vh] relative z-20 flex flex-col items-center justify-center font-congoose mx-auto mb-10 px-4 sm:px-6">
+          <div className="container h-[100vh] md:h-[75vh] relative z-20 flex flex-col items-center justify-center font-congoose mx-auto mb-10 px-4 sm:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div className="order-2 lg:order-1">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">

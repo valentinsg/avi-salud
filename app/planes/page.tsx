@@ -65,7 +65,7 @@ export default function PlanesPage() {
         {/* Content */}
         <div className="container relative z-20 flex flex-col justify-center items-center font-congoose pt-12 md:pt-16 lg:pt-20 mx-auto px-4 sm:px-4">
 
-          <p className="text-teal-50 text-2xl font-acumin mt-2 mb-8">
+          <p className="text-teal-50 text-2xl font-acumin mt-2 mb-20">
             Planes de Salud Complementarios Diseñados para el domicilio.
           </p>
           <PlansGrid
