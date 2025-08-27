@@ -43,10 +43,11 @@ export function PlanCard({
       )
       return `https://wa.me/${phone}?text=${text}`
     }
-    // Si viene de la página principal, ir a /planes#plan-{id}
-    // Si ya está en /planes, ir directamente a #plan-{id}
-    const isFromMainPage = typeof ctaHref === 'string' && ctaHref === '/planes'
-    return isFromMainPage ? `/planes#plan-${plan.id}` : `#plan-${plan.id}`
+    // Si ya estamos en /planes, usar ancla interna. En caso contrario, ir a la página específica del plan.
+    if (typeof window !== 'undefined' && window.location?.pathname.startsWith('/planes')) {
+      return `#plan-${plan.id}`
+    }
+    return `/planes/${plan.id}`
   })()
   const isExternal = computedHref.startsWith('http')
 

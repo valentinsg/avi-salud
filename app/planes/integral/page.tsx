@@ -25,7 +25,7 @@ export default function PlanIntegralPage() {
             />
           </div>
 
-          <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto py-8 px-4 sm:px-10">
+          <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto py-6 px-4 sm:px-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-20 items-center max-w-6xl mx-auto">
               <div className="order-2 lg:order-1 flex flex-col items-start">
                 <div className="flex items-center gap-3 mb-6 sm:mb-8">
@@ -38,7 +38,7 @@ export default function PlanIntegralPage() {
                     </span>
                   </div>
                 </div>
-                <p className="font-acumin text-base md:text-lg text-teal-50 leading-relaxed tracking-tight mb-8 sm:mb-10 max-w-2xl text-left">
+                <p className="font-acumin text-base md:text-lg text-teal-50 leading-relaxed tracking-tight mb-4 sm:mb-8 max-w-2xl text-left">
                   Ideal para: Pacientes con enfermedades complejas, terminales o
                   en rehabilitación intensiva que requieren atención integral y
                   constante.
@@ -122,19 +122,10 @@ export default function PlanIntegralPage() {
                     </li>
                   </ul>
                 </div>
-
-                {/* Información de contratación */}
-                <div className="bg-white rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 max-w-2xl mt-6">
-                  <p className="font-acumin text-sm md:text-base text-avi-teal-medium leading-relaxed text-left">
-                    <span className="font-semibold">Contratación:</span> Plan de
-                    contratación por presupuesto de acuerdo a requerimientos
-                    médicos.
-                  </p>
-                </div>
               </div>
 
               {/* Columna derecha - Imagen y Partnership */}
-              <div className="order-1 lg:order-2 space-y-14 flex flex-col items-center lg:items-start">
+              <div className="order-1 lg:order-2 space-y-6 mt-6 flex flex-col items-center lg:items-start">
                 <Link
                   href={buildWhatsAppHref('Plan Integral')}
                   target="_blank"
@@ -155,25 +146,14 @@ export default function PlanIntegralPage() {
                 </Link>
 
                 {/* Sección Partnership debajo de la imagen */}
-                <div className="bg-transparent p-6 max-w-3xl relative">
+                <div className="bg-transparent max-w-3xl relative">
                   {/* Pestaña superior */}
-                  <div className="absolute -top-4 bg-avi-teal-bright px-4 py-3 rounded-t-2xl">
-                    <h4 className="font-acumin text-lg font-bold text-white">
-                      PARTNERSHIP
-                    </h4>
-                  </div>
-
-                  {/* Contenido principal */}
-                  <div className="py-5 px-4 bg-avi-teal-bright shadow-xl rounded-b-2xl rounded-tr-2xl">
-                    <p className="font-acumin text-base md:text-lg text-white leading-relaxed mb-3 text-left font-medium">
-                      Innovación Colaborativa al Servicio del Paciente
-                    </p>
-                    <p className="font-acumin text-sm md:text-base text-white leading-relaxed text-left">
-                      En un momento crucial para el sistema de salud, donde los
-                      desafíos de sostenibilidad, integración y calidad exigen
-                      soluciones transformadoras, surge una alianza estratégica
-                      que se consolida sobre pilares de complementariedad,
-                      experiencia e innovación.
+                  {/* Información de contratación */}
+                  <div className="bg-white rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 max-w-2xl mt-6">
+                    <p className="font-acumin text-sm md:text-base text-avi-teal-medium leading-relaxed text-left">
+                      <span className="font-semibold">Contratación:</span>{' '}
+                      Mediante presupuesto de acuerdo a
+                      requerimientos médicos.
                     </p>
                   </div>
                 </div>
