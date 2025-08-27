@@ -18,6 +18,7 @@ export default function HomePage() {
           alt="Enfermera cuidando paciente"
           fill
           priority
+          quality={100}
           sizes="100vw"
           className="mt-14 object-cover w-full h-full object-[80%_center] sm:object-[45%_center] md:object-[60%_center] lg:object-[65%_center] xl:object-[68%_center] 2xl:object-[70%_center]"
         />

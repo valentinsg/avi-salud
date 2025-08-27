@@ -45,7 +45,7 @@ export default function PlanVitalPage() {
           <div className="container h-[100vh] md:h-[75vh] relative z-20 flex flex-col items-center justify-center font-congoose mx-auto mb-10 px-4 sm:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div className="order-2 lg:order-1">
-                <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                <div className="flex items-center gap-3 mb-2 sm:mb-4">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-teal-50 rounded-2xl flex items-center justify-center text-white shadow-md">
                     <ArrowDown className="w-6 h-6 text-teal-600" />
                   </div>
@@ -58,6 +58,9 @@ export default function PlanVitalPage() {
                     </span>
                   </div>
                 </div>
+                <span className="block font-bold font-acumin text-avi-teal-bright text-base sm:text-lg mb-3 sm:mb-2 mt-3 sm:mt-4">
+                  Periodo de contratación trimestral.
+                </span>
                 <p className="font-acumin text-base md:text-lg text-teal-50 leading-relaxed tracking-tight mb-6 sm:mb-8 max-w-md">
                   Pensado para pacientes con patologías agudas o crónicas que
                   requieren atención médica y de enfermería de manera frecuente,
@@ -68,7 +71,7 @@ export default function PlanVitalPage() {
                     <li className="flex items-start">
                       <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
                       <span className="text-teal-700 font-semibold">
-                        Atención médica domiciliaria programada y de urgencia
+                        Atención médica en el hogar para resolver consultas habituales, sin necesidad de traslado.
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -141,12 +144,11 @@ export default function PlanVitalPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      MÉDICINA CLÍNICA - 4 CONSULTAS / MES
+                      MEDICINA CLÍNICA - UNA CONSULTA TRIMESTRAL
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Consultas presenciales y virtuales con médico
-                        generalista y especialistas según necesidad.
+                        Atención médica en el hogar para resolver consultas habituales, sin necesidad de traslado.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -160,8 +162,7 @@ export default function PlanVitalPage() {
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Toma de signos vitales, administración de medicamentos,
-                        curaciones complejas y monitoreo de tratamientos.
+                        Toma de signos vitales (presión arterial, temperatura, frecuencia cardíaca). Administración de medicamentos prescritos (oral, tópico o inyectable). Curaciones simples de heridas.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -171,12 +172,11 @@ export default function PlanVitalPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      REHABILITACIÓN - 8 SESIONES / AÑO
+                      REHABILITACIÓN - 8 SESIONES TRIMESTRALES
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Fisioterapia, kinesiología, fonoaudiología o terapia
-                        ocupacional especializada según patología.
+                        Ejercicios supervisados para mejorar la movilidad. Fisioterapia, kinesiología, Fonoaudiología o terapia ocupacional ligera.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -186,12 +186,11 @@ export default function PlanVitalPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      NUTRICIÓN - 4 CONSULTAS / AÑO
+                      PLAN NUTRICIONAL - 2 VISITAS TRIMESTRALES
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Plan alimenticio personalizado con seguimiento
-                        nutricional especializado.
+                        Visita en domicilio para crear un plan de alimentación acorde a las necesidades de la persona y condiciones clínicas.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -201,11 +200,11 @@ export default function PlanVitalPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      SALUD MENTAL - 4 SESIONES / AÑO
+                      SALUD MENTAL - 2 SESIONES TRIMESTRALES
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Psicología clínica y terapia emocional especializada.
+                        Visita en domicilio para evaluar el bienestar emocional y diseñar un plan de acompañamiento acorde a las necesidades de la persona y sus circunstancias médicas; con seguimiento digitalizado durante todo el proceso. especializada.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -218,12 +217,11 @@ export default function PlanVitalPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      CUIDADOR - 120 HORAS / AÑO
+                      CUIDADOR DOMICILIARIO - 72 HS TRIMESTRALES
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Se habilitan 30 horas por trimestre con personal
-                        especializado en patologías moderadas.
+                        El plan incluye 72 horas para brindar cuidado y acompañamiento en el hogar.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -233,13 +231,11 @@ export default function PlanVitalPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      ANÁLISIS CLÍNICOS - 2 CONTROLES / AÑO
+                      ANÁLISIS CLÍNICOS - UN CONTROL TRIMESTRAL
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Perfil completo incluyendo marcadores específicos para
-                        patologías crónicas, control de medicamentos y
-                        seguimiento de parámetros clínicos.
+                        APB, Hemograma, Eritrosedimentación, Proteína C reactiva, Glucemia, Perfil lipoproteico básico, Hepatograma, Gamma glutamil transpeptidasa, Uremia, Tonograma sérico, Calcemia, Magnesemia, Fosfatemia, TSH, T4 libre, Uricemia, Albuminemia, Proteínas totales, Vitamina D total, Vitamina B12, Ácido fólico, PSA - antígeno prostático específico.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -249,12 +245,11 @@ export default function PlanVitalPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      DIAGNÓSTICO POR IMÁGEN - 2 PRÁCTICAS / AÑO
+                      DIAGNÓSTICO POR IMAGEN - UNA PRÁCTICA TRIMESTRAL
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Estudios de imagenología avanzados, ecografías
-                        especializadas y resonancias según indicación médica.
+                        Estudios de imagenología avanzados, ecografías especializadas y resonancias según indicación médica.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -264,13 +259,11 @@ export default function PlanVitalPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      TRASLADOS EN AMBULANCIA - 4 TRASLADOS / MES
+                      TRASLADOS EN AMBULANCIA - 2 TRASLADOS MENSUALES
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Servicios de traslado y asistencia en casos de
-                        emergencia y consultas programadas, priorizando la
-                        seguridad del paciente.
+                        Servicios de traslado y asistencia en casos de emergencia.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -280,13 +273,11 @@ export default function PlanVitalPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      EQUIPAMIENTO MÉDICO - SEGÚN NECESIDAD
+                      KIT DE INSUMOS
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Oxigenoterapia, monitores de signos vitales, bombas de
-                        infusión y equipos de rehabilitación según prescripción
-                        médica.
+                        Incluye elementos de higiene y suministros médicos básicos para el hogar, pensados para acompañar la atención y el cuidado diario.
                       </p>
                     </AccordionContent>
                   </AccordionItem>

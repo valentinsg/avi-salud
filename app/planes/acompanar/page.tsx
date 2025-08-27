@@ -24,11 +24,11 @@ export default function PlanAcompanarPage() {
       <section className="relative w-full py-16 bg-white ">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex items-left justify-left z-40">
-          <PlansBreadcrumb
-            currentPlan="Plan Acompañar"
-            currentPlanPath="/planes/acompanar"
-            textColor="text-teal-700"
-          />
+            <PlansBreadcrumb
+              currentPlan="Plan Acompañar"
+              currentPlanPath="/planes/acompanar"
+              textColor="text-teal-700"
+            />
           </div>
 
           {/* Imagen de fondo difuminada */}
@@ -141,11 +141,13 @@ export default function PlanAcompanarPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      ADMISIÓN CLÍNICA - 1 CONSULTA / AÑO
+                      ADMISIÓN CLÍNICA
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Visita programada de un médico general al ingreso.
+                        Primera evaluación integral en el domicilio, que nos
+                        permite conocer el estado general de salud de la persona
+                        y organizar un plan de cuidados personalizado.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -155,7 +157,7 @@ export default function PlanAcompanarPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      MÉDICINA CLÍNICA - 2 CONSULTAS / MES
+                      TELEMEDICINA - 2 CONSULTAS MENSUALES
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
@@ -166,16 +168,33 @@ export default function PlanAcompanarPage() {
                   </AccordionItem>
 
                   <AccordionItem
+                    value="medicina"
+                    className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
+                  >
+                    <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
+                      MEDICINA CLÍNICA - 6 CONSULTAS ANUALES
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
+                      <p className="text-gray-700 text-lg font-acumin">
+                        Primera evaluación integral en el domicilio, que nos
+                        permite conocer el estado general de salud de la persona
+                        y organizar un plan de cuidados personalizado.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem
                     value="odontologia"
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      ODONTOLOGÍA - 1 CONSULTA / AÑO
+                      ODONTOLOGÍA - CONTROL ANUAL
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Visita programada de control para garantizar la salud
-                        bucal.
+                        Una visita programada de control anual para garantizar el
+                        estado actual de su salud bucal y detectar posibles
+                        problemas a tiempo.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -201,11 +220,14 @@ export default function PlanAcompanarPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      NUTRICIÓN - 2 CONSULTAS / AÑO
+                      PLAN NUTRICIONAL
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Plan alimenticio personalizado con seguimiento.
+                        Visita anual en domicilio para crear un plan de
+                        alimentación acorde a las necesidades de la persona y
+                        condiciones clínicas; con seguimiento digitalizado durante
+                        todo el año.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -215,11 +237,15 @@ export default function PlanAcompanarPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      SALUD MENTAL - 2 SESIONES / AÑO
+                      SALUD MENTAL - EVALUACIÓN INTEGRAL
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Psicología y/o terapia emocional.
+                        Visita anual en domicilio para evaluar el bienestar
+                        emocional y diseñar un plan de acompañamiento acorde a
+                        las necesidades de la persona y sus circunstancias
+                        clínicas; con seguimiento digitalizado durante todo el
+                        año.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -232,7 +258,7 @@ export default function PlanAcompanarPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      ENFERMERÍA - 1 VISITA / MES
+                      ENFERMERÍA - 6 VISITAS ANUALES
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
@@ -249,11 +275,12 @@ export default function PlanAcompanarPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      CUIDADOR - 60 HORAS / AÑO
+                      CUIDADOR DOMICILIARIO - 60 HS ANUALES
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Se habilitan 15 horas por trimestre.
+                        El plan incluye 15 horas trimestrales de asistencia.
+                        Acumulables en el año.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -263,17 +290,17 @@ export default function PlanAcompanarPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      ANÁLISIS CLÍNICOS - 1 CONTROL / AÑO
+                      ANÁLISIS CLÍNICOS - UN CONTROL ANUAL
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        APB, Hemograma, Eritrosedimentación, Proteína C
-                        reactiva, Glucemia, Perfil lipoproteico básico,
-                        Hepatograma, Gamma glutamil transpeptidasa, Uremia,
-                        Tonograma sérico, Calcemia, Magnesemia, Fosfatemia, TSH,
-                        T4 libre, Uricemia, Albuminemia, Proteínas totales,
-                        Vitamina D total, Vitamina B12, Ácido fólico, PSA -
-                        antígeno prostático específico. A partir del 3er mes.
+                        APB, Hemograma, Eritrosedimentación, Proteína C reactiva,
+                        Glucemia, Perfil lipoproteico básico, Hepatograma, Gamma
+                        glutamil transpeptidasa, Uremia, Tonograma sérico,
+                        Calcemia, Magnesemia, Fosfatemia, TSH, T4 libre,
+                        Uricemia, Albuminemia, Proteínas totales, Vitamina D
+                        total, Vitamina B12, Ácido fólico, PSA - antígeno
+                        prostático específico. A partir del 3er mes.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -283,7 +310,7 @@ export default function PlanAcompanarPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      DIAGNÓSTICO POR IMÁGEN - 1 PRÁCTICA / AÑO
+                      DIAGNÓSTICO POR IMAGEN - UNA PRÁCTICA ANUAL
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
@@ -297,7 +324,7 @@ export default function PlanAcompanarPage() {
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      TRASLADOS EN AMBULANCIA - 2 TRASLADOS / MES
+                      TRASLADOS EN AMBULANCIA - 2 MENSUALES
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
