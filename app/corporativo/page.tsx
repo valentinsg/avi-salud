@@ -10,7 +10,7 @@ export default function CorporativoPage() {
   return (
     <div className="min-h-screen bg-teal-900">
       {/* Header Section */}
-      <section className="relative py-10 md:py-20 h-[90vh]">
+      <section className="relative py-10 md:py-20 h-[80vh] md:h-[90vh]">
         <Image
           src="/images/teal-gradient-bg.png"
           alt="Fondo de degradado azul"
@@ -33,18 +33,18 @@ export default function CorporativoPage() {
         </div>
 
         {/* Title */}
-        <div className="text-left relative z-20 mb-4 sm:mb-16 pt-6 sm:pt-8 md:pt-12 ml-2 sm:ml-2 md:ml-2 lg:ml-[7%]">
-          <h1 className="font-acumin mt-10 sm:mt-0 md:mt-0 text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold leading-tight tracking-tight max-w-[250px] sm:max-w-[280px] md:max-w-none">
-            <span className="inline text-2xl sm:text-xl md:text-2xl lg:text-3xl text-white md:text-avi-teal-bright md:hidden lg:inline">
+        <div className="container mx-auto px-4 text-left relative z-20 mb-0 sm:mb-16 pt-20 sm:pt-8 md:pt-12">
+          <h1 className="font-acumin mt-0 sm:mt-0 md:mt-0 text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold leading-tight tracking-tight max-w-[250px] sm:max-w-[280px] md:max-w-none">
+            <span className="inline text-3xl sm:text-xl md:text-2xl lg:text-3xl text-white md:text-avi-teal-bright md:hidden lg:inline">
               Servicios{' '}
             </span>
-            <span className="inline text-2xl sm:text-xl md:text-2xl lg:text-3xl text-white md:text-avi-teal-medium">
+            <span className="inline text-3xl sm:text-xl md:text-2xl lg:text-3xl text-white md:text-avi-teal-medium">
               Corporativos
             </span>
           </h1>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 h-[85%] flex items-center justify-center">
+        <div className="container mx-auto px-4 sm:px-6 md:h-[85%] h-[70%] flex items-center justify-center">
           <div className="flex flex-col items-center w-full">
             {/* Main content */}
             <div className="relative z-20 max-w-full mx-auto text-left px-2 sm:px-0">
@@ -182,10 +182,10 @@ export default function CorporativoPage() {
                   {/* Top Right Panel - Imagen */}
                   <div className="relative w-full lg:w-1/2 min-h-[28rem] md:min-h-[70vh] lg:min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-0 pt-12 md:pt-16">
                     <Image
-                      src="/images/laburantes-avi.jpg"
+                      src="/images/partners-estrategicos.png"
                       alt="Emergency Care"
                       fill
-                      className="object-cover object-center saturate-150 contrast-150"
+                      className="object-cover object-center saturate-120 contrast-120"
                       priority
                     />
                     <div className="absolute bottom-0 left-0 w-full h-full bg-teal-600/10 to-transparent z-10"></div>
@@ -258,7 +258,7 @@ export default function CorporativoPage() {
                     />
                   </div>
                   <span className="text-left leading-tight">
-                    PLAN DE SALUD PREVENTIVA PARA EMPRESAS
+                    SOLUCIONES MÉDICAS ESTRATÉGICAS PARA EMPRESAS ART
                   </span>
                 </div>
               </AccordionTrigger>
@@ -285,7 +285,7 @@ export default function CorporativoPage() {
                           />
                         </div>
                         <h3 className="font-cocogoose text-md md:text-lg lg:text-xl font-bold text-teal-600 uppercase leading-tight text-wrap">
-                          Soluciones médicas para empresas estrategicas para ART
+                          SOLUCIONES MÉDICAS ESTRATÉGICAS PARA EMPRESAS ART
                         </h3>
                       </div>
                       {/* Contenedor verde */}
@@ -360,7 +360,7 @@ export default function CorporativoPage() {
                   {/* Top Right Panel - Imagen */}
                   <div className="relative w-full lg:w-1/2 min-h-[28rem] md:min-h-screen lg:min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-0">
                     <Image
-                      src="/images/partners-estrategios.png"
+                      src="/images/aliados-estrategicos.webp"
                       alt="Aliados estratégicos para prestadoras de salud"
                       fill
                       className="object-cover object-center"

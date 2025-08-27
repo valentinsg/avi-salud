@@ -52,7 +52,7 @@ export default function PlanesPage() {
         </div>
 
         {/* Title */}
-        <div className="text-left relative z-20 mb-16 pt-8 md:pt-12 ml-4 md:ml-8 lg:ml-[10%]">
+        <div className="container mx-auto px-4 text-left relative z-20 mb-16 pt-8 md:pt-12">
           <h1 className="font-acumin text-2xl md:text-3xl lg:text-3xl font-bold leading-tight tracking-tight max-w-[280px] md:max-w-none">
             <span className="inline text-xl md:text-2xl lg:text-3xl text-teal-600 md:hidden lg:inline">
               Nuestros{' '}
