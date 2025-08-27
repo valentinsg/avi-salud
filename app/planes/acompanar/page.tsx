@@ -19,11 +19,11 @@ export default function PlanAcompanarPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F0FDFA] pt-10 md:pt-20">
+    <div className="min-h-screen bg-[#F0FDFA] pt-6 md:pt-20">
       {/* Descripción del Plan */}
       <section className="relative w-full py-16 bg-white ">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="flex items-left justify-left z-40">
+          <div className="flex items-left justify-left z-40 mb-4 sm:mb-6">
             <PlansBreadcrumb
               currentPlan="Plan Acompañar"
               currentPlanPath="/planes/acompanar"
@@ -41,7 +41,7 @@ export default function PlanAcompanarPage() {
             }}
           />
 
-          <div className="container h-[100vh] md:h-[75vh] relative z-20 flex flex-col items-center justify-center font-congoose mx-auto mb-10 px-4 sm:px-6">
+          <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto mb-10 px-4 sm:px-6 py-10 md:py-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-20 items-center">
               <div className="order-2 lg:order-1">
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
@@ -63,7 +63,7 @@ export default function PlanAcompanarPage() {
                   hogar. Ideal para personas mayores o en recuperación leve,
                   incluye servicios como:
                 </p>
-                <div className="bg-white rounded-3xl shadow-xl p-4 sm:p-5 md:p-6 max-w-md">
+                <div className="bg-white rounded-3xl shadow-xl p-4 sm:p-5 md:p-6 max-w-md mb-10">
                   <ul className="font-acumin text-base md:text-lg text-teal-900 leading-relaxed space-y-3">
                     <li className="flex items-start">
                       <ChevronRight className="w-4 h-4 text-teal-600 mt-0.5 mr-2" />
@@ -96,7 +96,7 @@ export default function PlanAcompanarPage() {
                 href={buildWhatsAppHref('Plan Acompañar')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative order-1 lg:order-2 w-full overflow-hidden rounded-[40px] sm:rounded-[40px] transition-transform duration-500 ease-out hover:-translate-y-2"
+                className="group relative order-1 lg:order-2 w-full overflow-hidden rounded-[28px] sm:rounded-[40px] transition-transform duration-500 ease-out hover:-translate-y-2"
               >
                 <Image
                   src="/images/plan-acompanar-card.png"

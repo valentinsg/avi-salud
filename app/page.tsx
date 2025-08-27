@@ -27,7 +27,7 @@ export default function HomePage() {
         {/* Content */}
         <div className="absolute inset-0 flex items-start md:items-center text-left px-2 sm:px-6 lg:px-10">
           <div className="container mx-auto">
-            <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-3xl font-medium mt-[125%] mr-8 md:mr-0 md:mt-20 md:ml-8 lg:ml-0 tracking-widest">
+            <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-3xl font-medium mt-[115%] mr-8 md:mr-0 md:mt-20 md:ml-8 lg:ml-0 tracking-widest">
               <h1 className="font-acumin leading-[0.9] font-semibold text-4xl text-left sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-teal-50 drop-shadow-md">
                 Cuidamos a
                 <br /> los que más <br />

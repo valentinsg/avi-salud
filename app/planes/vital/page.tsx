@@ -23,7 +23,7 @@ export default function PlanVitalPage() {
       {/* Vital */}
       <section className="relative w-full  bg-white ">
         <div className="container mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-left justify-left z-40 mb-4">
+          <div className="flex items-left justify-left z-40 mb-4 sm:mb-6">
             <PlansBreadcrumb
               currentPlan="Plan Vital"
               currentPlanPath="/planes/vital"
@@ -42,7 +42,7 @@ export default function PlanVitalPage() {
             }}
           />
 
-          <div className="container h-[100vh] md:h-[75vh] relative z-20 flex flex-col items-center justify-center font-congoose mx-auto mb-10 px-4 sm:px-6">
+          <div className="container relative z-20 flex flex-col items-center justify-center font-congoose mx-auto mb-10 px-4 sm:px-6 py-10 md:py-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
               <div className="order-2 lg:order-1">
                 <div className="flex items-center gap-3 mb-2 sm:mb-4">
@@ -102,7 +102,7 @@ export default function PlanVitalPage() {
                 className="group relative order-1 lg:order-2 w-full overflow-hidden rounded-[40px] sm:rounded-[48px] transition-transform duration-500 ease-out hover:-translate-y-2"
               >
                 <Image
-                  src="/images/partners-estrategicos.png"
+                  src="/images/plan-vital-card.png"
                   alt="Plan Vital"
                   width={525}
                   height={500}

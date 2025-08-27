@@ -1,4 +1,5 @@
 import PlansBreadcrumb from '@/components/PlansBreadcrumb'
+import { Button } from '@/components/ui/button'
 import { ArrowDown, Stethoscope } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -154,6 +155,12 @@ export default function PlanIntegralPage() {
                       <span className="font-semibold">Contratación:</span>{' '}
                       Mediante presupuesto de acuerdo a
                       requerimientos médicos.
+                      {' '}
+                      <Link href="/#contacto" className="align-middle inline-block ml-2 mt-0.5 relative top-[2px]">
+                        <Button className="h-6 md:h-7 px-3 py-0 text-[10px] md:text-xs leading-none bg-avi-teal-dark hover:bg-avi-teal-bright text-white rounded-full shadow-md">
+                          Contactar
+                        </Button>
+                      </Link>
                     </p>
                   </div>
                 </div>
