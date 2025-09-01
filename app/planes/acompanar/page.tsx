@@ -153,7 +153,7 @@ export default function PlanAcompanarPage() {
                   </AccordionItem>
 
                   <AccordionItem
-                    value="medicina"
+                    value="telemedicina"
                     className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
                   >
                     <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
@@ -176,9 +176,8 @@ export default function PlanAcompanarPage() {
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Primera evaluación integral en el domicilio, que nos
-                        permite conocer el estado general de salud de la persona
-                        y organizar un plan de cuidados personalizado.
+                        Atención médica en el hogar para resolver consultas
+                        habituales, sin necesidad de traslado.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -192,8 +191,8 @@ export default function PlanAcompanarPage() {
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        Una visita programada de control anual para garantizar el
-                        estado actual de su salud bucal y detectar posibles
+                        Una visita programada de control anual para garantizar
+                        el estado actual de su salud bucal y detectar posibles
                         problemas a tiempo.
                       </p>
                     </AccordionContent>
@@ -226,26 +225,8 @@ export default function PlanAcompanarPage() {
                       <p className="text-gray-700 text-lg font-acumin">
                         Visita anual en domicilio para crear un plan de
                         alimentación acorde a las necesidades de la persona y
-                        condiciones clínicas; con seguimiento digitalizado durante
-                        todo el año.
-                      </p>
-                    </AccordionContent>
-                  </AccordionItem>
-
-                  <AccordionItem
-                    value="salud-mental"
-                    className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
-                  >
-                    <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
-                      SALUD MENTAL - EVALUACIÓN INTEGRAL
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
-                      <p className="text-gray-700 text-lg font-acumin">
-                        Visita anual en domicilio para evaluar el bienestar
-                        emocional y diseñar un plan de acompañamiento acorde a
-                        las necesidades de la persona y sus circunstancias
-                        clínicas; con seguimiento digitalizado durante todo el
-                        año.
+                        condiciones clínicas; con seguimiento digitalizado
+                        durante todo el año.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -294,13 +275,13 @@ export default function PlanAcompanarPage() {
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
                       <p className="text-gray-700 text-lg font-acumin">
-                        APB, Hemograma, Eritrosedimentación, Proteína C reactiva,
-                        Glucemia, Perfil lipoproteico básico, Hepatograma, Gamma
-                        glutamil transpeptidasa, Uremia, Tonograma sérico,
-                        Calcemia, Magnesemia, Fosfatemia, TSH, T4 libre,
-                        Uricemia, Albuminemia, Proteínas totales, Vitamina D
-                        total, Vitamina B12, Ácido fólico, PSA - antígeno
-                        prostático específico. A partir del 3er mes.
+                        APB, Hemograma, Eritrosedimentación, Proteína C
+                        reactiva, Glucemia, Perfil lipoproteico básico,
+                        Hepatograma, Gamma glutamil transpeptidasa, Uremia,
+                        Tonograma sérico, Calcemia, Magnesemia, Fosfatemia, TSH,
+                        T4 libre, Uricemia, Albuminemia, Proteínas totales,
+                        Vitamina D total, Vitamina B12, Ácido fólico, PSA -
+                        antígeno prostático específico. A partir del 3er mes.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
@@ -331,6 +312,24 @@ export default function PlanAcompanarPage() {
                         Servicios de traslado y asistencia en casos de
                         emergencia, priorizando la seguridad del paciente, hasta
                         2 por mes.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem
+                    value="salud-mental"
+                    className="border-none rounded-2xl bg-avi-teal-bright shadow-lg"
+                  >
+                    <AccordionTrigger className="px-6 py-2 text-white font-bold hover:text-gray-100 font-acumin text-lg text-center">
+                      SALUD MENTAL - EVALUACIÓN INTEGRAL
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6 bg-white rounded-b-2xl pt-4">
+                      <p className="text-gray-700 text-lg font-acumin">
+                        Visita anual en domicilio para evaluar el bienestar
+                        emocional y diseñar un plan de acompañamiento acorde a
+                        las necesidades de la persona y sus circunstancias
+                        clínicas; con seguimiento digitalizado durante todo el
+                        año.
                       </p>
                     </AccordionContent>
                   </AccordionItem>
