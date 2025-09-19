@@ -2,15 +2,29 @@ import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
   try {
-    const { nombre, apellido, mail, consulta } = await request.json()
-    if (!nombre || !apellido || !mail || !consulta) {
+    // Aceptar payload flexible: {fullName, phone, mail, consulta} o {nombre, apellido, mail, consulta}
+    const body = await request.json().catch(() => null) as any
+    const mail: string | undefined = body?.mail
+    const consulta: string | undefined = body?.consulta
+    const phone: string | undefined = body?.phone
+    let nombre: string | undefined = body?.nombre
+    let apellido: string | undefined = body?.apellido
+    const fullName: string | undefined = body?.fullName
+
+    // Si viene fullName, úsalo como nombre completo
+    if (!nombre && fullName) {
+      nombre = fullName
+    }
+
+    // Validación mínima: requerimos mail, consulta y algún nombre
+    if (!mail || !consulta || !nombre) {
       return NextResponse.json({ error: 'Datos incompletos' }, { status: 400 })
     }
 
     // Enviar email usando Resend API si está disponible
     const RESEND_API_KEY = process.env.RESEND_API_KEY || process.env.AVI_SALUD_EMAIL
-    const to = 'info@avisalud.com.ar'
-    const subject = `Nueva consulta • AVI Salud — ${nombre} ${apellido}`
+    const to = process.env.CONTACT_TO_EMAIL || 'sanchezguevaravalentin@gmail.com'
+    const subject = `Nueva consulta • AVI Salud — ${[nombre, apellido].filter(Boolean).join(' ')}${phone ? ` • Tel: ${phone}` : ''}`
     const createdAt = new Date().toLocaleString('es-AR', { hour12: false })
     const html = `
       <table width="100%" cellpadding="0" cellspacing="0" style="font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; background:#f7faf9; padding:24px;">
@@ -28,12 +42,17 @@ export async function POST(request: Request) {
                   <table cellpadding="0" cellspacing="0" style="width:100%; margin-top:8px;">
                     <tr>
                       <td style="width:160px; padding:6px 0; color:#64748b; font-weight:600;">Nombre</td>
-                      <td style="padding:6px 0; color:#0f172a;">${nombre} ${apellido}</td>
+                      <td style="padding:6px 0; color:#0f172a;">${[nombre, apellido].filter(Boolean).join(' ')}</td>
                     </tr>
                     <tr>
                       <td style="width:160px; padding:6px 0; color:#64748b; font-weight:600;">Email</td>
                       <td style="padding:6px 0; color:#0f172a;">${mail}</td>
                     </tr>
+                    ${phone ? `
+                    <tr>
+                      <td style="width:160px; padding:6px 0; color:#64748b; font-weight:600;">Teléfono</td>
+                      <td style="padding:6px 0; color:#0f172a;">${phone}</td>
+                    </tr>` : ''}
                     <tr>
                       <td style="width:160px; padding:10px 0; color:#64748b; font-weight:600; vertical-align:top;">Consulta</td>
                       <td style="padding:10px 0; color:#0f172a; white-space:pre-wrap;">${consulta}</td>
