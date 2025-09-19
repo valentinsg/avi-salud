@@ -43,10 +43,7 @@ export function PlanCard({
       )
       return `https://wa.me/${phone}?text=${text}`
     }
-    // Si ya estamos en /planes, usar ancla interna. En caso contrario, ir a la página específica del plan.
-    if (typeof window !== 'undefined' && window.location?.pathname.startsWith('/planes')) {
-      return `#plan-${plan.id}`
-    }
+    // Llevar siempre a la página específica del plan.
     return `/planes/${plan.id}`
   })()
   const isExternal = computedHref.startsWith('http')

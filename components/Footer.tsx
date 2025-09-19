@@ -73,7 +73,7 @@ export default function Footer() {
             <div className="space-y-1 text-teal-100 text-sm sm:text-base">
               <p>+54 9 223 530 6250</p>
               <p>info@avisalud.com.ar</p>
-              <p>Av. Colón 3095</p>
+              <p>Casa Madre: Av. Colón 3095</p>
             </div>
           </div>
         </div>

@@ -64,7 +64,7 @@ export default function HomePage() {
         </div>
 
         {/* Button positioned in the white curved area - visible only on md and larger screens */}
-        <div className="hidden md:block absolute bottom-40 sm:bottom-6 md:bottom-12 lg:bottom-14 left-1/2 md:left-[5%] lg:left-[18%] transform -translate-x-1/2 md:translate-x-0 lg:translate-x-0 z-5">
+        <div className="hidden md:block absolute bottom-10 sm:bottom-10 md:bottom-12 lg:bottom-14 right-[6%] md:right-[8%] lg:right-[12%] z-5">
           <a href="/planes">
             <Button className="bg-avi-teal-bright hover:bg-teal-700 text-white rounded-full px-10 sm:px-6 md:px-8 py-6 sm:py-4 md:py-6 lg:py-6 lg:px-10 font-bold text-xl sm:text-base md:text-2xl lg:text-2xl font-acumin  shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
               conoce más
