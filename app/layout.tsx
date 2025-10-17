@@ -9,6 +9,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "AVI Salud",
   description: "AVI Salud - Cuidamos a los que más te cuidaron",
+  icons: {
+    icon: "/images/logo-avi.png",
+    shortcut: "/images/logo-avi.png",
+    apple: "/images/logo-avi.png",
+  },
 };
 
 export default function RootLayout({
