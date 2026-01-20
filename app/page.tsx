@@ -8,6 +8,33 @@ import Image from 'next/image'
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#F0FDFA] overflow-hidden">
+      {/* Banner Section */}
+      <section className="relative w-full">
+        {/* Desktop Banner */}
+        <div className="hidden md:block shadow-lg shadow-gray-400/80">
+          <Image
+            src="/images/banner-desktop-20.jpg"
+            alt="Banner AVI Salud"
+            width={1920}
+            height={400}
+            priority
+            className="w-full h-auto object-cover"
+          />
+        </div>
+        
+        {/* Mobile Banner */}
+        <div className="block md:hidden w-full h-[690px] overflow-hidden">
+          <Image
+            src="/images/banner-mobile-20.png"
+            alt="Banner AVI Salud"
+            width={768}
+            height={1365}
+            priority
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section
         id="inicio"
@@ -20,7 +47,7 @@ export default function HomePage() {
           priority
           quality={100}
           sizes="100vw"
-          className="mt-14 object-cover w-full h-full object-[80%_center] sm:object-[45%_center] md:object-[60%_center] lg:object-[65%_center] xl:object-[68%_center] 2xl:object-[70%_center]"
+          className="object-cover w-full h-full object-[80%_center] sm:object-[45%_center] md:object-[60%_center] lg:object-[65%_center] xl:object-[68%_center] 2xl:object-[70%_center]"
         />
         <div className="absolute inset-0 bg-teal-300 bg-opacity-10" />
 
@@ -28,7 +55,7 @@ export default function HomePage() {
         <div className="absolute inset-0 flex items-start md:items-center text-left px-2 sm:px-6 lg:px-10">
           <div className="container mx-auto">
             <div className="max-w-full sm:max-w-sm md:max-w-lg lg:max-w-3xl font-medium mt-[115%] mr-8 md:mr-0 md:mt-20 md:ml-8 lg:ml-0 tracking-widest">
-              <h1 className="font-acumin leading-[0.9] font-semibold text-4xl text-left sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-teal-50 drop-shadow-md">
+              <h1 className="font-acumin leading-[0.9] font-semibold text-4xl text-left sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-teal-50 drop-shadow-md">
                 Cuidamos a
                 <br /> los que más <br />
                 <span className="font-acumin text-[rgb(0,178,176)] md:text-[rgb(0,178,176)] drop-shadow-md">

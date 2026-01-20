@@ -44,9 +44,11 @@ export default function RootLayout({
         />
         {/* End Meta Pixel Code */}
       </head>
-      <body className={`${GeistSans.variable} ${GeistMono.variable} ${cocogoose.variable} ${acumin.variable}`} suppressHydrationWarning>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} ${cocogoose.variable} ${acumin.variable} m-0 p-0`} suppressHydrationWarning>
         <Header />
-        {children}
+        <main className="mt-[72px] sm:mt-[80px] md:mt-[88px] lg:mt-[96px]">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
