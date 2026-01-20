@@ -40,6 +40,7 @@ export default function HomePage() {
         id="inicio"
         className="relative h-[85vh] md:h-[80vh] lg:h-[100vh] w-full overflow-hidden"
       >
+        
         <Image
           src="/images/nurse-patient-care.jpg"
           alt="Enfermera cuidando paciente"
